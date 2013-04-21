@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09BC797B1723891200F6EAB6 /* B2DCircleShape.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BC79791723891200F6EAB6 /* B2DCircleShape.h */; };
+		09BC797C1723891200F6EAB6 /* B2DCircleShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09BC797A1723891200F6EAB6 /* B2DCircleShape.mm */; };
+		09BC798317238DBE00F6EAB6 /* B2DChainShape.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BC798117238DBE00F6EAB6 /* B2DChainShape.h */; };
+		09BC798417238DBE00F6EAB6 /* B2DChainShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09BC798217238DBE00F6EAB6 /* B2DChainShape.mm */; };
 		E527A12A16EAB53700F96715 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E527A12916EAB53700F96715 /* Foundation.framework */; };
 		E527A13916EAB53700F96715 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E527A13816EAB53700F96715 /* SenTestingKit.framework */; };
 		E527A13C16EAB53700F96715 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E527A12916EAB53700F96715 /* Foundation.framework */; };
@@ -95,6 +99,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09BC79791723891200F6EAB6 /* B2DCircleShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DCircleShape.h; sourceTree = "<group>"; };
+		09BC797A1723891200F6EAB6 /* B2DCircleShape.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DCircleShape.mm; sourceTree = "<group>"; };
+		09BC798117238DBE00F6EAB6 /* B2DChainShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DChainShape.h; sourceTree = "<group>"; };
+		09BC798217238DBE00F6EAB6 /* B2DChainShape.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DChainShape.mm; sourceTree = "<group>"; };
 		E527A12616EAB53700F96715 /* Box2D.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = Box2D.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E527A12916EAB53700F96715 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E527A13716EAB53700F96715 /* Box2DTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Box2DTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -309,6 +317,10 @@
 				E542019C16EAB6AB009CB9CE /* B2DPolygonShape.mm */,
 				E542019D16EAB6AB009CB9CE /* B2DShape.h */,
 				E542019E16EAB6AB009CB9CE /* B2DShape.mm */,
+				09BC79791723891200F6EAB6 /* B2DCircleShape.h */,
+				09BC797A1723891200F6EAB6 /* B2DCircleShape.mm */,
+				09BC798117238DBE00F6EAB6 /* B2DChainShape.h */,
+				09BC798217238DBE00F6EAB6 /* B2DChainShape.mm */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -527,6 +539,8 @@
 				E54201B316EAB6AB009CB9CE /* B2DWorld.h in Headers */,
 				E54201AE16EAB6AB009CB9CE /* B2DShape.h in Headers */,
 				E54201AC16EAB6AB009CB9CE /* B2DPolygonShape.h in Headers */,
+				09BC797B1723891200F6EAB6 /* B2DCircleShape.h in Headers */,
+				09BC798317238DBE00F6EAB6 /* B2DChainShape.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,6 +748,8 @@
 				E542027216EAB6B2009CB9CE /* b2WeldJoint.cpp in Sources */,
 				E542027416EAB6B2009CB9CE /* b2WheelJoint.cpp in Sources */,
 				E542027616EAB6B2009CB9CE /* b2Rope.cpp in Sources */,
+				09BC797C1723891200F6EAB6 /* B2DCircleShape.mm in Sources */,
+				09BC798417238DBE00F6EAB6 /* B2DChainShape.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
