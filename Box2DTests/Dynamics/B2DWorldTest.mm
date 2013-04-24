@@ -72,11 +72,11 @@
   
   B2DPolygonShape *polygonShape = [[B2DPolygonShape alloc] initWithBoxSize:CGSizeMake(0.5, 0.5)];
   
-  [body addFixureForShape:polygonShape
-                 friction:0.3
-              restitution:0.0
-                  density:1.0
-                 isSensor:NO];
+  [body addFixtureForShape:polygonShape
+                  friction:0.3
+               restitution:0.0
+                   density:1.0
+                  isSensor:NO];
   
   [self.world stepWithDelta:1 velocityInteractions:1 positionInteractions:8];
   
@@ -108,17 +108,17 @@
   B2DBody *firstBody = [self.world createBodyInPosition:CGPointMake(10, 10)
                                               type:kDynamicBodyType];
   
-  [firstBody addFixureForShape:polygonShape
-                     friction:0.2
-                  restitution:0.0
-                      density:0
-                     isSensor:NO];
+  [firstBody addFixtureForShape:polygonShape
+                       friction:0.2
+                    restitution:0.0
+                        density:0
+                       isSensor:NO];
   
   
   B2DBody *secondBody = [self.world createBodyInPosition:CGPointMake(10, 10)
                                               type:kDynamicBodyType];
   
-  [secondBody addFixureForShape:polygonShape
+  [secondBody addFixtureForShape:polygonShape
                         friction:0.2
                      restitution:0.0
                          density:0

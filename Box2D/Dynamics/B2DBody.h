@@ -26,11 +26,11 @@
 
 - (id)initWithBody:(b2Body *)boxBody;
 
-- (void)addFixureForShape:(B2DShape *)shape
-                 friction:(CGFloat)friction
-              restitution:(CGFloat)restitution
-                  density:(CGFloat)density
-                 isSensor:(BOOL)isSensor;
+- (void)addFixtureForShape:(B2DShape *)shape
+                  friction:(CGFloat)friction
+               restitution:(CGFloat)restitution
+                   density:(CGFloat)density
+                  isSensor:(BOOL)isSensor;
 
 - (void)applyForce:(CGPoint)force
         atLocation:(CGPoint)location
