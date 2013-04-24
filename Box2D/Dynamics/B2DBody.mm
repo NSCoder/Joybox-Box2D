@@ -74,20 +74,20 @@
 
 #pragma mark - Public Methods
 
-- (void)addFixureForShape:(B2DShape *)shape
-                 friction:(CGFloat)friction
-              restitution:(CGFloat)restitution
-                  density:(CGFloat)density
-                 isSensor:(BOOL)isSensor
+- (void)addFixtureForShape:(B2DShape *)shape
+                  friction:(CGFloat)friction
+               restitution:(CGFloat)restitution
+                   density:(CGFloat)density
+                  isSensor:(BOOL)isSensor
 {
-  b2FixtureDef fixureDefinition;
+  b2FixtureDef fixtureDefinition;
   
-  fixureDefinition.shape = shape.shape;
-  fixureDefinition.friction = friction;
-  fixureDefinition.restitution = restitution;
-  fixureDefinition.density = density;
-  fixureDefinition.isSensor = isSensor;
-  body->CreateFixture(&fixureDefinition);
+  fixtureDefinition.shape = shape.shape;
+  fixtureDefinition.friction = friction;
+  fixtureDefinition.restitution = restitution;
+  fixtureDefinition.density = density;
+  fixtureDefinition.isSensor = isSensor;
+  body->CreateFixture(&fixtureDefinition);
 }
 
 
