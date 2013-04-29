@@ -18,9 +18,9 @@
 @interface B2DBody : NSObject
 
 @property (nonatomic, assign) b2Body *body;
-@property (nonatomic, readonly, getter = position) CGPoint position;
 @property (nonatomic, readonly, getter = angle) CGFloat angle;
 @property (nonatomic, readonly, getter = center) CGPoint center;
+@property (nonatomic, getter = position, setter = setPosition:) CGPoint position;
 @property (nonatomic, getter = isSleepingAllowed, setter = setSleepingAllowed:) BOOL isSleepingAllowed;
 
 
