@@ -45,6 +45,10 @@
   return CGPointMake(actualPosition.x, actualPosition.y);
 }
 
+- (void)setPosition:(CGPoint)newPosition
+{
+  self.body->SetTransform(b2Vec2(newPosition.x, newPosition.y), self.body->GetAngle());
+}
 
 - (CGFloat)angle
 {
