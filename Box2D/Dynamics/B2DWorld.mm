@@ -22,12 +22,12 @@
 - (id)init
 {
   self = [super init];
- 
+
   if (self) {
-    
+
     b2Vec2 gravity;
     gravity.Set(0.0f, 0.0f);
-    
+
     self.world = new b2World(gravity);
   }
   return self;
@@ -47,7 +47,7 @@
 - (CGPoint)gravity
 {
   b2Vec2 gravity = self.world->GetGravity();
-  
+
   return CGPointMake(gravity.x, gravity.y);
 }
 
@@ -56,20 +56,20 @@
 {
   b2Vec2 gravity;
   gravity.Set(newGravity.x, newGravity.y);
-  
+
   self.world->SetGravity(gravity);
 }
 
 
-- (BOOL)continuosPhysics
+- (BOOL)continuousPhysics
 {
   return self.world->GetContinuousPhysics();
 }
 
 
-- (void)setContinuosPhysics:(BOOL)continuosPhysics
+- (void)setContinuousPhysics:(BOOL)continuousPhysics
 {
-  self.world->SetContinuousPhysics(continuosPhysics);
+  self.world->SetContinuousPhysics(continuousPhysics);
 }
 
 
@@ -102,9 +102,9 @@
   b2BodyDef bodyDefinition;
   bodyDefinition.type = [self convertBodyType:bodyType];
   bodyDefinition.position.Set(position.x, position.y);
-  
+
   b2Body *body = self.world->CreateBody(&bodyDefinition);
-  
+
   return [[B2DBody alloc] initWithBody:body];
 }
 
@@ -126,7 +126,7 @@
 - (b2BodyType)convertBodyType:(B2DBodyTypes)bodyType
 {
   b2BodyType convertedBodyType = b2_staticBody;
-  
+
   if (bodyType == kKinematicBodyType)
   {
     convertedBodyType = b2_kinematicBody;
@@ -135,7 +135,7 @@
   {
     convertedBodyType = b2_dynamicBody;
   }
-  
+
   return convertedBodyType;
 }
 
