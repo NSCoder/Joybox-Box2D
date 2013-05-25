@@ -20,6 +20,7 @@
 @property (nonatomic, assign) b2Body *body;
 @property (nonatomic, readonly, getter = angle) CGFloat angle;
 @property (nonatomic, readonly, getter = center) CGPoint center;
+@property (nonatomic, readonly, getter = isAwake) BOOL isAwake;
 @property (nonatomic, getter = position, setter = setPosition:) CGPoint position;
 @property (nonatomic, getter = isSleepingAllowed, setter = setSleepingAllowed:) BOOL isSleepingAllowed;
 

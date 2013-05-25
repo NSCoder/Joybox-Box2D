@@ -63,6 +63,10 @@
   return CGPointMake(vectorCenter.x, vectorCenter.y);
 }
 
+- (BOOL)isAwake
+{
+  return self.body->IsAwake();
+}
 
 - (BOOL)isSleepingAllowed
 {
