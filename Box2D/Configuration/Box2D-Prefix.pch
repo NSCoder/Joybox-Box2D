@@ -1,9 +1,12 @@
 //
-// Prefix header for all source files of the 'CBBox2D' target in the 'CBBox2D' project
+// Prefix header for all source files of the 'Box2D' target in the 'Box2D' project
 //
 
 #ifdef __OBJC__
   #import <Foundation/Foundation.h>
-  #import <CoreGraphics/CoreGraphics.h>
   #import <Box2D/Box2D.h>
+#endif
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 20100
+  #import <CoreGraphics/CoreGraphics.h>
 #endif

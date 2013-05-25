@@ -3,7 +3,7 @@
 //  Box2D
 //
 //  Created by Kenichi Yonekawa on 13/04/24.
-//  Copyright (c) 2013 CurveBeryl. All rights reserved.
+//  Copyright (c) 2013 Joybox. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

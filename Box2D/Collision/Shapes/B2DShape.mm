@@ -3,7 +3,7 @@
 //  Box2D
 //
 //  Created by Juan Jose Karam on 3/6/13.
-//  Copyright (c) 2013 CurveBeryl. All rights reserved.
+//  Copyright (c) 2013 Joybox. All rights reserved.
 //
 
 #import "B2DShape.h"
@@ -15,7 +15,9 @@
 - (void)dealloc
 {
   delete self.shape;
+  self.shape = nil;
+  
+  [super dealloc];
 }
-
 
 @end

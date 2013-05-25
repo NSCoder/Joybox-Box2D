@@ -3,7 +3,7 @@
 //  CBBox2D
 //
 //  Created by Juan Jose Karam on 2/17/13.
-//  Copyright (c) 2013 CurveBeryl. All rights reserved.
+//  Copyright (c) 2013 Joybox. All rights reserved.
 //
 //  Inspired by:
 //
@@ -15,13 +15,16 @@
 
 @class B2DShape;
 
-@interface B2DBody : NSObject
+@interface B2DBody : NSObject {
+  
+  b2Body *body;
+}
 
 @property (nonatomic, assign) b2Body *body;
+@property (nonatomic, getter = position, setter = setPosition:) CGPoint position;
 @property (nonatomic, readonly, getter = angle) CGFloat angle;
 @property (nonatomic, readonly, getter = center) CGPoint center;
 @property (nonatomic, readonly, getter = isAwake) BOOL isAwake;
-@property (nonatomic, getter = position, setter = setPosition:) CGPoint position;
 @property (nonatomic, getter = isSleepingAllowed, setter = setSleepingAllowed:) BOOL isSleepingAllowed;
 
 

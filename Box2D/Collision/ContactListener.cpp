@@ -3,7 +3,7 @@
 //  Box2D
 //
 //  Created by Juan Jose Karam on 3/5/13.
-//  Copyright (c) 2013 CurveBeryl. All rights reserved.
+//  Copyright (c) 2013 Joybox. All rights reserved.
 //
 
 #include "ContactListener.h"

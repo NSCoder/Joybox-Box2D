@@ -3,7 +3,7 @@
 //  Box2D
 //
 //  Created by Juan Jose Karam on 3/6/13.
-//  Copyright (c) 2013 CurveBeryl. All rights reserved.
+//  Copyright (c) 2013 Joybox. All rights reserved.
 //
 
 #import "B2DContactListener.h"
@@ -17,6 +17,10 @@
 
 
 @implementation B2DContactListener
+
+@synthesize contactListener;
+@synthesize beginContact;
+@synthesize endContact;
 
 
 - (id)init
@@ -48,14 +52,14 @@
                                             
                                             if (firstBodyUserData != NULL)
                                             {
-                                              firstBody = (__bridge B2DBody *)firstBodyUserData;
+                                              firstBody = (B2DBody *)firstBodyUserData;
                                             }
                                             
                                             void* secondBodyUserData = contact->GetFixtureB()->GetBody()->GetUserData();
                                             
                                             if (secondBodyUserData)
                                             {
-                                              secondBody = (__bridge B2DBody *)secondBodyUserData;
+                                              secondBody = (B2DBody *)secondBodyUserData;
                                             }
                                             
                                             self.beginContact(firstBody, secondBody, contact->IsTouching());
@@ -75,14 +79,14 @@
                                           
                                           if (firstBodyUserData != NULL)
                                           {
-                                            firstBody = (__bridge B2DBody *)firstBodyUserData;
+                                            firstBody = (B2DBody *)firstBodyUserData;
                                           }
                                           
                                           void* secondBodyUserData = contact->GetFixtureB()->GetBody()->GetUserData();
                                           
                                           if (secondBodyUserData)
                                           {
-                                            secondBody = (__bridge B2DBody *)secondBodyUserData;
+                                            secondBody = (B2DBody *)secondBodyUserData;
                                           }
                                           
                                           self.endContact(firstBody, secondBody);
@@ -93,7 +97,16 @@
 
 - (void)dealloc
 {
+  [self.beginContact release];
+  self.beginContact = nil;
+  
+  [self.endContact release];
+  self.endContact = nil;
+  
   delete self.contactListener;
+  self.contactListener = nil;
+  
+  [super dealloc];
 }
 
 

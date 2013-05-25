@@ -3,7 +3,7 @@
 //  CBBox2D
 //
 //  Created by Juan Jose Karam on 2/17/13.
-//  Copyright (c) 2013 CurveBeryl. All rights reserved.
+//  Copyright (c) 2013 Joybox. All rights reserved.
 //
 
 #import "B2DWorld.h"
@@ -18,6 +18,9 @@
 
 
 @implementation B2DWorld
+
+@synthesize world;
+
 
 - (id)init
 {
@@ -38,6 +41,8 @@
 {
   delete self.world;
   self.world = nil;
+  
+  [super dealloc];
 }
 
 

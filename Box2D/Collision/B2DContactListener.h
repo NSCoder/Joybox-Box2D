@@ -3,7 +3,7 @@
 //  Box2D
 //
 //  Created by Juan Jose Karam on 3/6/13.
-//  Copyright (c) 2013 CurveBeryl. All rights reserved.
+//  Copyright (c) 2013 Joybox. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -15,7 +15,11 @@ typedef void (^beginContactCallback)(B2DBody *firstBody, B2DBody *secondBody, BO
 typedef void (^endContactCallback)(B2DBody *firstBody, B2DBody *secondBody);
 
 
-@interface B2DContactListener : NSObject
+@interface B2DContactListener : NSObject {
+  ContactListener *contactListener;
+  beginContactCallback beginContact;
+  endContactCallback endContact;
+}
 
 @property (nonatomic, assign) ContactListener *contactListener;
 @property (nonatomic, copy) beginContactCallback beginContact;

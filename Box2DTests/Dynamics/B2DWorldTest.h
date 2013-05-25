@@ -9,7 +9,9 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import "B2DWorld.h"
 
-@interface B2DWorldTest : SenTestCase
+@interface B2DWorldTest : SenTestCase {
+  B2DWorld *world;
+}
 
 @property (nonatomic, strong) B2DWorld *world;
 

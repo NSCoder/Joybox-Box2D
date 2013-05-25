@@ -26,6 +26,7 @@
 
 - (void)tearDown
 {
+  [self.world release];
   self.world = nil;
 
   [super tearDown];

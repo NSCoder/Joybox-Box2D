@@ -3,7 +3,7 @@
 //  CBBox2D
 //
 //  Created by Juan Jose Karam on 2/17/13.
-//  Copyright (c) 2013 CurveBeryl. All rights reserved.
+//  Copyright (c) 2013 Joybox. All rights reserved.
 //
 //  Inspired by:
 //
@@ -18,9 +18,9 @@
 @implementation B2DBody
 
 @synthesize body;
-@synthesize position;
-@synthesize angle;
-@synthesize center;
+@dynamic position;
+@dynamic angle;
+@dynamic center;
 
 - (id)initWithBody:(b2Body *)aBody
 {
@@ -29,7 +29,7 @@
   if (self)
   {
     self.body = aBody;
-    aBody->SetUserData((__bridge void *)self);
+    aBody->SetUserData((void *)self);
   }
   
   return self;
@@ -63,10 +63,12 @@
   return CGPointMake(vectorCenter.x, vectorCenter.y);
 }
 
+
 - (BOOL)isAwake
 {
   return self.body->IsAwake();
 }
+
 
 - (BOOL)isSleepingAllowed
 {

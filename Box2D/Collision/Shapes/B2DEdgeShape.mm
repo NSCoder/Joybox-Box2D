@@ -3,14 +3,12 @@
 //  Box2D
 //
 //  Created by Juan Jose Karam on 2/19/13.
-//  Copyright (c) 2013 CurveBeryl. All rights reserved.
+//  Copyright (c) 2013 Joybox. All rights reserved.
 //
 
 #import "B2DEdgeShape.h"
 
 @implementation B2DEdgeShape
-
-@synthesize shape;
 
 - (id)initWithStartPoint:(CGPoint)startPoint
                 endPoint:(CGPoint)endPoint
@@ -22,12 +20,18 @@
     b2EdgeShape *edgeShape = new b2EdgeShape();
     
     edgeShape->Set(b2Vec2(startPoint.x, startPoint.y),
-                  b2Vec2(endPoint.x, endPoint.y));
+                   b2Vec2(endPoint.x, endPoint.y));
     
     self.shape = edgeShape;
   }
   
   return self;
+}
+
+
+- (void)dealloc
+{
+  [super dealloc];
 }
 
 @end

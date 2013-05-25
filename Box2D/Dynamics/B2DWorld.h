@@ -3,7 +3,7 @@
 //  CBBox2D
 //
 //  Created by Juan Jose Karam on 2/17/13.
-//  Copyright (c) 2013 CurveBeryl. All rights reserved.
+//  Copyright (c) 2013 Joybox. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -19,7 +19,11 @@ typedef enum {
 
 } B2DBodyTypes;
 
-@interface B2DWorld : NSObject
+
+@interface B2DWorld : NSObject {
+  
+  b2World *world;
+}
 
 @property (nonatomic, assign) b2World *world;
 @property (nonatomic, getter = gravity, setter = setGravity:) CGPoint gravity;
