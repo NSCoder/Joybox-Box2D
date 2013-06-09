@@ -129,4 +129,46 @@
   [self.world stepWithDelta:1 velocityInteractions:1 positionInteractions:8];
 }
 
+
+- (void)testBodyList
+{
+  [self.world createBodyInPosition:CGPointMake(10, 10) type:kDynamicBodyType];
+
+  STAssertTrue(self.world.bodyList.count == 1, @"The number of bodies is incorrect");
+  
+  B2DBody *body = [self.world.bodyList objectAtIndex:0];
+  
+  B2DPolygonShape *polygonShape = [[B2DPolygonShape alloc] initWithBoxSize:CGSizeMake(0.5, 0.5)];
+  
+  [body addFixtureForShape:polygonShape
+                       friction:0.2
+                    restitution:0.0
+                        density:0
+                       isSensor:NO];
+  
+  STAssertTrue(CGPointEqualToPoint(body.position, CGPointMake(10, 10)), @"The first body position is incorrect");
+}
+
+
+- (void)testBodyCount
+{
+  [self.world createBodyInPosition:CGPointMake(10, 10) type:kDynamicBodyType];
+  
+  STAssertTrue(self.world.bodyCount == 1, @"The number of bodies is incorrect");
+}
+
+
+- (void)testIsLocked
+{
+  STAssertFalse(self.world.isLocked, @"The World is Locked");
+}
+
+
+- (void)testAutoClearForces
+{
+  self.world.autoClearForces = NO;
+  
+  STAssertFalse(self.world.autoClearForces, @"World is auto clearing forces");
+}
+
 @end

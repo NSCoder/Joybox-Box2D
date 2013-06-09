@@ -37,6 +37,17 @@
 }
 
 
+- (id)initWithWorld:(b2World *)boxWorld
+{
+  self = [super init];
+  
+  if (self) {
+    self.world = boxWorld;
+  }
+  return self;
+}
+
+
 - (void)dealloc
 {
   delete self.world;
@@ -90,6 +101,37 @@
 }
 
 
+- (NSArray *)bodyList
+{
+  NSMutableArray *bodyList = [[NSMutableArray alloc] init];
+  
+  for (b2Body *body = self.world->GetBodyList(); body; body = body->GetNext())
+  {
+    [bodyList addObject:[[B2DBody alloc] initWithBody:body]];
+  }
+  
+  return bodyList;
+}
+
+- (NSInteger)bodyCount
+{
+  return self.world->GetBodyCount();
+}
+
+- (BOOL)isLocked
+{
+  return self.world->IsLocked();
+}
+
+- (BOOL)autoClearForces
+{
+  return self.world->GetAutoClearForces();
+}
+
+- (void)setAutoClearForces:(BOOL)autoClearForces
+{
+  self.world->SetAutoClearForces(autoClearForces);
+}
 
 #pragma mark - Public Methods
 
@@ -123,6 +165,12 @@
 - (void)addContactListener:(B2DContactListener *)contactListener
 {
   self.world->SetContactListener(contactListener.contactListener);
+}
+
+
+- (void)clearForces
+{
+  self.world->ClearForces();
 }
 
 

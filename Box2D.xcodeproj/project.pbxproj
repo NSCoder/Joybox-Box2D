@@ -192,6 +192,23 @@
 		E57A12B5173DFFEF002055C2 /* B2DWorld.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57A1295173DFFEF002055C2 /* B2DWorld.mm */; };
 		E57A12B7173E0674002055C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57A12B6173E0674002055C2 /* CoreGraphics.framework */; };
 		E57A12B9173E068B002055C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57A12B8173E068B002055C2 /* UIKit.framework */; };
+		E57C25481763E1FD00A850EB /* B2DFixture.h in Headers */ = {isa = PBXBuildFile; fileRef = E57C25461763E1FD00A850EB /* B2DFixture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E57C25491763E1FD00A850EB /* B2DFixture.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57C25471763E1FD00A850EB /* B2DFixture.mm */; };
+		E57C25511763F87F00A850EB /* B2DTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = E57C254F1763F87F00A850EB /* B2DTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E57C25521763F87F00A850EB /* B2DTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = E57C254F1763F87F00A850EB /* B2DTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E57C25531763F87F00A850EB /* B2DTransform.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57C25501763F87F00A850EB /* B2DTransform.mm */; };
+		E57C25541763F87F00A850EB /* B2DTransform.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57C25501763F87F00A850EB /* B2DTransform.mm */; };
+		E57C25561764004100A850EB /* B2DFixture.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57C25471763E1FD00A850EB /* B2DFixture.mm */; };
+		E57C25571764007A00A850EB /* B2DBodyTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E57C25551763FFE500A850EB /* B2DBodyTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E57C25581764008600A850EB /* B2DBodyTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E57C25551763FFE500A850EB /* B2DBodyTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E57C25591764008D00A850EB /* B2DFixture.h in Headers */ = {isa = PBXBuildFile; fileRef = E57C25461763E1FD00A850EB /* B2DFixture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E57C255B1764020F00A850EB /* B2DMassData.h in Headers */ = {isa = PBXBuildFile; fileRef = E57C255A1764020F00A850EB /* B2DMassData.h */; };
+		E57C255C1764020F00A850EB /* B2DMassData.h in Headers */ = {isa = PBXBuildFile; fileRef = E57C255A1764020F00A850EB /* B2DMassData.h */; };
+		E57C255E176402EE00A850EB /* B2DMassData.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57C255D176402EE00A850EB /* B2DMassData.mm */; };
+		E57C255F176402EE00A850EB /* B2DMassData.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57C255D176402EE00A850EB /* B2DMassData.mm */; };
+		E58089B317640B3F00C49864 /* B2DBodyTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E58089B217640B3F00C49864 /* B2DBodyTest.mm */; };
+		E58089B817640F6800C49864 /* B2DFixtureDef.h in Headers */ = {isa = PBXBuildFile; fileRef = E58089B717640F6800C49864 /* B2DFixtureDef.h */; };
+		E58089B917640F6800C49864 /* B2DFixtureDef.h in Headers */ = {isa = PBXBuildFile; fileRef = E58089B717640F6800C49864 /* B2DFixtureDef.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -339,6 +356,17 @@
 		E57A1295173DFFEF002055C2 /* B2DWorld.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DWorld.mm; sourceTree = "<group>"; };
 		E57A12B6173E0674002055C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		E57A12B8173E068B002055C2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E57C25461763E1FD00A850EB /* B2DFixture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DFixture.h; sourceTree = "<group>"; };
+		E57C25471763E1FD00A850EB /* B2DFixture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DFixture.mm; sourceTree = "<group>"; };
+		E57C254A1763F0C600A850EB /* B2DMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B2DMacros.h; sourceTree = "<group>"; };
+		E57C254F1763F87F00A850EB /* B2DTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = B2DTransform.h; path = Common/B2DTransform.h; sourceTree = "<group>"; };
+		E57C25501763F87F00A850EB /* B2DTransform.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = B2DTransform.mm; path = Common/B2DTransform.mm; sourceTree = "<group>"; };
+		E57C25551763FFE500A850EB /* B2DBodyTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B2DBodyTypes.h; sourceTree = "<group>"; };
+		E57C255A1764020F00A850EB /* B2DMassData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DMassData.h; sourceTree = "<group>"; };
+		E57C255D176402EE00A850EB /* B2DMassData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DMassData.mm; sourceTree = "<group>"; };
+		E58089B117640B3F00C49864 /* B2DBodyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DBodyTest.h; sourceTree = "<group>"; };
+		E58089B217640B3F00C49864 /* B2DBodyTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DBodyTest.mm; sourceTree = "<group>"; };
+		E58089B717640F6800C49864 /* B2DFixtureDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DFixtureDef.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +415,8 @@
 			children = (
 				E560F6B2173E0A7600F3C277 /* B2DWorldTest.h */,
 				E560F6B3173E0A7600F3C277 /* B2DWorldTest.mm */,
+				E58089B117640B3F00C49864 /* B2DBodyTest.h */,
+				E58089B217640B3F00C49864 /* B2DBodyTest.mm */,
 			);
 			path = Dynamics;
 			sourceTree = "<group>";
@@ -427,9 +457,11 @@
 		E57A10E5173DEDF9002055C2 /* Box2D */ = {
 			isa = PBXGroup;
 			children = (
+				E57C254E1763F85B00A850EB /* Common */,
 				E57A1283173DFFEF002055C2 /* Collision */,
 				E57A1291173DFFEF002055C2 /* Dynamics */,
 				E57A1280173DFF7F002055C2 /* Configuration */,
+				E57C254A1763F0C600A850EB /* B2DMacros.h */,
 			);
 			path = Box2D;
 			sourceTree = "<group>";
@@ -638,6 +670,8 @@
 				E57A128E173DFFEF002055C2 /* B2DPolygonShape.mm */,
 				E57A128F173DFFEF002055C2 /* B2DShape.h */,
 				E57A1290173DFFEF002055C2 /* B2DShape.mm */,
+				E57C255A1764020F00A850EB /* B2DMassData.h */,
+				E57C255D176402EE00A850EB /* B2DMassData.mm */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -649,8 +683,21 @@
 				E57A1293173DFFEF002055C2 /* B2DBody.mm */,
 				E57A1294173DFFEF002055C2 /* B2DWorld.h */,
 				E57A1295173DFFEF002055C2 /* B2DWorld.mm */,
+				E57C25461763E1FD00A850EB /* B2DFixture.h */,
+				E57C25471763E1FD00A850EB /* B2DFixture.mm */,
+				E57C25551763FFE500A850EB /* B2DBodyTypes.h */,
+				E58089B717640F6800C49864 /* B2DFixtureDef.h */,
 			);
 			path = Dynamics;
+			sourceTree = "<group>";
+		};
+		E57C254E1763F85B00A850EB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E57C254F1763F87F00A850EB /* B2DTransform.h */,
+				E57C25501763F87F00A850EB /* B2DTransform.mm */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -667,6 +714,11 @@
 				E560F70D173E0C4500F3C277 /* B2DBody.h in Headers */,
 				E560F70C173E0C4300F3C277 /* B2DShape.h in Headers */,
 				E560F70A173E0C3D00F3C277 /* B2DEdgeShape.h in Headers */,
+				E57C25591764008D00A850EB /* B2DFixture.h in Headers */,
+				E57C25581764008600A850EB /* B2DBodyTypes.h in Headers */,
+				E57C25521763F87F00A850EB /* B2DTransform.h in Headers */,
+				E57C255C1764020F00A850EB /* B2DMassData.h in Headers */,
+				E58089B917640F6800C49864 /* B2DFixtureDef.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +733,11 @@
 				E560F706173E0C2F00F3C277 /* B2DWorld.h in Headers */,
 				E560F703173E0C2700F3C277 /* B2DPolygonShape.h in Headers */,
 				E560F702173E0C2400F3C277 /* B2DEdgeShape.h in Headers */,
+				E57C25481763E1FD00A850EB /* B2DFixture.h in Headers */,
+				E57C25511763F87F00A850EB /* B2DTransform.h in Headers */,
+				E57C25571764007A00A850EB /* B2DBodyTypes.h in Headers */,
+				E57C255B1764020F00A850EB /* B2DMassData.h in Headers */,
+				E58089B817640F6800C49864 /* B2DFixtureDef.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,6 +914,9 @@
 				E57A12AB173DFFEF002055C2 /* B2DShape.mm in Sources */,
 				E57A12AF173DFFEF002055C2 /* B2DBody.mm in Sources */,
 				E57A12B3173DFFEF002055C2 /* B2DWorld.mm in Sources */,
+				E57C25491763E1FD00A850EB /* B2DFixture.mm in Sources */,
+				E57C25531763F87F00A850EB /* B2DTransform.mm in Sources */,
+				E57C255E176402EE00A850EB /* B2DMassData.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -918,6 +978,7 @@
 				E57A12B1173DFFEF002055C2 /* B2DBody.mm in Sources */,
 				E57A12B5173DFFEF002055C2 /* B2DWorld.mm in Sources */,
 				E560F6B6173E0A7600F3C277 /* B2DWorldTest.mm in Sources */,
+				E58089B317640B3F00C49864 /* B2DBodyTest.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -935,6 +996,7 @@
 				E57A11C1173DFD5E002055C2 /* b2TimeOfImpact.cpp in Sources */,
 				E57A11C6173DFD5E002055C2 /* b2ChainShape.cpp in Sources */,
 				E57A11CB173DFD5E002055C2 /* b2CircleShape.cpp in Sources */,
+				E57C25561764004100A850EB /* B2DFixture.mm in Sources */,
 				E57A11D0173DFD5E002055C2 /* b2EdgeShape.cpp in Sources */,
 				E57A11D5173DFD5E002055C2 /* b2PolygonShape.cpp in Sources */,
 				E57A11DB173DFD5E002055C2 /* b2BlockAllocator.cpp in Sources */,
@@ -978,6 +1040,8 @@
 				E57A12AC173DFFEF002055C2 /* B2DShape.mm in Sources */,
 				E57A12B0173DFFEF002055C2 /* B2DBody.mm in Sources */,
 				E57A12B4173DFFEF002055C2 /* B2DWorld.mm in Sources */,
+				E57C25541763F87F00A850EB /* B2DTransform.mm in Sources */,
+				E57C255F176402EE00A850EB /* B2DMassData.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
