@@ -146,6 +146,11 @@
   return self.world->IsLocked();
 }
 
+- (BOOL)autoClearForces
+{
+  return self.world->GetAutoClearForces();
+}
+
 - (void)setAutoClearForces:(BOOL)autoClearForces
 {
   self.world->SetAutoClearForces(autoClearForces);

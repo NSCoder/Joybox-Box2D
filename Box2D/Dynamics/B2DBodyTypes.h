@@ -6,6 +6,9 @@
 //  Copyright (c) 2013 Joybox. All rights reserved.
 //
 
+#ifndef Box2D_B2DBodyTypes_h
+#define Box2D_B2DBodyTypes_h
+
 typedef enum {
   
   kStaticBodyType = 0,
@@ -13,3 +16,5 @@ typedef enum {
   kDynamicBodyType
   
 } B2DBodyTypes;
+
+#endif

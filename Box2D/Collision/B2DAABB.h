@@ -16,4 +16,6 @@ struct B2DAABB
 };
 typedef struct B2DAABB B2DAABB;
 
+B2DAABB B2DAABBMake(CGPoint lowerBound, CGPoint upperBound);
+
 #endif

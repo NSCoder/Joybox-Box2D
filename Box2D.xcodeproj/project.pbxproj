@@ -63,6 +63,26 @@
 		E526E01D176CFA74005C3525 /* B2DContactFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E01A176CFA73005C3525 /* B2DContactFilter.mm */; };
 		E526E01E176CFA74005C3525 /* B2DContactFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E01A176CFA73005C3525 /* B2DContactFilter.mm */; };
 		E526E01F176CFA74005C3525 /* B2DContactFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E01A176CFA73005C3525 /* B2DContactFilter.mm */; };
+		E526E021176D04DF005C3525 /* B2DAABB.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E020176D04DF005C3525 /* B2DAABB.mm */; };
+		E526E022176D04DF005C3525 /* B2DAABB.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E020176D04DF005C3525 /* B2DAABB.mm */; };
+		E526E023176D04DF005C3525 /* B2DAABB.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E020176D04DF005C3525 /* B2DAABB.mm */; };
+		E526E025176D0677005C3525 /* B2DShapeTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E024176D0677005C3525 /* B2DShapeTypes.h */; };
+		E526E026176D0677005C3525 /* B2DShapeTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E024176D0677005C3525 /* B2DShapeTypes.h */; };
+		E526E029176D081F005C3525 /* B2DFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E027176D081E005C3525 /* B2DFilter.h */; };
+		E526E02A176D081F005C3525 /* B2DFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E027176D081E005C3525 /* B2DFilter.h */; };
+		E526E02B176D081F005C3525 /* B2DFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E028176D081F005C3525 /* B2DFilter.mm */; };
+		E526E02C176D081F005C3525 /* B2DFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E028176D081F005C3525 /* B2DFilter.mm */; };
+		E526E02D176D081F005C3525 /* B2DFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E028176D081F005C3525 /* B2DFilter.mm */; };
+		E526E030176D0A84005C3525 /* B2DRayCastOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E02E176D0A83005C3525 /* B2DRayCastOutput.h */; };
+		E526E031176D0A84005C3525 /* B2DRayCastOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E02E176D0A83005C3525 /* B2DRayCastOutput.h */; };
+		E526E032176D0A84005C3525 /* B2DRayCastOutput.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E02F176D0A83005C3525 /* B2DRayCastOutput.mm */; };
+		E526E033176D0A84005C3525 /* B2DRayCastOutput.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E02F176D0A83005C3525 /* B2DRayCastOutput.mm */; };
+		E526E034176D0A84005C3525 /* B2DRayCastOutput.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E02F176D0A83005C3525 /* B2DRayCastOutput.mm */; };
+		E526E037176D0A9A005C3525 /* B2DRayCastInput.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E035176D0A99005C3525 /* B2DRayCastInput.h */; };
+		E526E038176D0A9A005C3525 /* B2DRayCastInput.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E035176D0A99005C3525 /* B2DRayCastInput.h */; };
+		E526E039176D0A9A005C3525 /* B2DRayCastInput.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E036176D0A99005C3525 /* B2DRayCastInput.mm */; };
+		E526E03A176D0A9A005C3525 /* B2DRayCastInput.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E036176D0A99005C3525 /* B2DRayCastInput.mm */; };
+		E526E03B176D0A9A005C3525 /* B2DRayCastInput.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E036176D0A99005C3525 /* B2DRayCastInput.mm */; };
 		E560F6B4173E0A7600F3C277 /* Box2DTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E560F6AF173E0A7600F3C277 /* Box2DTests-Info.plist */; };
 		E560F6B5173E0A7600F3C277 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E560F6B0173E0A7600F3C277 /* InfoPlist.strings */; };
 		E560F6B6173E0A7600F3C277 /* B2DWorldTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E560F6B3173E0A7600F3C277 /* B2DWorldTest.mm */; };
@@ -305,6 +325,14 @@
 		E526E013176CF964005C3525 /* ContactFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactFilter.h; sourceTree = "<group>"; };
 		E526E019176CFA73005C3525 /* B2DContactFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DContactFilter.h; sourceTree = "<group>"; };
 		E526E01A176CFA73005C3525 /* B2DContactFilter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DContactFilter.mm; sourceTree = "<group>"; };
+		E526E020176D04DF005C3525 /* B2DAABB.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DAABB.mm; sourceTree = "<group>"; };
+		E526E024176D0677005C3525 /* B2DShapeTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DShapeTypes.h; sourceTree = "<group>"; };
+		E526E027176D081E005C3525 /* B2DFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DFilter.h; sourceTree = "<group>"; };
+		E526E028176D081F005C3525 /* B2DFilter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DFilter.mm; sourceTree = "<group>"; };
+		E526E02E176D0A83005C3525 /* B2DRayCastOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DRayCastOutput.h; sourceTree = "<group>"; };
+		E526E02F176D0A83005C3525 /* B2DRayCastOutput.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DRayCastOutput.mm; sourceTree = "<group>"; };
+		E526E035176D0A99005C3525 /* B2DRayCastInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DRayCastInput.h; sourceTree = "<group>"; };
+		E526E036176D0A99005C3525 /* B2DRayCastInput.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DRayCastInput.mm; sourceTree = "<group>"; };
 		E560F6AF173E0A7600F3C277 /* Box2DTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Box2DTests-Info.plist"; sourceTree = "<group>"; };
 		E560F6B0173E0A7600F3C277 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		E560F6B2173E0A7600F3C277 /* B2DWorldTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DWorldTest.h; sourceTree = "<group>"; };
@@ -747,6 +775,11 @@
 			children = (
 				E57A1288173DFFEF002055C2 /* Shapes */,
 				E526DFC7176CEE65005C3525 /* B2DAABB.h */,
+				E526E020176D04DF005C3525 /* B2DAABB.mm */,
+				E526E02E176D0A83005C3525 /* B2DRayCastOutput.h */,
+				E526E02F176D0A83005C3525 /* B2DRayCastOutput.mm */,
+				E526E035176D0A99005C3525 /* B2DRayCastInput.h */,
+				E526E036176D0A99005C3525 /* B2DRayCastInput.mm */,
 			);
 			path = Collision;
 			sourceTree = "<group>";
@@ -764,6 +797,7 @@
 				E57A128E173DFFEF002055C2 /* B2DPolygonShape.mm */,
 				E57A128F173DFFEF002055C2 /* B2DShape.h */,
 				E57A1290173DFFEF002055C2 /* B2DShape.mm */,
+				E526E024176D0677005C3525 /* B2DShapeTypes.h */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -781,6 +815,8 @@
 				E526DFB6176CE8D8005C3525 /* B2DProfile.h */,
 				E57A1294173DFFEF002055C2 /* B2DWorld.h */,
 				E57A1295173DFFEF002055C2 /* B2DWorld.mm */,
+				E526E027176D081E005C3525 /* B2DFilter.h */,
+				E526E028176D081F005C3525 /* B2DFilter.mm */,
 			);
 			path = Dynamics;
 			sourceTree = "<group>";
@@ -825,6 +861,10 @@
 				E526E00E176CF5D1005C3525 /* B2DDestructionListener.h in Headers */,
 				E526E018176CF964005C3525 /* ContactFilter.h in Headers */,
 				E526E01C176CFA74005C3525 /* B2DContactFilter.h in Headers */,
+				E526E026176D0677005C3525 /* B2DShapeTypes.h in Headers */,
+				E526E02A176D081F005C3525 /* B2DFilter.h in Headers */,
+				E526E031176D0A84005C3525 /* B2DRayCastOutput.h in Headers */,
+				E526E038176D0A9A005C3525 /* B2DRayCastInput.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -856,6 +896,10 @@
 				E526E00D176CF5D1005C3525 /* B2DDestructionListener.h in Headers */,
 				E526E017176CF964005C3525 /* ContactFilter.h in Headers */,
 				E526E01B176CFA74005C3525 /* B2DContactFilter.h in Headers */,
+				E526E025176D0677005C3525 /* B2DShapeTypes.h in Headers */,
+				E526E029176D081F005C3525 /* B2DFilter.h in Headers */,
+				E526E030176D0A84005C3525 /* B2DRayCastOutput.h in Headers */,
+				E526E037176D0A9A005C3525 /* B2DRayCastInput.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1043,6 +1087,10 @@
 				E526E00F176CF5D1005C3525 /* B2DDestructionListener.mm in Sources */,
 				E526E014176CF964005C3525 /* ContactFilter.cpp in Sources */,
 				E526E01D176CFA74005C3525 /* B2DContactFilter.mm in Sources */,
+				E526E021176D04DF005C3525 /* B2DAABB.mm in Sources */,
+				E526E02B176D081F005C3525 /* B2DFilter.mm in Sources */,
+				E526E032176D0A84005C3525 /* B2DRayCastOutput.mm in Sources */,
+				E526E039176D0A9A005C3525 /* B2DRayCastInput.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1113,6 +1161,10 @@
 				E526E011176CF5D1005C3525 /* B2DDestructionListener.mm in Sources */,
 				E526E016176CF964005C3525 /* ContactFilter.cpp in Sources */,
 				E526E01F176CFA74005C3525 /* B2DContactFilter.mm in Sources */,
+				E526E023176D04DF005C3525 /* B2DAABB.mm in Sources */,
+				E526E02D176D081F005C3525 /* B2DFilter.mm in Sources */,
+				E526E034176D0A84005C3525 /* B2DRayCastOutput.mm in Sources */,
+				E526E03B176D0A9A005C3525 /* B2DRayCastInput.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1184,6 +1236,10 @@
 				E526E010176CF5D1005C3525 /* B2DDestructionListener.mm in Sources */,
 				E526E015176CF964005C3525 /* ContactFilter.cpp in Sources */,
 				E526E01E176CFA74005C3525 /* B2DContactFilter.mm in Sources */,
+				E526E022176D04DF005C3525 /* B2DAABB.mm in Sources */,
+				E526E02C176D081F005C3525 /* B2DFilter.mm in Sources */,
+				E526E033176D0A84005C3525 /* B2DRayCastOutput.mm in Sources */,
+				E526E03A176D0A9A005C3525 /* B2DRayCastInput.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

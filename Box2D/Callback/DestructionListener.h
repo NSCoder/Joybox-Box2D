@@ -18,6 +18,13 @@ typedef void (^fixtureDestructionListenerSayGoodbyeCallback)(b2Fixture *fixture)
 class DestructionListener : public b2DestructionListener
 {
 public:
+  
+  DestructionListener()
+  {
+    jointSayGoodbye = NULL;
+    fixtureSayGoodbye = NULL;
+  }
+  
   jointDestructionListenerSayGoodbyeCallback jointSayGoodbye;
   fixtureDestructionListenerSayGoodbyeCallback fixtureSayGoodbye;
   void SayGoodbye(b2Joint* joint);
