@@ -11,6 +11,9 @@
 @implementation B2DShape
 
 @synthesize shape;
+@dynamic type;
+@dynamic childCount;
+@dynamic radius;
 
 - (id)initWithShape:(b2Shape *)boxShape
 {
@@ -32,6 +35,9 @@
   [super dealloc];
 }
 
+
+#pragma mark - Properties
+
 - (B2DShapeTypes)type
 {
   return (B2DShapeTypes)self.shape->GetType();
@@ -42,6 +48,14 @@
   return (NSInteger)self.shape->GetChildCount();
 }
 
+- (CGFloat)radius
+{
+  return self.shape->m_radius;
+}
+
+
+#pragma mark - Methods
+
 - (BOOL)testPointWithTransform:(B2DTransform)transform andPoint:(CGPoint)point
 {
   b2Transform boxTransform = b2Transform();
@@ -49,7 +63,10 @@
   return self.shape->TestPoint(boxTransform, b2Vec2FromPoint(point));
 }
 
-- (BOOL)rayCastWithOutput:(B2DRayCastOutput)output input:(B2DRayCastInput)input transform:(B2DTransform)transform children:(NSInteger)childIndex
+- (BOOL)rayCastWithOutput:(B2DRayCastOutput)output
+                    input:(B2DRayCastInput)input
+                transform:(B2DTransform)transform
+                 children:(NSInteger)childIndex
 {
   b2RayCastOutput boxOutput;
   boxOutput.normal = b2Vec2FromPoint(output.normal);
