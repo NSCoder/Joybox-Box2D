@@ -9,6 +9,8 @@
 #import "B2DWorld.h"
 #import "B2DBody.h"
 #import "B2DContactListener.h"
+#import "B2DContactFilter.h"
+#import "B2DDestructionListener.h"
 #import "B2DQueryCallback.h"
 #import "B2DRayCastCallback.h"
 
@@ -169,9 +171,19 @@
 
 #pragma mark - Methods
 
-- (void)addContactListener:(B2DContactListener *)contactListener
+- (void)setContactListener:(B2DContactListener *)contactListener
 {
   self.world->SetContactListener(contactListener.contactListener);
+}
+
+- (void)setContactFilter:(B2DContactFilter *)contactFilter
+{
+  self.world->SetContactFilter(contactFilter.contactFilter);
+}
+
+- (void)setDestructionListener:(B2DDestructionListener *)destructionListener
+{
+  self.world->SetDestructionListener(destructionListener.destructionListener);
 }
 
 - (B2DBody *)createBody:(B2DBodyDef)bodyDefinition
@@ -238,6 +250,12 @@
 
 #pragma mark - Deprecated
 
+- (void)addContactListener:(B2DContactListener *)contactListener
+{
+  NSLog(@"Deprecated Method: User setContactListener: instead.");
+  self.world->SetContactListener(contactListener.contactListener);
+}
+
 - (BOOL)continuousPhysics
 {
   NSLog(@"Deprecated Method: This method is for testing purposes only.");
@@ -249,7 +267,6 @@
   NSLog(@"Deprecated Method: This method is for testing purposes only.");
   self.world->SetContinuousPhysics(continuousPhysics);
 }
-
 
 - (B2DBody *)createBodyInPosition:(CGPoint)position
                              type:(B2DBodyTypes)bodyType
@@ -263,7 +280,6 @@
 
   return [[B2DBody alloc] initWithBody:body];
 }
-
 
 - (void)removeBody:(B2DBody *)body
 {

@@ -10,10 +10,16 @@
 
 void DestructionListener::SayGoodbye(b2Joint* joint)
 {
-  printf("Joint Death");
+  if (jointSayGoodbye != NULL)
+  {
+    jointSayGoodbye(joint);
+  }
 }
 
 void DestructionListener::SayGoodbye(b2Fixture* fixture)
 {
-  printf("Fixture Death");
+  if (fixtureSayGoodbye != NULL)
+  {
+    fixtureSayGoodbye(fixture);
+  }
 }

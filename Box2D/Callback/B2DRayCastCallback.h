@@ -11,7 +11,7 @@
 
 @class B2DFixture;
 
-typedef float32 (^reportRaycastFixtureCallback)(B2DFixture *fixture, CGPoint point, CGPoint normal, CGFloat fraction);
+typedef float (^reportRaycastFixtureCallback)(B2DFixture *fixture, CGPoint point, CGPoint normal, CGFloat fraction);
 
 @interface B2DRayCastCallback : NSObject {
   RayCastCallback *rayCastCallback;

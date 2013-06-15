@@ -14,6 +14,8 @@
 
 @class B2DBody;
 @class B2DContactListener;
+@class B2DContactFilter;
+@class B2DDestructionListener;
 @class B2DQueryCallback;
 @class B2DRayCastCallback;
 
@@ -39,7 +41,9 @@
 
 - (id)initWithWorld:(b2World *)boxWorld;
 
-- (void)addContactListener:(B2DContactListener *)contactListener;
+- (void)setContactListener:(B2DContactListener *)contactListener;
+- (void)setContactFilter:(B2DContactFilter *)contactFilter;
+- (void)setDestructionListener:(B2DDestructionListener *)destructionListener;
 - (B2DBody *)createBody:(B2DBodyDef)bodyDefinition;
 - (void)destroyBody:(B2DBody *)body;
 - (void)stepWithDelta:(CGFloat)delta velocityInteractions:(int)velocityInteractions positionInteractions:(int)positionInteractions;
@@ -52,6 +56,7 @@
 
 @property (nonatomic, assign) BOOL continuousPhysics;
 
+- (void)addContactListener:(B2DContactListener *)contactListener __attribute__ ((deprecated));
 - (B2DBody *)createBodyInPosition:(CGPoint)position type:(B2DBodyTypes)bodyType __attribute__ ((deprecated));
 - (void)removeBody:(B2DBody *)body __attribute__ ((deprecated));
 

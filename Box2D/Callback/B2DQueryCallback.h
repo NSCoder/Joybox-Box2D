@@ -11,7 +11,7 @@
 
 @class B2DFixture;
 
-typedef bool (^reportQueryFixtureCallback)(B2DFixture *fixture);
+typedef BOOL (^reportQueryFixtureCallback)(B2DFixture *fixture);
 
 @interface B2DQueryCallback : NSObject {
   QueryCallback *queryCallback;

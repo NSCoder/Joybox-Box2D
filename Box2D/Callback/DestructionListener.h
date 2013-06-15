@@ -12,9 +12,14 @@
 #include <iostream>
 #include <Box2D/Box2D.h>
 
+typedef void (^jointDestructionListenerSayGoodbyeCallback)(b2Joint *fixture);
+typedef void (^fixtureDestructionListenerSayGoodbyeCallback)(b2Fixture *fixture);
+
 class DestructionListener : public b2DestructionListener
 {
 public:
+  jointDestructionListenerSayGoodbyeCallback jointSayGoodbye;
+  fixtureDestructionListenerSayGoodbyeCallback fixtureSayGoodbye;
   void SayGoodbye(b2Joint* joint);
   void SayGoodbye(b2Fixture* fixture);
 };
