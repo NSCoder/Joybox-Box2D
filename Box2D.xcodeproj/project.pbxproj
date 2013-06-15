@@ -7,17 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E526DFB1176CE09F005C3525 /* B2DBodyDef.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFB0176CE09F005C3525 /* B2DBodyDef.h */; };
+		E526DFB2176CE09F005C3525 /* B2DBodyDef.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFB0176CE09F005C3525 /* B2DBodyDef.h */; };
+		E526DFB7176CE8D8005C3525 /* B2DProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFB6176CE8D8005C3525 /* B2DProfile.h */; };
+		E526DFB8176CE8D8005C3525 /* B2DProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFB6176CE8D8005C3525 /* B2DProfile.h */; };
+		E526DFC8176CEE65005C3525 /* B2DAABB.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFC7176CEE65005C3525 /* B2DAABB.h */; };
+		E526DFC9176CEE65005C3525 /* B2DAABB.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFC7176CEE65005C3525 /* B2DAABB.h */; };
+		E526DFE4176CF3AA005C3525 /* B2DContactListener.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFDA176CF3AA005C3525 /* B2DContactListener.h */; };
+		E526DFE5176CF3AA005C3525 /* B2DContactListener.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFDA176CF3AA005C3525 /* B2DContactListener.h */; };
+		E526DFE6176CF3AA005C3525 /* B2DContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526DFDB176CF3AA005C3525 /* B2DContactListener.mm */; };
+		E526DFE7176CF3AA005C3525 /* B2DContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526DFDB176CF3AA005C3525 /* B2DContactListener.mm */; };
+		E526DFE8176CF3AA005C3525 /* B2DContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526DFDB176CF3AA005C3525 /* B2DContactListener.mm */; };
+		E526DFE9176CF3AA005C3525 /* ContactListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E526DFDC176CF3AA005C3525 /* ContactListener.cpp */; };
+		E526DFEA176CF3AA005C3525 /* ContactListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E526DFDC176CF3AA005C3525 /* ContactListener.cpp */; };
+		E526DFEB176CF3AA005C3525 /* ContactListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E526DFDC176CF3AA005C3525 /* ContactListener.cpp */; };
+		E526DFEC176CF3AA005C3525 /* ContactListener.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFDD176CF3AA005C3525 /* ContactListener.h */; };
+		E526DFED176CF3AA005C3525 /* ContactListener.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFDD176CF3AA005C3525 /* ContactListener.h */; };
+		E526DFEE176CF3AA005C3525 /* DestructionListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E526DFDE176CF3AA005C3525 /* DestructionListener.cpp */; };
+		E526DFEF176CF3AA005C3525 /* DestructionListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E526DFDE176CF3AA005C3525 /* DestructionListener.cpp */; };
+		E526DFF0176CF3AA005C3525 /* DestructionListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E526DFDE176CF3AA005C3525 /* DestructionListener.cpp */; };
+		E526DFF1176CF3AA005C3525 /* DestructionListener.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFDF176CF3AA005C3525 /* DestructionListener.h */; };
+		E526DFF2176CF3AA005C3525 /* DestructionListener.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFDF176CF3AA005C3525 /* DestructionListener.h */; };
+		E526DFF3176CF3AA005C3525 /* QueryCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E526DFE0176CF3AA005C3525 /* QueryCallback.cpp */; };
+		E526DFF4176CF3AA005C3525 /* QueryCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E526DFE0176CF3AA005C3525 /* QueryCallback.cpp */; };
+		E526DFF5176CF3AA005C3525 /* QueryCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E526DFE0176CF3AA005C3525 /* QueryCallback.cpp */; };
+		E526DFF6176CF3AA005C3525 /* QueryCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFE1176CF3AA005C3525 /* QueryCallback.h */; };
+		E526DFF7176CF3AA005C3525 /* QueryCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFE1176CF3AA005C3525 /* QueryCallback.h */; };
+		E526DFF8176CF3AA005C3525 /* RayCastCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E526DFE2176CF3AA005C3525 /* RayCastCallback.cpp */; };
+		E526DFF9176CF3AA005C3525 /* RayCastCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E526DFE2176CF3AA005C3525 /* RayCastCallback.cpp */; };
+		E526DFFA176CF3AA005C3525 /* RayCastCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E526DFE2176CF3AA005C3525 /* RayCastCallback.cpp */; };
+		E526DFFB176CF3AA005C3525 /* RayCastCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFE3176CF3AA005C3525 /* RayCastCallback.h */; };
+		E526DFFC176CF3AA005C3525 /* RayCastCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFE3176CF3AA005C3525 /* RayCastCallback.h */; };
+		E526E001176CF3C5005C3525 /* B2DQueryCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFFD176CF3C5005C3525 /* B2DQueryCallback.h */; };
+		E526E002176CF3C5005C3525 /* B2DQueryCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFFD176CF3C5005C3525 /* B2DQueryCallback.h */; };
+		E526E003176CF3C5005C3525 /* B2DQueryCallback.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526DFFE176CF3C5005C3525 /* B2DQueryCallback.mm */; };
+		E526E004176CF3C5005C3525 /* B2DQueryCallback.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526DFFE176CF3C5005C3525 /* B2DQueryCallback.mm */; };
+		E526E005176CF3C5005C3525 /* B2DQueryCallback.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526DFFE176CF3C5005C3525 /* B2DQueryCallback.mm */; };
+		E526E006176CF3C5005C3525 /* B2DRayCastCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFFF176CF3C5005C3525 /* B2DRayCastCallback.h */; };
+		E526E007176CF3C5005C3525 /* B2DRayCastCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFFF176CF3C5005C3525 /* B2DRayCastCallback.h */; };
+		E526E008176CF3C5005C3525 /* B2DRayCastCallback.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E000176CF3C5005C3525 /* B2DRayCastCallback.mm */; };
+		E526E009176CF3C5005C3525 /* B2DRayCastCallback.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E000176CF3C5005C3525 /* B2DRayCastCallback.mm */; };
+		E526E00A176CF3C5005C3525 /* B2DRayCastCallback.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E000176CF3C5005C3525 /* B2DRayCastCallback.mm */; };
 		E560F6B4173E0A7600F3C277 /* Box2DTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E560F6AF173E0A7600F3C277 /* Box2DTests-Info.plist */; };
 		E560F6B5173E0A7600F3C277 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E560F6B0173E0A7600F3C277 /* InfoPlist.strings */; };
 		E560F6B6173E0A7600F3C277 /* B2DWorldTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E560F6B3173E0A7600F3C277 /* B2DWorldTest.mm */; };
-		E560F700173E0C1F00F3C277 /* B2DContactListener.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A1284173DFFEF002055C2 /* B2DContactListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E560F701173E0C2200F3C277 /* B2DCircleShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A1289173DFFEF002055C2 /* B2DCircleShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E560F702173E0C2400F3C277 /* B2DEdgeShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A128B173DFFEF002055C2 /* B2DEdgeShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E560F703173E0C2700F3C277 /* B2DPolygonShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A128D173DFFEF002055C2 /* B2DPolygonShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E560F704173E0C2A00F3C277 /* B2DShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A128F173DFFEF002055C2 /* B2DShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E560F705173E0C2D00F3C277 /* B2DBody.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A1292173DFFEF002055C2 /* B2DBody.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E560F706173E0C2F00F3C277 /* B2DWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A1294173DFFEF002055C2 /* B2DWorld.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E560F708173E0C3800F3C277 /* B2DContactListener.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A1284173DFFEF002055C2 /* B2DContactListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E560F709173E0C3B00F3C277 /* B2DCircleShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A1289173DFFEF002055C2 /* B2DCircleShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E560F70A173E0C3D00F3C277 /* B2DEdgeShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A128B173DFFEF002055C2 /* B2DEdgeShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E560F70B173E0C3E00F3C277 /* B2DPolygonShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A128D173DFFEF002055C2 /* B2DPolygonShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -166,12 +205,6 @@
 		E57A127B173DFD5E002055C2 /* b2Rope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1198173DFD5E002055C2 /* b2Rope.cpp */; };
 		E57A127C173DFD5E002055C2 /* b2Rope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1198173DFD5E002055C2 /* b2Rope.cpp */; };
 		E57A127D173DFD5E002055C2 /* b2Rope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1198173DFD5E002055C2 /* b2Rope.cpp */; };
-		E57A1297173DFFEF002055C2 /* B2DContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57A1285173DFFEF002055C2 /* B2DContactListener.mm */; };
-		E57A1298173DFFEF002055C2 /* B2DContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57A1285173DFFEF002055C2 /* B2DContactListener.mm */; };
-		E57A1299173DFFEF002055C2 /* B2DContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57A1285173DFFEF002055C2 /* B2DContactListener.mm */; };
-		E57A129A173DFFEF002055C2 /* ContactListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1286173DFFEF002055C2 /* ContactListener.cpp */; };
-		E57A129B173DFFEF002055C2 /* ContactListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1286173DFFEF002055C2 /* ContactListener.cpp */; };
-		E57A129C173DFFEF002055C2 /* ContactListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1286173DFFEF002055C2 /* ContactListener.cpp */; };
 		E57A129F173DFFEF002055C2 /* B2DCircleShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57A128A173DFFEF002055C2 /* B2DCircleShape.mm */; };
 		E57A12A0173DFFEF002055C2 /* B2DCircleShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57A128A173DFFEF002055C2 /* B2DCircleShape.mm */; };
 		E57A12A1173DFFEF002055C2 /* B2DCircleShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57A128A173DFFEF002055C2 /* B2DCircleShape.mm */; };
@@ -234,6 +267,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E526DFB0176CE09F005C3525 /* B2DBodyDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DBodyDef.h; sourceTree = "<group>"; };
+		E526DFB6176CE8D8005C3525 /* B2DProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DProfile.h; sourceTree = "<group>"; };
+		E526DFC7176CEE65005C3525 /* B2DAABB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DAABB.h; sourceTree = "<group>"; };
+		E526DFDA176CF3AA005C3525 /* B2DContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DContactListener.h; sourceTree = "<group>"; };
+		E526DFDB176CF3AA005C3525 /* B2DContactListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DContactListener.mm; sourceTree = "<group>"; };
+		E526DFDC176CF3AA005C3525 /* ContactListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ContactListener.cpp; sourceTree = "<group>"; };
+		E526DFDD176CF3AA005C3525 /* ContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListener.h; sourceTree = "<group>"; };
+		E526DFDE176CF3AA005C3525 /* DestructionListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DestructionListener.cpp; sourceTree = "<group>"; };
+		E526DFDF176CF3AA005C3525 /* DestructionListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestructionListener.h; sourceTree = "<group>"; };
+		E526DFE0176CF3AA005C3525 /* QueryCallback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = QueryCallback.cpp; sourceTree = "<group>"; };
+		E526DFE1176CF3AA005C3525 /* QueryCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryCallback.h; sourceTree = "<group>"; };
+		E526DFE2176CF3AA005C3525 /* RayCastCallback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RayCastCallback.cpp; sourceTree = "<group>"; };
+		E526DFE3176CF3AA005C3525 /* RayCastCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RayCastCallback.h; sourceTree = "<group>"; };
+		E526DFFD176CF3C5005C3525 /* B2DQueryCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DQueryCallback.h; sourceTree = "<group>"; };
+		E526DFFE176CF3C5005C3525 /* B2DQueryCallback.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DQueryCallback.mm; sourceTree = "<group>"; };
+		E526DFFF176CF3C5005C3525 /* B2DRayCastCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DRayCastCallback.h; sourceTree = "<group>"; };
+		E526E000176CF3C5005C3525 /* B2DRayCastCallback.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DRayCastCallback.mm; sourceTree = "<group>"; };
 		E560F6AF173E0A7600F3C277 /* Box2DTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Box2DTests-Info.plist"; sourceTree = "<group>"; };
 		E560F6B0173E0A7600F3C277 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		E560F6B2173E0A7600F3C277 /* B2DWorldTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DWorldTest.h; sourceTree = "<group>"; };
@@ -338,10 +388,6 @@
 		E57A1198173DFD5E002055C2 /* b2Rope.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Rope.cpp; sourceTree = "<group>"; };
 		E57A1199173DFD5E002055C2 /* b2Rope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Rope.h; sourceTree = "<group>"; };
 		E57A1281173DFF7F002055C2 /* Box2D-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Box2D-Prefix.pch"; sourceTree = "<group>"; };
-		E57A1284173DFFEF002055C2 /* B2DContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DContactListener.h; sourceTree = "<group>"; };
-		E57A1285173DFFEF002055C2 /* B2DContactListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DContactListener.mm; sourceTree = "<group>"; };
-		E57A1286173DFFEF002055C2 /* ContactListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ContactListener.cpp; sourceTree = "<group>"; };
-		E57A1287173DFFEF002055C2 /* ContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListener.h; sourceTree = "<group>"; };
 		E57A1289173DFFEF002055C2 /* B2DCircleShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DCircleShape.h; sourceTree = "<group>"; };
 		E57A128A173DFFEF002055C2 /* B2DCircleShape.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DCircleShape.mm; sourceTree = "<group>"; };
 		E57A128B173DFFEF002055C2 /* B2DEdgeShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DEdgeShape.h; sourceTree = "<group>"; };
@@ -401,6 +447,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E526DFD9176CF3AA005C3525 /* Callback */ = {
+			isa = PBXGroup;
+			children = (
+				E526DFDA176CF3AA005C3525 /* B2DContactListener.h */,
+				E526DFDB176CF3AA005C3525 /* B2DContactListener.mm */,
+				E526DFFD176CF3C5005C3525 /* B2DQueryCallback.h */,
+				E526DFFE176CF3C5005C3525 /* B2DQueryCallback.mm */,
+				E526DFFF176CF3C5005C3525 /* B2DRayCastCallback.h */,
+				E526E000176CF3C5005C3525 /* B2DRayCastCallback.mm */,
+				E526DFDC176CF3AA005C3525 /* ContactListener.cpp */,
+				E526DFDD176CF3AA005C3525 /* ContactListener.h */,
+				E526DFDE176CF3AA005C3525 /* DestructionListener.cpp */,
+				E526DFDF176CF3AA005C3525 /* DestructionListener.h */,
+				E526DFE0176CF3AA005C3525 /* QueryCallback.cpp */,
+				E526DFE1176CF3AA005C3525 /* QueryCallback.h */,
+				E526DFE2176CF3AA005C3525 /* RayCastCallback.cpp */,
+				E526DFE3176CF3AA005C3525 /* RayCastCallback.h */,
+			);
+			path = Callback;
+			sourceTree = "<group>";
+		};
 		E560F6AE173E0A7600F3C277 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,6 +524,7 @@
 		E57A10E5173DEDF9002055C2 /* Box2D */ = {
 			isa = PBXGroup;
 			children = (
+				E526DFD9176CF3AA005C3525 /* Callback */,
 				E57C254E1763F85B00A850EB /* Common */,
 				E57A1283173DFFEF002055C2 /* Collision */,
 				E57A1291173DFFEF002055C2 /* Dynamics */,
@@ -650,11 +718,8 @@
 		E57A1283173DFFEF002055C2 /* Collision */ = {
 			isa = PBXGroup;
 			children = (
-				E57A1284173DFFEF002055C2 /* B2DContactListener.h */,
-				E57A1285173DFFEF002055C2 /* B2DContactListener.mm */,
-				E57A1286173DFFEF002055C2 /* ContactListener.cpp */,
-				E57A1287173DFFEF002055C2 /* ContactListener.h */,
 				E57A1288173DFFEF002055C2 /* Shapes */,
+				E526DFC7176CEE65005C3525 /* B2DAABB.h */,
 			);
 			path = Collision;
 			sourceTree = "<group>";
@@ -666,12 +731,12 @@
 				E57A128A173DFFEF002055C2 /* B2DCircleShape.mm */,
 				E57A128B173DFFEF002055C2 /* B2DEdgeShape.h */,
 				E57A128C173DFFEF002055C2 /* B2DEdgeShape.mm */,
+				E57C255A1764020F00A850EB /* B2DMassData.h */,
+				E57C255D176402EE00A850EB /* B2DMassData.mm */,
 				E57A128D173DFFEF002055C2 /* B2DPolygonShape.h */,
 				E57A128E173DFFEF002055C2 /* B2DPolygonShape.mm */,
 				E57A128F173DFFEF002055C2 /* B2DShape.h */,
 				E57A1290173DFFEF002055C2 /* B2DShape.mm */,
-				E57C255A1764020F00A850EB /* B2DMassData.h */,
-				E57C255D176402EE00A850EB /* B2DMassData.mm */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -681,12 +746,14 @@
 			children = (
 				E57A1292173DFFEF002055C2 /* B2DBody.h */,
 				E57A1293173DFFEF002055C2 /* B2DBody.mm */,
-				E57A1294173DFFEF002055C2 /* B2DWorld.h */,
-				E57A1295173DFFEF002055C2 /* B2DWorld.mm */,
+				E526DFB0176CE09F005C3525 /* B2DBodyDef.h */,
+				E57C25551763FFE500A850EB /* B2DBodyTypes.h */,
 				E57C25461763E1FD00A850EB /* B2DFixture.h */,
 				E57C25471763E1FD00A850EB /* B2DFixture.mm */,
-				E57C25551763FFE500A850EB /* B2DBodyTypes.h */,
 				E58089B717640F6800C49864 /* B2DFixtureDef.h */,
+				E526DFB6176CE8D8005C3525 /* B2DProfile.h */,
+				E57A1294173DFFEF002055C2 /* B2DWorld.h */,
+				E57A1295173DFFEF002055C2 /* B2DWorld.mm */,
 			);
 			path = Dynamics;
 			sourceTree = "<group>";
@@ -707,7 +774,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E560F708173E0C3800F3C277 /* B2DContactListener.h in Headers */,
 				E560F70B173E0C3E00F3C277 /* B2DPolygonShape.h in Headers */,
 				E560F709173E0C3B00F3C277 /* B2DCircleShape.h in Headers */,
 				E560F70E173E0C4600F3C277 /* B2DWorld.h in Headers */,
@@ -719,6 +785,16 @@
 				E57C25521763F87F00A850EB /* B2DTransform.h in Headers */,
 				E57C255C1764020F00A850EB /* B2DMassData.h in Headers */,
 				E58089B917640F6800C49864 /* B2DFixtureDef.h in Headers */,
+				E526DFB2176CE09F005C3525 /* B2DBodyDef.h in Headers */,
+				E526DFB8176CE8D8005C3525 /* B2DProfile.h in Headers */,
+				E526DFC9176CEE65005C3525 /* B2DAABB.h in Headers */,
+				E526DFE5176CF3AA005C3525 /* B2DContactListener.h in Headers */,
+				E526DFED176CF3AA005C3525 /* ContactListener.h in Headers */,
+				E526DFF2176CF3AA005C3525 /* DestructionListener.h in Headers */,
+				E526DFF7176CF3AA005C3525 /* QueryCallback.h in Headers */,
+				E526DFFC176CF3AA005C3525 /* RayCastCallback.h in Headers */,
+				E526E002176CF3C5005C3525 /* B2DQueryCallback.h in Headers */,
+				E526E007176CF3C5005C3525 /* B2DRayCastCallback.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,7 +802,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E560F700173E0C1F00F3C277 /* B2DContactListener.h in Headers */,
 				E560F704173E0C2A00F3C277 /* B2DShape.h in Headers */,
 				E560F701173E0C2200F3C277 /* B2DCircleShape.h in Headers */,
 				E560F705173E0C2D00F3C277 /* B2DBody.h in Headers */,
@@ -738,6 +813,16 @@
 				E57C25571764007A00A850EB /* B2DBodyTypes.h in Headers */,
 				E57C255B1764020F00A850EB /* B2DMassData.h in Headers */,
 				E58089B817640F6800C49864 /* B2DFixtureDef.h in Headers */,
+				E526DFB1176CE09F005C3525 /* B2DBodyDef.h in Headers */,
+				E526DFB7176CE8D8005C3525 /* B2DProfile.h in Headers */,
+				E526DFC8176CEE65005C3525 /* B2DAABB.h in Headers */,
+				E526DFE4176CF3AA005C3525 /* B2DContactListener.h in Headers */,
+				E526DFEC176CF3AA005C3525 /* ContactListener.h in Headers */,
+				E526DFF1176CF3AA005C3525 /* DestructionListener.h in Headers */,
+				E526DFF6176CF3AA005C3525 /* QueryCallback.h in Headers */,
+				E526DFFB176CF3AA005C3525 /* RayCastCallback.h in Headers */,
+				E526E001176CF3C5005C3525 /* B2DQueryCallback.h in Headers */,
+				E526E006176CF3C5005C3525 /* B2DRayCastCallback.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,8 +991,6 @@
 				E57A1271173DFD5E002055C2 /* b2WeldJoint.cpp in Sources */,
 				E57A1276173DFD5E002055C2 /* b2WheelJoint.cpp in Sources */,
 				E57A127B173DFD5E002055C2 /* b2Rope.cpp in Sources */,
-				E57A1297173DFFEF002055C2 /* B2DContactListener.mm in Sources */,
-				E57A129A173DFFEF002055C2 /* ContactListener.cpp in Sources */,
 				E57A129F173DFFEF002055C2 /* B2DCircleShape.mm in Sources */,
 				E57A12A3173DFFEF002055C2 /* B2DEdgeShape.mm in Sources */,
 				E57A12A7173DFFEF002055C2 /* B2DPolygonShape.mm in Sources */,
@@ -917,6 +1000,13 @@
 				E57C25491763E1FD00A850EB /* B2DFixture.mm in Sources */,
 				E57C25531763F87F00A850EB /* B2DTransform.mm in Sources */,
 				E57C255E176402EE00A850EB /* B2DMassData.mm in Sources */,
+				E526DFE6176CF3AA005C3525 /* B2DContactListener.mm in Sources */,
+				E526DFE9176CF3AA005C3525 /* ContactListener.cpp in Sources */,
+				E526DFEE176CF3AA005C3525 /* DestructionListener.cpp in Sources */,
+				E526DFF3176CF3AA005C3525 /* QueryCallback.cpp in Sources */,
+				E526DFF8176CF3AA005C3525 /* RayCastCallback.cpp in Sources */,
+				E526E003176CF3C5005C3525 /* B2DQueryCallback.mm in Sources */,
+				E526E008176CF3C5005C3525 /* B2DRayCastCallback.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,8 +1059,6 @@
 				E57A1272173DFD5E002055C2 /* b2WeldJoint.cpp in Sources */,
 				E57A1277173DFD5E002055C2 /* b2WheelJoint.cpp in Sources */,
 				E57A127C173DFD5E002055C2 /* b2Rope.cpp in Sources */,
-				E57A1299173DFFEF002055C2 /* B2DContactListener.mm in Sources */,
-				E57A129C173DFFEF002055C2 /* ContactListener.cpp in Sources */,
 				E57A12A1173DFFEF002055C2 /* B2DCircleShape.mm in Sources */,
 				E57A12A5173DFFEF002055C2 /* B2DEdgeShape.mm in Sources */,
 				E57A12A9173DFFEF002055C2 /* B2DPolygonShape.mm in Sources */,
@@ -979,6 +1067,13 @@
 				E57A12B5173DFFEF002055C2 /* B2DWorld.mm in Sources */,
 				E560F6B6173E0A7600F3C277 /* B2DWorldTest.mm in Sources */,
 				E58089B317640B3F00C49864 /* B2DBodyTest.mm in Sources */,
+				E526DFE8176CF3AA005C3525 /* B2DContactListener.mm in Sources */,
+				E526DFEB176CF3AA005C3525 /* ContactListener.cpp in Sources */,
+				E526DFF0176CF3AA005C3525 /* DestructionListener.cpp in Sources */,
+				E526DFF5176CF3AA005C3525 /* QueryCallback.cpp in Sources */,
+				E526DFFA176CF3AA005C3525 /* RayCastCallback.cpp in Sources */,
+				E526E005176CF3C5005C3525 /* B2DQueryCallback.mm in Sources */,
+				E526E00A176CF3C5005C3525 /* B2DRayCastCallback.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1032,8 +1127,6 @@
 				E57A1273173DFD5E002055C2 /* b2WeldJoint.cpp in Sources */,
 				E57A1278173DFD5E002055C2 /* b2WheelJoint.cpp in Sources */,
 				E57A127D173DFD5E002055C2 /* b2Rope.cpp in Sources */,
-				E57A1298173DFFEF002055C2 /* B2DContactListener.mm in Sources */,
-				E57A129B173DFFEF002055C2 /* ContactListener.cpp in Sources */,
 				E57A12A0173DFFEF002055C2 /* B2DCircleShape.mm in Sources */,
 				E57A12A4173DFFEF002055C2 /* B2DEdgeShape.mm in Sources */,
 				E57A12A8173DFFEF002055C2 /* B2DPolygonShape.mm in Sources */,
@@ -1042,6 +1135,13 @@
 				E57A12B4173DFFEF002055C2 /* B2DWorld.mm in Sources */,
 				E57C25541763F87F00A850EB /* B2DTransform.mm in Sources */,
 				E57C255F176402EE00A850EB /* B2DMassData.mm in Sources */,
+				E526DFE7176CF3AA005C3525 /* B2DContactListener.mm in Sources */,
+				E526DFEA176CF3AA005C3525 /* ContactListener.cpp in Sources */,
+				E526DFEF176CF3AA005C3525 /* DestructionListener.cpp in Sources */,
+				E526DFF4176CF3AA005C3525 /* QueryCallback.cpp in Sources */,
+				E526DFF9176CF3AA005C3525 /* RayCastCallback.cpp in Sources */,
+				E526E004176CF3C5005C3525 /* B2DQueryCallback.mm in Sources */,
+				E526E009176CF3C5005C3525 /* B2DRayCastCallback.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

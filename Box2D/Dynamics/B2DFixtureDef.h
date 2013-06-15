@@ -13,6 +13,16 @@
 
 struct B2DFixtureDef
 {
+  B2DFixtureDef()
+	{
+		shape = NULL;
+		userData = NULL;
+		friction = 0.2f;
+		restitution = 0.0f;
+		density = 0.0f;
+		isSensor = false;
+	}
+  
   B2DShape *shape;
   id userData;
   CGFloat friction;

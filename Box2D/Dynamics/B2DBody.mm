@@ -64,6 +64,11 @@
 - (void)dealloc
 {
   [self.userData release];
+  self.userData = nil;
+  
+  self.world.world->DestroyBody(self.body);
+  self.body = nil;
+  
   [super dealloc];
 }
 
@@ -357,6 +362,7 @@
 {
   body->DestroyFixture(fixture.fixture);
 }
+
 
 #pragma mark - Deprecated
 

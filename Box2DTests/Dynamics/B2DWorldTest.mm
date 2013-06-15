@@ -11,6 +11,7 @@
 #import "B2DPolygonShape.h"
 #import "B2DEdgeShape.h"
 #import "B2DContactListener.h"
+#import "DestructionListener.h"
 
 @implementation B2DWorldTest
 
@@ -82,6 +83,8 @@
   [self.world stepWithDelta:1 velocityInteractions:1 positionInteractions:8];
 
   STAssertFalse(5 == body.position.y, @"The test body is not moving into the world");
+  
+  [body release];
 }
 
 
@@ -169,6 +172,35 @@
   self.world.autoClearForces = NO;
   
   STAssertFalse(self.world.autoClearForces, @"World is auto clearing forces");
+}
+
+- (void)testDeleteWorld
+{
+  B2DWorld *newWorld = [[B2DWorld alloc] init];
+  
+  DestructionListener *destruction = new DestructionListener;
+
+  newWorld.world->SetDestructionListener(destruction);
+
+  B2DBody *body = [newWorld createBodyInPosition:CGPointMake(10, 10)
+                                                   type:kDynamicBodyType];
+  
+  B2DPolygonShape *polygonShape = [[B2DPolygonShape alloc] initWithBoxSize:CGSizeMake(0.5, 0.5)];
+  
+  [body addFixtureForShape:polygonShape
+                  friction:0.2
+               restitution:0.0
+                   density:0
+                  isSensor:NO];
+  
+  [self.world stepWithDelta:1 velocityInteractions:1 positionInteractions:8];
+  [self.world stepWithDelta:1 velocityInteractions:1 positionInteractions:8];
+  
+  [body release];
+ //newWorld.world->DestroyBody(body.body);
+  //delete newWorld.world;
+  //newWorld.world = NULL;
+  //[newWorld release];
 }
 
 @end
