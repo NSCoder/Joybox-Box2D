@@ -88,9 +88,8 @@
 		E526E043176D231E005C3525 /* B2DChainShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E040176D231D005C3525 /* B2DChainShape.mm */; };
 		E526E044176D231E005C3525 /* B2DChainShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E040176D231D005C3525 /* B2DChainShape.mm */; };
 		E526E045176D231E005C3525 /* B2DChainShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E040176D231D005C3525 /* B2DChainShape.mm */; };
-		E560F6B4173E0A7600F3C277 /* Box2DTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E560F6AF173E0A7600F3C277 /* Box2DTests-Info.plist */; };
+		E526E048176D2DAF005C3525 /* B2DWorldTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E047176D2DAF005C3525 /* B2DWorldTest.mm */; };
 		E560F6B5173E0A7600F3C277 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E560F6B0173E0A7600F3C277 /* InfoPlist.strings */; };
-		E560F6B6173E0A7600F3C277 /* B2DWorldTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E560F6B3173E0A7600F3C277 /* B2DWorldTest.mm */; };
 		E560F701173E0C2200F3C277 /* B2DCircleShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A1289173DFFEF002055C2 /* B2DCircleShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E560F702173E0C2400F3C277 /* B2DEdgeShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A128B173DFFEF002055C2 /* B2DEdgeShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E560F703173E0C2700F3C277 /* B2DPolygonShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A128D173DFFEF002055C2 /* B2DPolygonShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -132,7 +131,7 @@
 		E57A11BB173DFD5E002055C2 /* b2DynamicTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1143173DFD5E002055C2 /* b2DynamicTree.cpp */; };
 		E57A11BC173DFD5E002055C2 /* b2DynamicTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1143173DFD5E002055C2 /* b2DynamicTree.cpp */; };
 		E57A11BF173DFD5E002055C2 /* b2TimeOfImpact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1145173DFD5E002055C2 /* b2TimeOfImpact.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
-		E57A11C0173DFD5E002055C2 /* b2TimeOfImpact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1145173DFD5E002055C2 /* b2TimeOfImpact.cpp */; };
+		E57A11C0173DFD5E002055C2 /* b2TimeOfImpact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1145173DFD5E002055C2 /* b2TimeOfImpact.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		E57A11C1173DFD5E002055C2 /* b2TimeOfImpact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1145173DFD5E002055C2 /* b2TimeOfImpact.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		E57A11C4173DFD5E002055C2 /* b2ChainShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1148173DFD5E002055C2 /* b2ChainShape.cpp */; };
 		E57A11C5173DFD5E002055C2 /* b2ChainShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1148173DFD5E002055C2 /* b2ChainShape.cpp */; };
@@ -216,7 +215,7 @@
 		E57A124A173DFD5E002055C2 /* b2FrictionJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1183173DFD5E002055C2 /* b2FrictionJoint.cpp */; };
 		E57A124B173DFD5E002055C2 /* b2FrictionJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1183173DFD5E002055C2 /* b2FrictionJoint.cpp */; };
 		E57A124E173DFD5E002055C2 /* b2GearJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1185173DFD5E002055C2 /* b2GearJoint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
-		E57A124F173DFD5E002055C2 /* b2GearJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1185173DFD5E002055C2 /* b2GearJoint.cpp */; };
+		E57A124F173DFD5E002055C2 /* b2GearJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1185173DFD5E002055C2 /* b2GearJoint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		E57A1250173DFD5E002055C2 /* b2GearJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1185173DFD5E002055C2 /* b2GearJoint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		E57A1253173DFD5E002055C2 /* b2Joint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1187173DFD5E002055C2 /* b2Joint.cpp */; };
 		E57A1254173DFD5E002055C2 /* b2Joint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1187173DFD5E002055C2 /* b2Joint.cpp */; };
@@ -225,19 +224,19 @@
 		E57A1259173DFD5E002055C2 /* b2MouseJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1189173DFD5E002055C2 /* b2MouseJoint.cpp */; };
 		E57A125A173DFD5E002055C2 /* b2MouseJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1189173DFD5E002055C2 /* b2MouseJoint.cpp */; };
 		E57A125D173DFD5E002055C2 /* b2PrismaticJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A118B173DFD5E002055C2 /* b2PrismaticJoint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
-		E57A125E173DFD5E002055C2 /* b2PrismaticJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A118B173DFD5E002055C2 /* b2PrismaticJoint.cpp */; };
+		E57A125E173DFD5E002055C2 /* b2PrismaticJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A118B173DFD5E002055C2 /* b2PrismaticJoint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		E57A125F173DFD5E002055C2 /* b2PrismaticJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A118B173DFD5E002055C2 /* b2PrismaticJoint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		E57A1262173DFD5E002055C2 /* b2PulleyJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A118D173DFD5E002055C2 /* b2PulleyJoint.cpp */; };
 		E57A1263173DFD5E002055C2 /* b2PulleyJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A118D173DFD5E002055C2 /* b2PulleyJoint.cpp */; };
 		E57A1264173DFD5E002055C2 /* b2PulleyJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A118D173DFD5E002055C2 /* b2PulleyJoint.cpp */; };
 		E57A1267173DFD5E002055C2 /* b2RevoluteJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A118F173DFD5E002055C2 /* b2RevoluteJoint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
-		E57A1268173DFD5E002055C2 /* b2RevoluteJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A118F173DFD5E002055C2 /* b2RevoluteJoint.cpp */; };
+		E57A1268173DFD5E002055C2 /* b2RevoluteJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A118F173DFD5E002055C2 /* b2RevoluteJoint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		E57A1269173DFD5E002055C2 /* b2RevoluteJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A118F173DFD5E002055C2 /* b2RevoluteJoint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		E57A126C173DFD5E002055C2 /* b2RopeJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1191173DFD5E002055C2 /* b2RopeJoint.cpp */; };
 		E57A126D173DFD5E002055C2 /* b2RopeJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1191173DFD5E002055C2 /* b2RopeJoint.cpp */; };
 		E57A126E173DFD5E002055C2 /* b2RopeJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1191173DFD5E002055C2 /* b2RopeJoint.cpp */; };
 		E57A1271173DFD5E002055C2 /* b2WeldJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1193173DFD5E002055C2 /* b2WeldJoint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
-		E57A1272173DFD5E002055C2 /* b2WeldJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1193173DFD5E002055C2 /* b2WeldJoint.cpp */; };
+		E57A1272173DFD5E002055C2 /* b2WeldJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1193173DFD5E002055C2 /* b2WeldJoint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		E57A1273173DFD5E002055C2 /* b2WeldJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1193173DFD5E002055C2 /* b2WeldJoint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		E57A1276173DFD5E002055C2 /* b2WheelJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1195173DFD5E002055C2 /* b2WheelJoint.cpp */; };
 		E57A1277173DFD5E002055C2 /* b2WheelJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1195173DFD5E002055C2 /* b2WheelJoint.cpp */; };
@@ -279,7 +278,6 @@
 		E57C255C1764020F00A850EB /* B2DMassData.h in Headers */ = {isa = PBXBuildFile; fileRef = E57C255A1764020F00A850EB /* B2DMassData.h */; };
 		E57C255E176402EE00A850EB /* B2DMassData.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57C255D176402EE00A850EB /* B2DMassData.mm */; };
 		E57C255F176402EE00A850EB /* B2DMassData.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57C255D176402EE00A850EB /* B2DMassData.mm */; };
-		E58089B317640B3F00C49864 /* B2DBodyTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E58089B217640B3F00C49864 /* B2DBodyTest.mm */; };
 		E58089B817640F6800C49864 /* B2DFixtureDef.h in Headers */ = {isa = PBXBuildFile; fileRef = E58089B717640F6800C49864 /* B2DFixtureDef.h */; };
 		E58089B917640F6800C49864 /* B2DFixtureDef.h in Headers */ = {isa = PBXBuildFile; fileRef = E58089B717640F6800C49864 /* B2DFixtureDef.h */; };
 /* End PBXBuildFile section */
@@ -340,10 +338,10 @@
 		E526E036176D0A99005C3525 /* B2DRayCastInput.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DRayCastInput.mm; sourceTree = "<group>"; };
 		E526E03F176D231D005C3525 /* B2DChainShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DChainShape.h; sourceTree = "<group>"; };
 		E526E040176D231D005C3525 /* B2DChainShape.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DChainShape.mm; sourceTree = "<group>"; };
+		E526E046176D2DAF005C3525 /* B2DWorldTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DWorldTest.h; sourceTree = "<group>"; };
+		E526E047176D2DAF005C3525 /* B2DWorldTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DWorldTest.mm; sourceTree = "<group>"; };
 		E560F6AF173E0A7600F3C277 /* Box2DTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Box2DTests-Info.plist"; sourceTree = "<group>"; };
 		E560F6B0173E0A7600F3C277 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		E560F6B2173E0A7600F3C277 /* B2DWorldTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DWorldTest.h; sourceTree = "<group>"; };
-		E560F6B3173E0A7600F3C277 /* B2DWorldTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DWorldTest.mm; sourceTree = "<group>"; };
 		E57A10DC173DEDF9002055C2 /* libBox2D.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBox2D.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57A10DF173DEDF9002055C2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E57A10F0173DEDFA002055C2 /* Box2DTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Box2DTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -466,8 +464,6 @@
 		E57C25551763FFE500A850EB /* B2DBodyTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B2DBodyTypes.h; sourceTree = "<group>"; };
 		E57C255A1764020F00A850EB /* B2DMassData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DMassData.h; sourceTree = "<group>"; };
 		E57C255D176402EE00A850EB /* B2DMassData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DMassData.mm; sourceTree = "<group>"; };
-		E58089B117640B3F00C49864 /* B2DBodyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DBodyTest.h; sourceTree = "<group>"; };
-		E58089B217640B3F00C49864 /* B2DBodyTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DBodyTest.mm; sourceTree = "<group>"; };
 		E58089B717640F6800C49864 /* B2DFixtureDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DFixtureDef.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -542,10 +538,8 @@
 		E560F6B1173E0A7600F3C277 /* Dynamics */ = {
 			isa = PBXGroup;
 			children = (
-				E560F6B2173E0A7600F3C277 /* B2DWorldTest.h */,
-				E560F6B3173E0A7600F3C277 /* B2DWorldTest.mm */,
-				E58089B117640B3F00C49864 /* B2DBodyTest.h */,
-				E58089B217640B3F00C49864 /* B2DBodyTest.mm */,
+				E526E046176D2DAF005C3525 /* B2DWorldTest.h */,
+				E526E047176D2DAF005C3525 /* B2DWorldTest.mm */,
 			);
 			path = Dynamics;
 			sourceTree = "<group>";
@@ -1006,7 +1000,6 @@
 			files = (
 				E57A119B173DFD5E002055C2 /* Box2DConfig.cmake in Resources */,
 				E57A119D173DFD5E002055C2 /* CMakeLists.txt in Resources */,
-				E560F6B4173E0A7600F3C277 /* Box2DTests-Info.plist in Resources */,
 				E560F6B5173E0A7600F3C277 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1161,8 +1154,6 @@
 				E57A12AD173DFFEF002055C2 /* B2DShape.mm in Sources */,
 				E57A12B1173DFFEF002055C2 /* B2DBody.mm in Sources */,
 				E57A12B5173DFFEF002055C2 /* B2DWorld.mm in Sources */,
-				E560F6B6173E0A7600F3C277 /* B2DWorldTest.mm in Sources */,
-				E58089B317640B3F00C49864 /* B2DBodyTest.mm in Sources */,
 				E526DFE8176CF3AA005C3525 /* B2DContactListener.mm in Sources */,
 				E526DFEB176CF3AA005C3525 /* ContactListener.cpp in Sources */,
 				E526DFF0176CF3AA005C3525 /* DestructionListener.cpp in Sources */,
@@ -1178,6 +1169,7 @@
 				E526E034176D0A84005C3525 /* B2DRayCastOutput.mm in Sources */,
 				E526E03B176D0A9A005C3525 /* B2DRayCastInput.mm in Sources */,
 				E526E045176D231E005C3525 /* B2DChainShape.mm in Sources */,
+				E526E048176D2DAF005C3525 /* B2DWorldTest.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

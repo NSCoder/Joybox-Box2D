@@ -1,18 +1,13 @@
 //
-//  CBWorldTest.h
-//  CBBox2D
+//  B2DWorldTest.h
+//  Box2D
 //
-//  Created by Juan Jose Karam on 2/17/13.
-//  Copyright (c) 2013 CurveBeryl. All rights reserved.
+//  Created by Juan José Karam on 6/15/13.
+//  Copyright (c) 2013 Joybox. All rights reserved.
 //
 
 #import <SenTestingKit/SenTestingKit.h>
-#import "B2DWorld.h"
 
-@interface B2DWorldTest : SenTestCase {
-  B2DWorld *world;
-}
-
-@property (nonatomic, strong) B2DWorld *world;
+@interface B2DWorldTest : SenTestCase
 
 @end

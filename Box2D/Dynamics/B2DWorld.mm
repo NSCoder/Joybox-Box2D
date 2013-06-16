@@ -45,9 +45,7 @@
 
   if (self)
   {
-    b2Vec2 gravity;
-    gravity.Set(0.0f, 0.0f);
-    self.world = new b2World(gravity);
+    self.world = new b2World(b2Vec2(0.0, 0.0));
   }
   
   return self;
@@ -67,6 +65,7 @@
 
 - (void)dealloc
 {
+  delete self.world;
   self.world = nil;
   [super dealloc];
 }
@@ -202,7 +201,7 @@
   body.angularVelocity = bodyDefinition.angularVelocity;
   body.linearDamping = bodyDefinition.linearDamping;
   body.angularDamping = bodyDefinition.angularDamping;
-  body.allowSleep = bodyDefinition.angularDamping;
+  body.allowSleep = bodyDefinition.allowSleep;
   body.awake = bodyDefinition.awake;
   body.fixedRotation = bodyDefinition.fixedRotation;
   body.bullet = bodyDefinition.bullet;

@@ -32,6 +32,8 @@
     }
     
     polygonShape->Set(boxVertices, (int32)vertexCount);
+    
+    self.shape = polygonShape;
   }
   
   return self;
@@ -45,6 +47,8 @@
   {
     b2PolygonShape *polygonShape = new b2PolygonShape();
     polygonShape->SetAsBox(halfWidth, halfHeight);
+    
+    self.shape = polygonShape;
   }
   
   return self;
@@ -58,6 +62,8 @@
   {
     b2PolygonShape *polygonShape = new b2PolygonShape();
     polygonShape->SetAsBox(halfWidth, halfHeight, b2Vec2FromPoint(center), angle);
+    
+    self.shape = polygonShape;
   }
   
   return self;
@@ -126,6 +132,8 @@
     
     b2PolygonShape *polygonShape = new b2PolygonShape();
     polygonShape->SetAsBox(boxSize.width, boxSize.height);
+    
+    self.shape = polygonShape;
   }
   
   return self;
