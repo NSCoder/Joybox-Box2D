@@ -63,14 +63,14 @@
   return self.shape->TestPoint(boxTransform, b2Vec2FromPoint(point));
 }
 
-- (BOOL)rayCastWithOutput:(B2DRayCastOutput)output
+- (BOOL)rayCastWithOutput:(B2DRayCastOutput *)output
                     input:(B2DRayCastInput)input
                 transform:(B2DTransform)transform
                  children:(NSInteger)childIndex
 {
   b2RayCastOutput boxOutput;
-  boxOutput.normal = b2Vec2FromPoint(output.normal);
-  boxOutput.fraction = output.fraction;
+  boxOutput.normal = b2Vec2FromPoint(output->normal);
+  boxOutput.fraction = output->fraction;
   
   b2RayCastInput boxInput;
   boxInput.p1 = b2Vec2FromPoint(input.point1);
@@ -80,32 +80,40 @@
   b2Transform boxTransform = b2Transform();
   boxTransform.Set(b2Vec2FromPoint(transform.position), transform.angle);
   
-  return self.shape->RayCast(&boxOutput, boxInput, boxTransform, (int32)childIndex);
+  BOOL rayCast = self.shape->RayCast(&boxOutput, boxInput, boxTransform, (int32)childIndex);
+  output->normal = CGPointFromVector(boxOutput.normal);
+  output->fraction = boxOutput.fraction;
+  
+  return rayCast;
 }
 
-//Check this methods, they should return something
-- (void)computeAABB:(B2DAABB)aabb withTransform:(B2DTransform)transform andChildIndex:(NSInteger)childIndex
+- (void)computeAABB:(B2DAABB *)aabb withTransform:(B2DTransform)transform andChildIndex:(NSInteger)childIndex
 {
   b2AABB boxAABB;
-  boxAABB.lowerBound = b2Vec2FromPoint(aabb.lowerBound);
-  boxAABB.upperBound = b2Vec2FromPoint(aabb.upperBound);
+  boxAABB.lowerBound = b2Vec2FromPoint(aabb->lowerBound);
+  boxAABB.upperBound = b2Vec2FromPoint(aabb->upperBound);
   
   b2Transform boxTransform = b2Transform();
   boxTransform.Set(b2Vec2FromPoint(transform.position), transform.angle);
   
   self.shape->ComputeAABB(&boxAABB, boxTransform, (int32)childIndex);
+  
+  aabb->lowerBound = CGPointFromVector(boxAABB.lowerBound);
+  aabb->upperBound = CGPointFromVector(boxAABB.upperBound);
 }
 
-- (void)computeMass:(B2DMassData)massData withDensity:(CGFloat)density
+- (void)computeMass:(B2DMassData *)massData withDensity:(CGFloat)density
 {
   b2MassData boxMassData;
-  boxMassData.mass = massData.mass;
-  boxMassData.center = b2Vec2FromPoint(massData.center);
-  boxMassData.I = massData.rotationalInertia;
+  boxMassData.mass = massData->mass;
+  boxMassData.center = b2Vec2FromPoint(massData->center);
+  boxMassData.I = massData->rotationalInertia;
   
   self.shape->ComputeMass(&boxMassData, density);
   
-  //return B2DMassDataMake(boxMassData.mass, CGPointFromVector(boxMassData.center), boxMassData.I);
+  massData->mass = boxMassData.mass;
+  massData->center = CGPointFromVector(boxMassData.center);
+  massData->rotationalInertia = boxMassData.I;
 }
 
 @end

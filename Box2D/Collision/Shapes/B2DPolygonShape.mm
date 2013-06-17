@@ -54,7 +54,7 @@
   return self;
 }
 
-- (id)initWithHalfWidth:(CGFloat)halfWidth halfHeight:(CGFloat)halfHeight center:(CGPoint)center angle:(CGFloat)angle
+- (id)initWithHalfWidth:(CGFloat)halfWidth halfHeight:(CGFloat)halfHeight center:(CGPoint)center andAngle:(CGFloat)angle
 {
   self = [super init];
   

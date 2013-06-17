@@ -14,11 +14,9 @@
 @dynamic vertexCount;
 @dynamic vertices;
 @dynamic hasPreviousVertex;
-@dynamic previousVertex;
 @dynamic hasNextVertex;
-@dynamic nextVertex;
 
-- (id)initWithRadius:(CGFloat)radius
+- (id)init
 {
   self = [super init];
   
@@ -56,19 +54,9 @@
   return ((b2ChainShape *)self.shape)->m_hasPrevVertex;
 }
 
-- (CGPoint)previousVertex
-{
-  return CGPointFromVector(((b2ChainShape *)self.shape)->m_prevVertex);
-}
-
 - (BOOL)hasNextVertex
 {
   return ((b2ChainShape *)self.shape)->m_hasNextVertex;
-}
-
-- (CGPoint)nextVertex
-{
-  return CGPointFromVector(((b2ChainShape *)self.shape)->m_nextVertex);
 }
 
 
@@ -100,9 +88,19 @@
   ((b2ChainShape *)self.shape)->CreateChain(boxVertices, (int32)vertexCount);
 }
 
+- (CGPoint)previousVertex
+{
+  return CGPointFromVector(((b2ChainShape *)self.shape)->m_prevVertex);
+}
+
 - (void)setPreviousVertex:(CGPoint)vertex
 {
   ((b2ChainShape *)self.shape)->SetPrevVertex(b2Vec2FromPoint(vertex));
+}
+
+- (CGPoint)nextVertex
+{
+  return CGPointFromVector(((b2ChainShape *)self.shape)->m_nextVertex);
 }
 
 - (void)setNextVertex:(CGPoint)vertex

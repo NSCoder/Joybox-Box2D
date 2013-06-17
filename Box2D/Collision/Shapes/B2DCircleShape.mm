@@ -61,7 +61,7 @@
 
 - (CGPoint)getVertex:(NSInteger)index
 {
-  return CGPointFromVector(((b2PolygonShape *)self.shape)->GetVertex((int32)index));
+  return CGPointFromVector(((b2CircleShape *)self.shape)->GetVertex((int32)index));
 }
 
 @end

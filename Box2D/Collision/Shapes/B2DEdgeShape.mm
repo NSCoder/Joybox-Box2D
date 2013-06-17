@@ -17,6 +17,18 @@
 @dynamic hasEndAdjacentVertex;
 @dynamic endAdjacentVertex;
 
+- (id)init
+{
+  self = [super init];
+  
+  if (self)
+  {   
+    self.shape = new b2EdgeShape();
+  }
+  
+  return self;
+}
+
 - (id)initWithStartVertex:(CGPoint)startVertex endVertex:(CGPoint)endVertex
 {
   self = [super init];

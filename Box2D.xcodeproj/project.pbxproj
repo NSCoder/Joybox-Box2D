@@ -90,6 +90,11 @@
 		E526E045176D231E005C3525 /* B2DChainShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E040176D231D005C3525 /* B2DChainShape.mm */; };
 		E526E048176D2DAF005C3525 /* B2DWorldTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E047176D2DAF005C3525 /* B2DWorldTest.mm */; };
 		E526E04B176E8229005C3525 /* B2DBodyTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E04A176E8229005C3525 /* B2DBodyTest.mm */; };
+		E526E050176E9D37005C3525 /* B2DCircleShapeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E04F176E9D37005C3525 /* B2DCircleShapeTest.mm */; };
+		E526E053176EA10B005C3525 /* B2DEdgeShapeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E052176EA10B005C3525 /* B2DEdgeShapeTest.mm */; };
+		E554233F176EA3C600FD9E39 /* B2DMassDataTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E554233E176EA3C600FD9E39 /* B2DMassDataTest.mm */; };
+		E5542342176EA47300FD9E39 /* B2DPolygonShapeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5542341176EA47300FD9E39 /* B2DPolygonShapeTest.mm */; };
+		E5542345176EAA7500FD9E39 /* B2DShapeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5542344176EAA7500FD9E39 /* B2DShapeTest.mm */; };
 		E560F6B5173E0A7600F3C277 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E560F6B0173E0A7600F3C277 /* InfoPlist.strings */; };
 		E560F701173E0C2200F3C277 /* B2DCircleShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A1289173DFFEF002055C2 /* B2DCircleShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E560F702173E0C2400F3C277 /* B2DEdgeShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A128B173DFFEF002055C2 /* B2DEdgeShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -281,6 +286,7 @@
 		E57C255F176402EE00A850EB /* B2DMassData.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57C255D176402EE00A850EB /* B2DMassData.mm */; };
 		E58089B817640F6800C49864 /* B2DFixtureDef.h in Headers */ = {isa = PBXBuildFile; fileRef = E58089B717640F6800C49864 /* B2DFixtureDef.h */; };
 		E58089B917640F6800C49864 /* B2DFixtureDef.h in Headers */ = {isa = PBXBuildFile; fileRef = E58089B717640F6800C49864 /* B2DFixtureDef.h */; };
+		E5D8A939176EB2C500F63197 /* B2DChainShapeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5D8A938176EB2C500F63197 /* B2DChainShapeTest.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -343,6 +349,16 @@
 		E526E047176D2DAF005C3525 /* B2DWorldTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DWorldTest.mm; sourceTree = "<group>"; };
 		E526E049176E8229005C3525 /* B2DBodyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DBodyTest.h; sourceTree = "<group>"; };
 		E526E04A176E8229005C3525 /* B2DBodyTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DBodyTest.mm; sourceTree = "<group>"; };
+		E526E04E176E9D37005C3525 /* B2DCircleShapeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DCircleShapeTest.h; sourceTree = "<group>"; };
+		E526E04F176E9D37005C3525 /* B2DCircleShapeTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DCircleShapeTest.mm; sourceTree = "<group>"; };
+		E526E051176EA10B005C3525 /* B2DEdgeShapeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DEdgeShapeTest.h; sourceTree = "<group>"; };
+		E526E052176EA10B005C3525 /* B2DEdgeShapeTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DEdgeShapeTest.mm; sourceTree = "<group>"; };
+		E554233D176EA3C600FD9E39 /* B2DMassDataTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DMassDataTest.h; sourceTree = "<group>"; };
+		E554233E176EA3C600FD9E39 /* B2DMassDataTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DMassDataTest.mm; sourceTree = "<group>"; };
+		E5542340176EA47300FD9E39 /* B2DPolygonShapeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DPolygonShapeTest.h; sourceTree = "<group>"; };
+		E5542341176EA47300FD9E39 /* B2DPolygonShapeTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DPolygonShapeTest.mm; sourceTree = "<group>"; };
+		E5542343176EAA7500FD9E39 /* B2DShapeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DShapeTest.h; sourceTree = "<group>"; };
+		E5542344176EAA7500FD9E39 /* B2DShapeTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DShapeTest.mm; sourceTree = "<group>"; };
 		E560F6AF173E0A7600F3C277 /* Box2DTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Box2DTests-Info.plist"; sourceTree = "<group>"; };
 		E560F6B0173E0A7600F3C277 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		E57A10DC173DEDF9002055C2 /* libBox2D.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBox2D.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -468,6 +484,8 @@
 		E57C255A1764020F00A850EB /* B2DMassData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DMassData.h; sourceTree = "<group>"; };
 		E57C255D176402EE00A850EB /* B2DMassData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DMassData.mm; sourceTree = "<group>"; };
 		E58089B717640F6800C49864 /* B2DFixtureDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DFixtureDef.h; sourceTree = "<group>"; };
+		E5D8A937176EB2C500F63197 /* B2DChainShapeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DChainShapeTest.h; sourceTree = "<group>"; };
+		E5D8A938176EB2C500F63197 /* B2DChainShapeTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DChainShapeTest.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -527,6 +545,33 @@
 				E526DFE3176CF3AA005C3525 /* RayCastCallback.h */,
 			);
 			path = Callback;
+			sourceTree = "<group>";
+		};
+		E526E04C176E9D1B005C3525 /* Collision */ = {
+			isa = PBXGroup;
+			children = (
+				E526E04D176E9D1B005C3525 /* Shapes */,
+			);
+			path = Collision;
+			sourceTree = "<group>";
+		};
+		E526E04D176E9D1B005C3525 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				E526E04E176E9D37005C3525 /* B2DCircleShapeTest.h */,
+				E526E04F176E9D37005C3525 /* B2DCircleShapeTest.mm */,
+				E526E051176EA10B005C3525 /* B2DEdgeShapeTest.h */,
+				E526E052176EA10B005C3525 /* B2DEdgeShapeTest.mm */,
+				E554233D176EA3C600FD9E39 /* B2DMassDataTest.h */,
+				E554233E176EA3C600FD9E39 /* B2DMassDataTest.mm */,
+				E5542340176EA47300FD9E39 /* B2DPolygonShapeTest.h */,
+				E5542341176EA47300FD9E39 /* B2DPolygonShapeTest.mm */,
+				E5542343176EAA7500FD9E39 /* B2DShapeTest.h */,
+				E5542344176EAA7500FD9E39 /* B2DShapeTest.mm */,
+				E5D8A937176EB2C500F63197 /* B2DChainShapeTest.h */,
+				E5D8A938176EB2C500F63197 /* B2DChainShapeTest.mm */,
+			);
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 		E560F6AE173E0A7600F3C277 /* Configuration */ = {
@@ -598,6 +643,7 @@
 		E57A10F7173DEDFA002055C2 /* Box2DTests */ = {
 			isa = PBXGroup;
 			children = (
+				E526E04C176E9D1B005C3525 /* Collision */,
 				E560F6AE173E0A7600F3C277 /* Configuration */,
 				E560F6B1173E0A7600F3C277 /* Dynamics */,
 			);
@@ -1176,6 +1222,12 @@
 				E526E045176D231E005C3525 /* B2DChainShape.mm in Sources */,
 				E526E048176D2DAF005C3525 /* B2DWorldTest.mm in Sources */,
 				E526E04B176E8229005C3525 /* B2DBodyTest.mm in Sources */,
+				E526E050176E9D37005C3525 /* B2DCircleShapeTest.mm in Sources */,
+				E526E053176EA10B005C3525 /* B2DEdgeShapeTest.mm in Sources */,
+				E554233F176EA3C600FD9E39 /* B2DMassDataTest.mm in Sources */,
+				E5542342176EA47300FD9E39 /* B2DPolygonShapeTest.mm in Sources */,
+				E5542345176EAA7500FD9E39 /* B2DShapeTest.mm in Sources */,
+				E5D8A939176EB2C500F63197 /* B2DChainShapeTest.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

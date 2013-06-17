@@ -18,7 +18,7 @@
 
 - (id)initWithVertices:(CGPoint *)vertices andVertexCount:(NSInteger)vertexCount;
 - (id)initWithHalfWidth:(CGFloat)halfWidth andHalfHeight:(CGFloat)halfHeight;
-- (id)initWithHalfWidth:(CGFloat)halfWidth halfHeight:(CGFloat)halfHeight center:(CGPoint)center angle:(CGFloat)angle;
+- (id)initWithHalfWidth:(CGFloat)halfWidth halfHeight:(CGFloat)halfHeight center:(CGPoint)center andAngle:(CGFloat)angle;
 
 - (CGPoint)getVertex:(NSInteger)index;
 

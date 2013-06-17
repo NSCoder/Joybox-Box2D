@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreGraphics/CoreGraphics.h>
 
 static inline CGPoint CGPointFromVector(b2Vec2 vector)
 {
