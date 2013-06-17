@@ -34,7 +34,7 @@
 @property (nonatomic, assign) CGFloat angularVelocity;
 @property (nonatomic, assign, readonly) CGFloat mass;
 @property (nonatomic, assign, readonly) CGFloat inertia;
-@property (nonatomic, assign, readonly) B2DMassData massData;
+@property (nonatomic, assign) B2DMassData massData;
 @property (nonatomic, assign) CGFloat linearDamping;
 @property (nonatomic, assign) CGFloat angularDamping;
 @property (nonatomic, assign) CGFloat gravityScale;
@@ -49,7 +49,10 @@
 @property (nonatomic, assign) BOOL sleepingAllowed;
 @property (nonatomic, assign, readonly) B2DWorld *world;
 
+- (id)initWithBody:(b2Body *)boxBody;
 
+- (void)resetMassData;
+- (void)setTransformWithPosition:(CGPoint)position andAngle:(CGFloat)angle;
 - (CGPoint)worldPoint:(CGPoint)localPoint;
 - (CGPoint)worldVector:(CGPoint)localVector;
 - (CGPoint)localPoint:(CGPoint)worldPoint;
@@ -66,12 +69,11 @@
 - (void)createFixture:(B2DFixtureDef)fixtureDefinition;
 - (void)createFixtureWithShape:(B2DShape *)shape andDensity:(CGFloat)density;
 - (void)destroyFixture:(B2DFixture *)fixture;
+- (void)dump;
 
 #pragma mark - Deprecated
 
 @property (nonatomic, readonly) CGPoint center __attribute__ ((deprecated));
-
-- (id)initWithBody:(b2Body *)boxBody;
 
 - (void)addFixtureForShape:(B2DShape *)shape
                   friction:(CGFloat)friction

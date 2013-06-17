@@ -403,16 +403,6 @@
 {
   B2DWorld *world = [[B2DWorld alloc] init];
   
-  B2DBodyDef bodyDefinition = B2DBodyDef();
-  bodyDefinition.position = CGPointMake(10, 10);
-  bodyDefinition.type = kDynamicBodyType;
-  
-  B2DFixtureDef fixtureDefinition = B2DFixtureDef();
-  fixtureDefinition.shape = [[B2DPolygonShape alloc] initWithHalfWidth:0.5 andHalfHeight:0.5];
-  
-  B2DBody *body = [world createBody:bodyDefinition];
-  [body createFixture:fixtureDefinition];
-  
   STAssertNoThrow([world dump], nil);
 }
 

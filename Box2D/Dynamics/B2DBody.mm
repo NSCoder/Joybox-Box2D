@@ -150,6 +150,16 @@
   return B2DMassDataMake(massData.mass, CGPointFromVector(massData.center), massData.I);
 }
 
+- (void)setMassData:(B2DMassData)massData
+{
+  b2MassData boxMassData = b2MassData();
+  boxMassData.mass = massData.mass;
+  boxMassData.center = b2Vec2FromPoint(massData.center);
+  boxMassData.I = massData.rotationalInertia;
+  
+  self.body->SetMassData(&boxMassData);
+}
+
 - (CGFloat)linearDamping
 {
   return self.body->GetLinearDamping();
@@ -253,7 +263,12 @@
 
 #pragma mark - Methods
 
-- (void)setTransformWithPosition:(CGPoint)position andAngle:(CGFloat) angle
+- (void)resetMassData
+{
+  self.body->ResetMassData();
+}
+
+- (void)setTransformWithPosition:(CGPoint)position andAngle:(CGFloat)angle
 {
   self.body->SetTransform(b2Vec2FromPoint(position), angle);
 }
@@ -361,6 +376,11 @@
 - (void)destroyFixture:(B2DFixture *)fixture
 {
   body->DestroyFixture(fixture.fixture);
+}
+
+- (void)dump
+{
+  body->Dump();
 }
 
 
