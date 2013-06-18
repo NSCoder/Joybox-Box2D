@@ -1,5 +1,5 @@
 //
-//  B2DPolygonShape.m
+//  B2DPolygonShape.mm
 //  Box2D
 //
 //  Created by Juan Jose Karam on 2/18/13.

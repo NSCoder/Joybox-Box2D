@@ -1,5 +1,5 @@
 //
-//  CBWorld.m
+//  CBWorld.mm
 //  CBBox2D
 //
 //  Created by Juan Jose Karam on 2/17/13.

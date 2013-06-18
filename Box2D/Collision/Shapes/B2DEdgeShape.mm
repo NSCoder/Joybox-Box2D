@@ -1,5 +1,5 @@
 //
-//  B2DEdgeShape.m
+//  B2DEdgeShape.mm
 //  Box2D
 //
 //  Created by Juan Jose Karam on 2/19/13.

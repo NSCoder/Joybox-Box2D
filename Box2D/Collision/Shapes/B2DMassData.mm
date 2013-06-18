@@ -1,5 +1,5 @@
 //
-//  B2DMassData.c
+//  B2DMassData.mm
 //  Box2D
 //
 //  Created by Juan Jose Karam on 6/8/13.

@@ -1,15 +1,10 @@
 //
-//  CBBody.m
+//  CBBody.mm
 //  CBBox2D
 //
 //  Created by Juan Jose Karam on 2/17/13.
 //  Copyright (c) 2013 Joybox. All rights reserved.
 //
-//  Inspired by:
-//
-//  Thanks to Axcho for his beautiful Cocos2D-Box2D implementation
-//  CCBox2D (https://github.com/axcho/CCBox2D)
-
 
 #import "B2DBody.h"
 #import "B2DFixture.h"

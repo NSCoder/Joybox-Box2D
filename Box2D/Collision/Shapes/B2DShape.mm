@@ -1,5 +1,5 @@
 //
-//  B2DShape.m
+//  B2DShape.mm
 //  Box2D
 //
 //  Created by Juan Jose Karam on 3/6/13.
@@ -66,7 +66,7 @@
 - (BOOL)rayCastWithOutput:(B2DRayCastOutput *)output
                     input:(B2DRayCastInput)input
                 transform:(B2DTransform)transform
-                 children:(NSInteger)childIndex
+                 andChildren:(NSInteger)childIndex
 {
   b2RayCastOutput boxOutput;
   boxOutput.normal = b2Vec2FromPoint(output->normal);

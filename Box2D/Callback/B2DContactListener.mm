@@ -1,5 +1,5 @@
 //
-//  B2DContactListener.m
+//  B2DContactListener.mm
 //  Box2D
 //
 //  Created by Juan Jose Karam on 3/6/13.

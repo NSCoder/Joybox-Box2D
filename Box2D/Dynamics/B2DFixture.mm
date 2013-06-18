@@ -1,5 +1,5 @@
 //
-//  B2DFixture.m
+//  B2DFixture.mm
 //  Box2D
 //
 //  Created by Juan Jose Karam on 6/8/13.
@@ -137,19 +137,23 @@
   return self.fixture->TestPoint(b2Vec2FromPoint(point));
 }
 
-// Check this method with the &
-- (BOOL)rayCastWithOutput:(B2DRayCastOutput)output input:(B2DRayCastInput)input andChildIndex:(NSInteger)childIndex
+- (BOOL)rayCastWithOutput:(B2DRayCastOutput *)output input:(B2DRayCastInput)input andChildIndex:(NSInteger)childIndex
 {
   b2RayCastOutput boxOutput;
-  boxOutput.normal = b2Vec2FromPoint(output.normal);
-  boxOutput.fraction = output.fraction;
+  boxOutput.normal = b2Vec2FromPoint(output->normal);
+  boxOutput.fraction = output->fraction;
   
   b2RayCastInput boxInput;
   boxInput.p1 = b2Vec2FromPoint(input.point1);
   boxInput.p2 = b2Vec2FromPoint(input.point2);
   boxInput.maxFraction = input.maxFraction;
   
-  return self.fixture->RayCast(&boxOutput, boxInput, (int32)childIndex);
+  BOOL rayCast = self.fixture->RayCast(&boxOutput, boxInput, (int32)childIndex);
+  
+  output->normal = CGPointFromVector(boxOutput.normal);
+  output->fraction = boxOutput.fraction;
+  
+  return rayCast;
 }
 
 - (B2DMassData)massData

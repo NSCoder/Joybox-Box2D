@@ -2,7 +2,7 @@
 //  B2DBodyDef.h
 //  Box2D
 //
-//  Created by Juan José Karam on 6/15/13.
+//  Created by Juan Jose Karam on 6/15/13.
 //  Copyright (c) 2013 Joybox. All rights reserved.
 //
 
@@ -13,23 +13,6 @@
 
 struct B2DBodyDef
 {
-  B2DBodyDef()
-	{
-		position = CGPointMake(0.0f, 0.0f);
-		angle = 0.0f;
-		linearVelocity = CGPointMake(0.0f, 0.0f);
-		angularVelocity = 0.0f;
-		linearDamping = 0.0f;
-		angularDamping = 0.0f;
-		allowSleep = true;
-		awake = true;
-		fixedRotation = false;
-		bullet = false;
-		type = kStaticBodyType;
-		active = true;
-		gravityScale = 1.0f;
-	}
-  
   B2DBodyTypes type;
   CGPoint position;
   CGFloat angle;
@@ -46,5 +29,6 @@ struct B2DBodyDef
 };
 typedef struct B2DBodyDef B2DBodyDef;
 
+B2DBodyDef B2DBodyDefMake();
 
 #endif

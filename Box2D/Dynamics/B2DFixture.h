@@ -39,7 +39,7 @@
 - (void)refilter;
 - (B2DFixture *)next;
 - (BOOL)testPoint:(CGPoint)point;
-- (BOOL)rayCastWithOutput:(B2DRayCastOutput)output input:(B2DRayCastInput)input andChildIndex:(NSInteger)childIndex;
+- (BOOL)rayCastWithOutput:(B2DRayCastOutput *)output input:(B2DRayCastInput)input andChildIndex:(NSInteger)childIndex;
 - (B2DMassData)massData;
 - (B2DAABB)aabb:(NSInteger)childIndex;
 - (void)dump:(NSInteger)bodyIndex;

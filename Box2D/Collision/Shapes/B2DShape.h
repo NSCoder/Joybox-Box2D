@@ -30,7 +30,7 @@
 - (BOOL)rayCastWithOutput:(B2DRayCastOutput *)output
                     input:(B2DRayCastInput)input
                 transform:(B2DTransform)transform
-                 children:(NSInteger)childIndex;
+                 andChildren:(NSInteger)childIndex;
 - (void)computeAABB:(B2DAABB *)aabb withTransform:(B2DTransform)transform andChildIndex:(NSInteger)childIndex;
 - (void)computeMass:(B2DMassData *)massData withDensity:(CGFloat)density;
 

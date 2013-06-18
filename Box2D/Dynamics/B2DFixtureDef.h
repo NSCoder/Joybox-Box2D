@@ -2,7 +2,7 @@
 //  B2DFixtureDef.h
 //  Box2D
 //
-//  Created by Juan José Karam on 6/8/13.
+//  Created by Juan Jose Karam on 6/8/13.
 //  Copyright (c) 2013 Joybox. All rights reserved.
 //
 
@@ -13,16 +13,6 @@
 
 struct B2DFixtureDef
 {
-  B2DFixtureDef()
-	{
-		shape = NULL;
-		userData = NULL;
-		friction = 0.2f;
-		restitution = 0.0f;
-		density = 0.0f;
-		isSensor = false;
-	}
-  
   B2DShape *shape;
   id userData;
   CGFloat friction;
@@ -31,5 +21,7 @@ struct B2DFixtureDef
   BOOL isSensor;
 };
 typedef struct B2DFixtureDef B2DFixtureDef;
+
+B2DFixtureDef B2DFixtureDefMake();
 
 #endif
