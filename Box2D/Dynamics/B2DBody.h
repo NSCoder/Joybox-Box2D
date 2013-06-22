@@ -47,7 +47,6 @@
 @property (nonatomic, assign) BOOL fixedRotation;
 @property (nonatomic, assign, readonly) BOOL isSleepingAllowed;
 @property (nonatomic, assign) BOOL sleepingAllowed;
-@property (nonatomic, assign, readonly) B2DWorld *world;
 
 - (id)initWithBody:(b2Body *)boxBody;
 

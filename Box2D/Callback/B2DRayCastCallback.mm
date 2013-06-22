@@ -33,22 +33,34 @@
   return self;
 }
 
+- (void)dealloc
+{
+  [reportFixture release];
+  reportFixture = nil;
+  
+  delete rayCastCallback;
+  rayCastCallback = nil;
+  
+  [super dealloc];
+}
+
 - (void)setupCallbacks
 {
-  self.rayCastCallback->reportFixture = [^(b2Fixture *boxFixture, const b2Vec2& boxPoint, const b2Vec2& boxNormal, float32 fraction)
+  __block B2DRayCastCallback *weakSelf = self;
+  self.rayCastCallback->SetReportFixture(^(b2Fixture *boxFixture, const b2Vec2& boxPoint, const b2Vec2& boxNormal, float32 fraction)
                                          {
-                                           if (self.reportFixture != nil)
+                                           if (weakSelf.reportFixture != nil)
                                            {
                                              B2DFixture *fixture = [[B2DFixture alloc] initWithFixture:boxFixture];
                                              CGPoint point = CGPointFromVector(boxPoint);
                                              CGPoint normal = CGPointFromVector(boxNormal);
-                                             return self.reportFixture(fixture, point, normal, fraction);
+                                             return weakSelf.reportFixture([fixture autorelease], point, normal, fraction);
                                            }
                                            else
                                            {
                                              return 0.0f;
                                            }
-                                         } copy];
+                                         });
 }
 
 @end

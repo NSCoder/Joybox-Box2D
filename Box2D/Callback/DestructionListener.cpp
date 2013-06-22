@@ -8,18 +8,26 @@
 
 #include "DestructionListener.h"
 
+DestructionListener::~DestructionListener()
+{
+  Block_release(m_jointSayGoodbye);
+  m_jointSayGoodbye = NULL;
+  Block_release(m_fixtureSayGoodbye);
+  m_fixtureSayGoodbye = NULL;
+}
+
 void DestructionListener::SayGoodbye(b2Joint* joint)
 {
-  if (jointSayGoodbye != NULL)
+  if (m_jointSayGoodbye != NULL)
   {
-    jointSayGoodbye(joint);
+    m_jointSayGoodbye(joint);
   }
 }
 
 void DestructionListener::SayGoodbye(b2Fixture* fixture)
 {
-  if (fixtureSayGoodbye != NULL)
+  if (m_fixtureSayGoodbye != NULL)
   {
-    fixtureSayGoodbye(fixture);
+    m_fixtureSayGoodbye(fixture);
   }
 }

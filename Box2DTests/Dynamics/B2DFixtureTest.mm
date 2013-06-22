@@ -70,14 +70,6 @@
   STAssertEquals(fixture.type, kPolygonShapeType, nil);
 }
 
-- (void)testShape
-{
-  NSArray *fixtureList = [self.body fixtureList];
-  B2DFixture *fixture = [fixtureList objectAtIndex:0];
-  
-  STAssertEquals(fixture.shape.type, kPolygonShapeType, nil);
-}
-
 - (void)testIsSensor
 {
   NSArray *fixtureList = [self.body fixtureList];

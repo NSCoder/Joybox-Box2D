@@ -8,11 +8,17 @@
 
 #include "ContactFilter.h"
 
+ContactFilter::~ContactFilter()
+{
+  Block_release(m_shouldCollide);
+  m_shouldCollide = NULL;
+}
+
 bool ContactFilter::ShouldCollide(b2Fixture* fixtureA, b2Fixture* fixtureB)
 {
-  if (shouldCollide != NULL)
+  if (m_shouldCollide != NULL)
   {
-    return shouldCollide(fixtureA, fixtureB);
+    return m_shouldCollide(fixtureA, fixtureB);
   }
   else
   {

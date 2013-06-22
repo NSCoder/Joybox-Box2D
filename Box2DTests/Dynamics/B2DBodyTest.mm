@@ -46,7 +46,7 @@
 - (void)testDealloc
 {
   B2DBodyDef bodyDefinition = B2DBodyDefMake();
-  B2DBody *body = [self.world createBody:bodyDefinition];
+  B2DBody *body = [[self.world createBody:bodyDefinition] retain];
   
   STAssertNoThrow([body release], nil);
 }
@@ -366,13 +366,6 @@
   body.sleepingAllowed = NO;
   
   STAssertFalse(body.isSleepingAllowed, nil);
-}
-
-- (void)testWorld
-{
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
-  B2DBody *body = [self.world createBody:bodyDefinition];
-  STAssertEquals(body.world.world, self.world.world, nil);
 }
 
 

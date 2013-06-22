@@ -8,38 +8,50 @@
 
 #include "ContactListener.h"
 
+ContactListener::~ContactListener()
+{
+  Block_release(m_beginContact);
+  m_beginContact = NULL;
+  Block_release(m_endContact);
+  m_endContact = NULL;
+  Block_release(m_preSolve);
+  m_preSolve = NULL;
+  Block_release(m_postSolve);
+  m_postSolve = NULL;
+}
+
 void ContactListener::BeginContact(b2Contact *contact)
 {
-  if (beginContact != NULL)
+  if (m_beginContact != NULL)
   {
-    beginContact(contact);
+    m_beginContact(contact);
   }
 }
 
 
 void ContactListener::EndContact(b2Contact *contact)
 {
-  if (endContact != NULL)
+  if (m_endContact != NULL)
   {
-    endContact(contact);
+    m_endContact(contact);
   }
 }
 
 
 void ContactListener::PreSolve(b2Contact *contact, const b2Manifold *oldManifold)
 {
-  if (preSolve != NULL)
+  if (m_preSolve != NULL)
   {
-    preSolve(contact, oldManifold);
+    m_preSolve(contact, oldManifold);
   }
 }
 
 
 void ContactListener::PostSolve(b2Contact *contact, const b2ContactImpulse *impulse)
 {
-  if (postSolve != NULL)
+  if (m_postSolve != NULL)
   {
-    postSolve(contact, impulse);
+    m_postSolve(contact, impulse);
   }
 }
 

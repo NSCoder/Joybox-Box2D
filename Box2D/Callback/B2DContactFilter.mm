@@ -33,21 +33,33 @@
   return self;
 }
 
+- (void)dealloc
+{
+  [shouldCollide release];
+  shouldCollide = nil;
+  
+  delete contactFilter;
+  contactFilter = nil;
+  
+  [super dealloc];
+}
+
 - (void)setupCallbacks
 {
-  self.contactFilter->shouldCollide = [^(b2Fixture *boxFixtureA, b2Fixture *boxFixtureB)
+  __block B2DContactFilter *weakSelf = self;  
+  self.contactFilter->SetShouldCollide(^(b2Fixture *boxFixtureA, b2Fixture *boxFixtureB)
                                        {
-                                         if (self.shouldCollide != nil)
+                                         if (weakSelf.shouldCollide != nil)
                                          {
                                            B2DFixture *fixtureA = [[B2DFixture alloc] initWithFixture:boxFixtureA];
                                            B2DFixture *fixtureB = [[B2DFixture alloc] initWithFixture:boxFixtureB];
-                                           return self.shouldCollide(fixtureA, fixtureB);
+                                           return weakSelf.shouldCollide([fixtureA autorelease], [fixtureB autorelease]);
                                          }
                                          else
                                          {
-                                           return YES;
+                                           return true;
                                          }
-                                       } copy];
+                                       });
 }
 
 @end

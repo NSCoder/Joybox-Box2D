@@ -34,16 +34,28 @@
   return self;
 }
 
+- (void)dealloc
+{
+  [fixtureSayGoodbye release];
+  fixtureSayGoodbye = nil;
+  
+  delete destructionListener;
+  destructionListener = nil;
+  
+  [super dealloc];
+}
+
 - (void)setupCallbacks
 {
-  self.destructionListener->fixtureSayGoodbye = [^(b2Fixture *boxFixture)
+  __block B2DDestructionListener *weakSelf = self;
+  self.destructionListener->SetFixtureSayGoodbye(^(b2Fixture *boxFixture)
                                                  {
-                                                   if (self.fixtureSayGoodbye != nil)
+                                                   if (weakSelf.fixtureSayGoodbye != nil)
                                                    {
                                                      B2DFixture *fixture = [[B2DFixture alloc] initWithFixture:boxFixture];
-                                                     return self.fixtureSayGoodbye(fixture);
+                                                     return weakSelf.fixtureSayGoodbye([fixture autorelease]);
                                                    }
-                                                 } copy];
+                                                 });
 }
 
 

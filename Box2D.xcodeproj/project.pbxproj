@@ -77,6 +77,16 @@
 		E526E04B176E8229005C3525 /* B2DBodyTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E04A176E8229005C3525 /* B2DBodyTest.mm */; };
 		E526E050176E9D37005C3525 /* B2DCircleShapeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E04F176E9D37005C3525 /* B2DCircleShapeTest.mm */; };
 		E526E053176EA10B005C3525 /* B2DEdgeShapeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E052176EA10B005C3525 /* B2DEdgeShapeTest.mm */; };
+		E5491DD91775A2A00030C22D /* B2DContactFilterTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DD81775A2A00030C22D /* B2DContactFilterTest.mm */; };
+		E5491DDC1775A4D00030C22D /* B2DContactListenerTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DDB1775A4D00030C22D /* B2DContactListenerTest.mm */; };
+		E5491DDF1775A6670030C22D /* B2DDestructionListenerTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DDE1775A6670030C22D /* B2DDestructionListenerTest.mm */; };
+		E5491DE21775AA710030C22D /* B2DQueryCallbackTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DE11775AA710030C22D /* B2DQueryCallbackTest.mm */; };
+		E5491DE51775AB300030C22D /* B2DRayCastCallbackTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DE41775AB300030C22D /* B2DRayCastCallbackTest.mm */; };
+		E5491DE81775AC550030C22D /* ContactFilterTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DE71775AC550030C22D /* ContactFilterTest.mm */; };
+		E5491DEB1775AD140030C22D /* ContactListenerTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DEA1775AD130030C22D /* ContactListenerTest.mm */; };
+		E5491DEE1775AE680030C22D /* DestructionListenerTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DED1775AE680030C22D /* DestructionListenerTest.mm */; };
+		E5491DF11775AF350030C22D /* QueryCallbackTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DF01775AF350030C22D /* QueryCallbackTest.mm */; };
+		E5491DF41775AFBD0030C22D /* RayCastCallbackTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DF31775AFBD0030C22D /* RayCastCallbackTest.mm */; };
 		E554233F176EA3C600FD9E39 /* B2DMassDataTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E554233E176EA3C600FD9E39 /* B2DMassDataTest.mm */; };
 		E5542342176EA47300FD9E39 /* B2DPolygonShapeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5542341176EA47300FD9E39 /* B2DPolygonShapeTest.mm */; };
 		E5542345176EAA7500FD9E39 /* B2DShapeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5542344176EAA7500FD9E39 /* B2DShapeTest.mm */; };
@@ -109,7 +119,7 @@
 		E57A11B0173DFD5E002055C2 /* b2Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A113F173DFD5E002055C2 /* b2Collision.cpp */; };
 		E57A11B2173DFD5E002055C2 /* b2Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A113F173DFD5E002055C2 /* b2Collision.cpp */; };
 		E57A11B5173DFD5E002055C2 /* b2Distance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1141173DFD5E002055C2 /* b2Distance.cpp */; };
-		E57A11B7173DFD5E002055C2 /* b2Distance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1141173DFD5E002055C2 /* b2Distance.cpp */; };
+		E57A11B7173DFD5E002055C2 /* b2Distance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1141173DFD5E002055C2 /* b2Distance.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-checker"; }; };
 		E57A11BA173DFD5E002055C2 /* b2DynamicTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1143173DFD5E002055C2 /* b2DynamicTree.cpp */; };
 		E57A11BC173DFD5E002055C2 /* b2DynamicTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1143173DFD5E002055C2 /* b2DynamicTree.cpp */; };
 		E57A11BF173DFD5E002055C2 /* b2TimeOfImpact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1145173DFD5E002055C2 /* b2TimeOfImpact.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -137,7 +147,7 @@
 		E57A11F8173DFD5E002055C2 /* b2Body.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1160173DFD5E002055C2 /* b2Body.cpp */; };
 		E57A11FA173DFD5E002055C2 /* b2Body.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1160173DFD5E002055C2 /* b2Body.cpp */; };
 		E57A11FD173DFD5E002055C2 /* b2ContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1162173DFD5E002055C2 /* b2ContactManager.cpp */; };
-		E57A11FF173DFD5E002055C2 /* b2ContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1162173DFD5E002055C2 /* b2ContactManager.cpp */; };
+		E57A11FF173DFD5E002055C2 /* b2ContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1162173DFD5E002055C2 /* b2ContactManager.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-checker"; }; };
 		E57A1202173DFD5E002055C2 /* b2Fixture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1164173DFD5E002055C2 /* b2Fixture.cpp */; };
 		E57A1204173DFD5E002055C2 /* b2Fixture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1164173DFD5E002055C2 /* b2Fixture.cpp */; };
 		E57A1207173DFD5E002055C2 /* b2Island.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1166173DFD5E002055C2 /* b2Island.cpp */; };
@@ -155,7 +165,7 @@
 		E57A1226173DFD5E002055C2 /* b2Contact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1174173DFD5E002055C2 /* b2Contact.cpp */; };
 		E57A1228173DFD5E002055C2 /* b2Contact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1174173DFD5E002055C2 /* b2Contact.cpp */; };
 		E57A122B173DFD5E002055C2 /* b2ContactSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1176173DFD5E002055C2 /* b2ContactSolver.cpp */; };
-		E57A122D173DFD5E002055C2 /* b2ContactSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1176173DFD5E002055C2 /* b2ContactSolver.cpp */; };
+		E57A122D173DFD5E002055C2 /* b2ContactSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1176173DFD5E002055C2 /* b2ContactSolver.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-checker"; }; };
 		E57A1230173DFD5E002055C2 /* b2EdgeAndCircleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1178173DFD5E002055C2 /* b2EdgeAndCircleContact.cpp */; };
 		E57A1232173DFD5E002055C2 /* b2EdgeAndCircleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A1178173DFD5E002055C2 /* b2EdgeAndCircleContact.cpp */; };
 		E57A1235173DFD5E002055C2 /* b2EdgeAndPolygonContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E57A117A173DFD5E002055C2 /* b2EdgeAndPolygonContact.cpp */; };
@@ -300,6 +310,26 @@
 		E526E04F176E9D37005C3525 /* B2DCircleShapeTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DCircleShapeTest.mm; sourceTree = "<group>"; };
 		E526E051176EA10B005C3525 /* B2DEdgeShapeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DEdgeShapeTest.h; sourceTree = "<group>"; };
 		E526E052176EA10B005C3525 /* B2DEdgeShapeTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DEdgeShapeTest.mm; sourceTree = "<group>"; };
+		E5491DD71775A2A00030C22D /* B2DContactFilterTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = B2DContactFilterTest.h; path = Callback/B2DContactFilterTest.h; sourceTree = "<group>"; };
+		E5491DD81775A2A00030C22D /* B2DContactFilterTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = B2DContactFilterTest.mm; path = Callback/B2DContactFilterTest.mm; sourceTree = "<group>"; };
+		E5491DDA1775A4D00030C22D /* B2DContactListenerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = B2DContactListenerTest.h; path = Callback/B2DContactListenerTest.h; sourceTree = "<group>"; };
+		E5491DDB1775A4D00030C22D /* B2DContactListenerTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = B2DContactListenerTest.mm; path = Callback/B2DContactListenerTest.mm; sourceTree = "<group>"; };
+		E5491DDD1775A6670030C22D /* B2DDestructionListenerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = B2DDestructionListenerTest.h; path = Callback/B2DDestructionListenerTest.h; sourceTree = "<group>"; };
+		E5491DDE1775A6670030C22D /* B2DDestructionListenerTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = B2DDestructionListenerTest.mm; path = Callback/B2DDestructionListenerTest.mm; sourceTree = "<group>"; };
+		E5491DE01775AA710030C22D /* B2DQueryCallbackTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = B2DQueryCallbackTest.h; path = Callback/B2DQueryCallbackTest.h; sourceTree = "<group>"; };
+		E5491DE11775AA710030C22D /* B2DQueryCallbackTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = B2DQueryCallbackTest.mm; path = Callback/B2DQueryCallbackTest.mm; sourceTree = "<group>"; };
+		E5491DE31775AB300030C22D /* B2DRayCastCallbackTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = B2DRayCastCallbackTest.h; path = Callback/B2DRayCastCallbackTest.h; sourceTree = "<group>"; };
+		E5491DE41775AB300030C22D /* B2DRayCastCallbackTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = B2DRayCastCallbackTest.mm; path = Callback/B2DRayCastCallbackTest.mm; sourceTree = "<group>"; };
+		E5491DE61775AC550030C22D /* ContactFilterTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactFilterTest.h; path = Callback/ContactFilterTest.h; sourceTree = "<group>"; };
+		E5491DE71775AC550030C22D /* ContactFilterTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ContactFilterTest.mm; path = Callback/ContactFilterTest.mm; sourceTree = "<group>"; };
+		E5491DE91775AD130030C22D /* ContactListenerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactListenerTest.h; path = Callback/ContactListenerTest.h; sourceTree = "<group>"; };
+		E5491DEA1775AD130030C22D /* ContactListenerTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ContactListenerTest.mm; path = Callback/ContactListenerTest.mm; sourceTree = "<group>"; };
+		E5491DEC1775AE670030C22D /* DestructionListenerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DestructionListenerTest.h; path = Callback/DestructionListenerTest.h; sourceTree = "<group>"; };
+		E5491DED1775AE680030C22D /* DestructionListenerTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DestructionListenerTest.mm; path = Callback/DestructionListenerTest.mm; sourceTree = "<group>"; };
+		E5491DEF1775AF340030C22D /* QueryCallbackTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryCallbackTest.h; path = Callback/QueryCallbackTest.h; sourceTree = "<group>"; };
+		E5491DF01775AF350030C22D /* QueryCallbackTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = QueryCallbackTest.mm; path = Callback/QueryCallbackTest.mm; sourceTree = "<group>"; };
+		E5491DF21775AFBC0030C22D /* RayCastCallbackTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RayCastCallbackTest.h; path = Callback/RayCastCallbackTest.h; sourceTree = "<group>"; };
+		E5491DF31775AFBD0030C22D /* RayCastCallbackTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = RayCastCallbackTest.mm; path = Callback/RayCastCallbackTest.mm; sourceTree = "<group>"; };
 		E554233D176EA3C600FD9E39 /* B2DMassDataTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DMassDataTest.h; sourceTree = "<group>"; };
 		E554233E176EA3C600FD9E39 /* B2DMassDataTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DMassDataTest.mm; sourceTree = "<group>"; };
 		E5542340176EA47300FD9E39 /* B2DPolygonShapeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DPolygonShapeTest.h; sourceTree = "<group>"; };
@@ -548,6 +578,33 @@
 			path = Shapes;
 			sourceTree = "<group>";
 		};
+		E5491DD61775A2800030C22D /* Callback */ = {
+			isa = PBXGroup;
+			children = (
+				E5491DD71775A2A00030C22D /* B2DContactFilterTest.h */,
+				E5491DD81775A2A00030C22D /* B2DContactFilterTest.mm */,
+				E5491DDA1775A4D00030C22D /* B2DContactListenerTest.h */,
+				E5491DDB1775A4D00030C22D /* B2DContactListenerTest.mm */,
+				E5491DDD1775A6670030C22D /* B2DDestructionListenerTest.h */,
+				E5491DDE1775A6670030C22D /* B2DDestructionListenerTest.mm */,
+				E5491DE01775AA710030C22D /* B2DQueryCallbackTest.h */,
+				E5491DE11775AA710030C22D /* B2DQueryCallbackTest.mm */,
+				E5491DE31775AB300030C22D /* B2DRayCastCallbackTest.h */,
+				E5491DE41775AB300030C22D /* B2DRayCastCallbackTest.mm */,
+				E5491DE61775AC550030C22D /* ContactFilterTest.h */,
+				E5491DE71775AC550030C22D /* ContactFilterTest.mm */,
+				E5491DE91775AD130030C22D /* ContactListenerTest.h */,
+				E5491DEA1775AD130030C22D /* ContactListenerTest.mm */,
+				E5491DEC1775AE670030C22D /* DestructionListenerTest.h */,
+				E5491DED1775AE680030C22D /* DestructionListenerTest.mm */,
+				E5491DEF1775AF340030C22D /* QueryCallbackTest.h */,
+				E5491DF01775AF350030C22D /* QueryCallbackTest.mm */,
+				E5491DF21775AFBC0030C22D /* RayCastCallbackTest.h */,
+				E5491DF31775AFBD0030C22D /* RayCastCallbackTest.mm */,
+			);
+			name = Callback;
+			sourceTree = "<group>";
+		};
 		E560F6AE173E0A7600F3C277 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,6 +684,7 @@
 		E57A10F7173DEDFA002055C2 /* Box2DTests */ = {
 			isa = PBXGroup;
 			children = (
+				E5491DD61775A2800030C22D /* Callback */,
 				E5B36C2817701D7700EC80DE /* Common */,
 				E526E04C176E9D1B005C3525 /* Collision */,
 				E560F6AE173E0A7600F3C277 /* Configuration */,
@@ -1169,6 +1227,16 @@
 				E5B36C4017702A4500EC80DE /* B2DFixtureDefTest.mm in Sources */,
 				E5B36C4317702B4C00EC80DE /* B2DProfileTest.mm in Sources */,
 				E5B36C4617702C9000EC80DE /* B2DFixtureTest.mm in Sources */,
+				E5491DD91775A2A00030C22D /* B2DContactFilterTest.mm in Sources */,
+				E5491DDC1775A4D00030C22D /* B2DContactListenerTest.mm in Sources */,
+				E5491DDF1775A6670030C22D /* B2DDestructionListenerTest.mm in Sources */,
+				E5491DE21775AA710030C22D /* B2DQueryCallbackTest.mm in Sources */,
+				E5491DE51775AB300030C22D /* B2DRayCastCallbackTest.mm in Sources */,
+				E5491DE81775AC550030C22D /* ContactFilterTest.mm in Sources */,
+				E5491DEB1775AD140030C22D /* ContactListenerTest.mm in Sources */,
+				E5491DEE1775AE680030C22D /* DestructionListenerTest.mm in Sources */,
+				E5491DF11775AF350030C22D /* QueryCallbackTest.mm in Sources */,
+				E5491DF41775AFBD0030C22D /* RayCastCallbackTest.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

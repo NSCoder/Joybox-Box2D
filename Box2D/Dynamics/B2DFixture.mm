@@ -36,7 +36,7 @@
 
 - (B2DShape *)shape
 {
-  return [[B2DShape alloc] initWithShape:self.fixture->GetShape()];
+  return [[[B2DShape alloc] initWithShape:self.fixture->GetShape()] autorelease];
 }
 
 - (BOOL)isSensor
@@ -72,7 +72,7 @@
 
 - (B2DBody *)body
 {
-  return [[B2DBody alloc] initWithBody:self.fixture->GetBody()];
+  return [[[B2DBody alloc] initWithBody:self.fixture->GetBody()] autorelease];
 }
 
 - (id)userData
@@ -129,7 +129,7 @@
   
   if (boxFixture == NULL) { return nil; }
   
-  return [[B2DFixture alloc] initWithFixture:boxFixture];
+  return [[[B2DFixture alloc] initWithFixture:boxFixture] autorelease];
 }
 
 - (BOOL)testPoint:(CGPoint)point

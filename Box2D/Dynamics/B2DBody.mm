@@ -37,7 +37,6 @@
 @dynamic fixedRotation;
 @dynamic isSleepingAllowed;
 @dynamic sleepingAllowed;
-@dynamic world;
 @dynamic center;
 
 
@@ -58,11 +57,8 @@
 
 - (void)dealloc
 {
-  [self.userData release];
-  self.userData = nil;
-  
-  self.world.world->DestroyBody(self.body);
-  self.body = nil;
+  [userData release];
+  userData = nil;
   
   [super dealloc];
 }
@@ -250,12 +246,6 @@
   self.body->SetSleepingAllowed(sleepingAllowed);
 }
 
-- (B2DWorld *)world
-{
-  return [[B2DWorld alloc] initWithWorld:self.body->GetWorld()];
-}
-
-
 #pragma mark - Methods
 
 - (void)resetMassData
@@ -308,12 +298,14 @@
 {
   NSMutableArray *fixtureList = [[NSMutableArray alloc] init];
   
-  for (b2Fixture *fixture = self.body->GetFixtureList(); fixture; fixture = fixture->GetNext())
+  for (b2Fixture *boxFixture = self.body->GetFixtureList(); boxFixture; boxFixture = boxFixture->GetNext())
   {
-    [fixtureList addObject:[[B2DFixture alloc] initWithFixture:fixture]];
+    B2DFixture *fixture = [[B2DFixture alloc] initWithFixture:boxFixture];
+    [fixtureList addObject:fixture];
+    [fixture release];
   }
   
-  return fixtureList;
+  return [fixtureList autorelease];
 }
 
 - (B2DBody *)next

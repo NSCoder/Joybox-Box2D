@@ -29,9 +29,9 @@
 
 - (void)dealloc
 {
-  delete self.shape;
-  self.shape = nil;
-  
+  delete shape;
+  shape = nil;
+    
   [super dealloc];
 }
 

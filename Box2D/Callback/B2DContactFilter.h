@@ -11,7 +11,7 @@
 
 @class B2DFixture;
 
-typedef BOOL (^shouldCollideCallback)(B2DFixture *fixtureA, B2DFixture *fixtureB);
+typedef bool (^shouldCollideCallback)(B2DFixture *fixtureA, B2DFixture *fixtureB);
 
 @interface B2DContactFilter : NSObject {
   ContactFilter *contactFilter;

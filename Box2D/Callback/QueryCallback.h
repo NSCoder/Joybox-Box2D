@@ -10,6 +10,7 @@
 #define __Box2D__B2DQueryCallback__
 
 #include <iostream>
+#include <Block.h>
 #include <Box2D/Box2D.h>
 
 typedef bool (^queryCallbackReportFixtureCallback)(b2Fixture *fixture);
@@ -17,8 +18,23 @@ typedef bool (^queryCallbackReportFixtureCallback)(b2Fixture *fixture);
 class QueryCallback : public b2QueryCallback
 {
 public:
-  queryCallbackReportFixtureCallback reportFixture;
+  ~QueryCallback();
+  queryCallbackReportFixtureCallback GetReportFixture();
+  void SetReportFixture(queryCallbackReportFixtureCallback reportFixture);
+
+private:
+  queryCallbackReportFixtureCallback m_reportFixture;
   bool ReportFixture(b2Fixture* fixture);
 };
+
+inline queryCallbackReportFixtureCallback QueryCallback::GetReportFixture()
+{
+  return m_reportFixture;
+}
+
+inline void QueryCallback::SetReportFixture(queryCallbackReportFixtureCallback reportFixture)
+{
+  m_reportFixture = Block_copy(reportFixture);
+}
 
 #endif /* defined(__Box2D__B2DQueryCallback__) */

@@ -8,11 +8,17 @@
 
 #include "QueryCallback.h"
 
+QueryCallback::~QueryCallback()
+{
+  Block_release(m_reportFixture);
+  m_reportFixture = NULL;
+}
+
 bool QueryCallback::ReportFixture(b2Fixture* fixture)
 {
-  if (reportFixture != NULL)
+  if (m_reportFixture != NULL)
   {
-    return reportFixture(fixture);
+    return m_reportFixture(fixture);
   }
   else
   {

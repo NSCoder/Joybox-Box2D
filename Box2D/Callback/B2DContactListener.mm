@@ -8,6 +8,7 @@
 
 #import "B2DContactListener.h"
 #import "ContactListener.h"
+#import "B2DBody.h"
 
 @interface B2DContactListener ()
 
@@ -37,76 +38,53 @@
   return self;
 }
 
-
-- (void)setupCallbacks
+- (void)dealloc
 {
+  [beginContact release];
+  beginContact = nil;
   
-  self.contactListener->beginContact = [^(b2Contact *contact)
-                                        {
-                                          if (self.beginContact != nil)
-                                          {
-                                            B2DBody *firstBody = nil;
-                                            B2DBody *secondBody = nil;
-                                            
-                                            void* firstBodyUserData = contact->GetFixtureA()->GetBody()->GetUserData();
-                                            
-                                            if (firstBodyUserData != NULL)
-                                            {
-                                              firstBody = (B2DBody *)firstBodyUserData;
-                                            }
-                                            
-                                            void* secondBodyUserData = contact->GetFixtureB()->GetBody()->GetUserData();
-                                            
-                                            if (secondBodyUserData)
-                                            {
-                                              secondBody = (B2DBody *)secondBodyUserData;
-                                            }
-                                            
-                                            self.beginContact(firstBody, secondBody, contact->IsTouching());
-                                          }
-                                          
-                                        } copy];
+  [endContact release];
+  endContact = nil;
   
+  delete contactListener;
+  contactListener = nil;
   
-  self.contactListener->endContact = [^(b2Contact *contact)
-                                      {
-                                        if (self.endContact != nil)
-                                        {
-                                          B2DBody *firstBody = nil;
-                                          B2DBody *secondBody = nil;
-                                          
-                                          void* firstBodyUserData = contact->GetFixtureA()->GetBody()->GetUserData();
-                                          
-                                          if (firstBodyUserData != NULL)
-                                          {
-                                            firstBody = (B2DBody *)firstBodyUserData;
-                                          }
-                                          
-                                          void* secondBodyUserData = contact->GetFixtureB()->GetBody()->GetUserData();
-                                          
-                                          if (secondBodyUserData)
-                                          {
-                                            secondBody = (B2DBody *)secondBodyUserData;
-                                          }
-                                          
-                                          self.endContact(firstBody, secondBody);
-                                        }
-                                      } copy];
+  [super dealloc];
 }
 
 
-- (void)dealloc
+- (void)setupCallbacks
 {
-  [self.beginContact release];
-  self.beginContact = nil;
+  __block B2DContactListener *weakSelf = self;
   
-  [self.endContact release];
-  self.endContact = nil;
+  self.contactListener->SetBeginContact(^(b2Contact *contact)
+                                        {
+                                          if (weakSelf.beginContact != nil)
+                                          {
+                                            b2Body *firstBoxBody = contact->GetFixtureA()->GetBody();
+                                            b2Body *secondBoxBody = contact->GetFixtureA()->GetBody();
+                                            
+                                            B2DBody *firstBody = [[B2DBody alloc] initWithBody:firstBoxBody];
+                                            B2DBody *secondBody = [[B2DBody alloc] initWithBody:secondBoxBody];
+                                            
+                                            weakSelf.beginContact([firstBody autorelease], [secondBody autorelease], contact->IsTouching());
+                                          }
+                                        });
   
-  delete self.contactListener;
-  self.contactListener = nil;
   
-  [super dealloc];
+  self.contactListener->SetEndContact(^(b2Contact *contact)
+                                      {
+                                        if (weakSelf.endContact != nil)
+                                        {
+                                          b2Body *firstBoxBody = contact->GetFixtureA()->GetBody();
+                                          b2Body *secondBoxBody = contact->GetFixtureA()->GetBody();
+                                          
+                                          B2DBody *firstBody = [[B2DBody alloc] initWithBody:firstBoxBody];
+                                          B2DBody *secondBody = [[B2DBody alloc] initWithBody:secondBoxBody];
+                                          
+                                          weakSelf.endContact([firstBody autorelease], [secondBody autorelease]);
+                                        }
+                                      });
 }
 
 

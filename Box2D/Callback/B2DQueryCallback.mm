@@ -33,20 +33,32 @@
   return self;
 }
 
+- (void)dealloc
+{
+  [reportFixture release];
+  reportFixture = nil;
+  
+  delete queryCallback;
+  queryCallback = nil;
+  
+  [super dealloc];
+}
+
 - (void)setupCallbacks
 {
-  self.queryCallback->reportFixture = [^(b2Fixture *boxFixture)
+  __block B2DQueryCallback *weakSelf = self;
+  self.queryCallback->SetReportFixture(^(b2Fixture *boxFixture)
                                        {
-                                         if (self.reportFixture != nil)
+                                         if (weakSelf.reportFixture != nil)
                                          {
                                            B2DFixture *fixture = [[B2DFixture alloc] initWithFixture:boxFixture];
-                                           return self.reportFixture(fixture);
+                                           return weakSelf.reportFixture([fixture autorelease]);
                                          }
                                          else
                                          {
-                                           return YES;
+                                           return true;
                                          }
-                                       } copy];
+                                       });
 }
 
 @end

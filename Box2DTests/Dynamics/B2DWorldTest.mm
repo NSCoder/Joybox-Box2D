@@ -205,7 +205,7 @@
     STAssertNotNil(fixtureB.body, nil);
     STAssertTrue(fixtureA.type == kPolygonShapeType, nil);
     STAssertTrue(fixtureB.type == kPolygonShapeType, nil);
-    return YES;
+    return true;
   };
   
   [world setContactFilter:contactFilter];
@@ -249,8 +249,6 @@
   
   B2DBody *body = [world createBody:bodyDefinition];
   [body createFixture:fixtureDefinition];
-  
-  [body release];
 }
 
 - (void)testCreateBody
@@ -361,7 +359,7 @@
   {
     STAssertNotNil(fixture.body, nil);
     STAssertTrue(fixture.type == kPolygonShapeType, nil);
-    return YES;
+    return true;
   };
   
   B2DAABB aabb = B2DAABB();

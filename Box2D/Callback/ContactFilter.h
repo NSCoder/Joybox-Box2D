@@ -10,6 +10,7 @@
 #define __Box2D__ContactFilter__
 
 #include <iostream>
+#include <Block.h>
 #include <Box2D/Box2D.h>
 
 typedef bool (^contactFilterShouldCollideCallback)(b2Fixture *fixtureA, b2Fixture *fixtureB);
@@ -17,8 +18,23 @@ typedef bool (^contactFilterShouldCollideCallback)(b2Fixture *fixtureA, b2Fixtur
 class ContactFilter : public b2ContactFilter
 {
 public:
-  contactFilterShouldCollideCallback shouldCollide;
+  ~ContactFilter();
+  contactFilterShouldCollideCallback GetShouldCollide();
+  void SetShouldCollide(contactFilterShouldCollideCallback shouldCollide);
+  
+private:
+  contactFilterShouldCollideCallback m_shouldCollide;
   bool ShouldCollide(b2Fixture* fixtureA, b2Fixture* fixtureB);
 };
+
+inline contactFilterShouldCollideCallback ContactFilter::GetShouldCollide()
+{
+  return m_shouldCollide;
+}
+
+inline void ContactFilter::SetShouldCollide(contactFilterShouldCollideCallback shouldCollide)
+{
+  m_shouldCollide = Block_copy(shouldCollide);
+}
 
 #endif /* defined(__Box2D__ContactFilter__) */

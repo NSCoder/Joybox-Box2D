@@ -65,8 +65,9 @@
 
 - (void)dealloc
 {
-  delete self.world;
-  self.world = nil;
+  delete world;
+  world = nil;
+  
   [super dealloc];
 }
 
@@ -77,12 +78,14 @@
 {
   NSMutableArray *bodyList = [[NSMutableArray alloc] init];
   
-  for (b2Body *body = self.world->GetBodyList(); body; body = body->GetNext())
+  for (b2Body *boxBody = self.world->GetBodyList(); boxBody; boxBody = boxBody->GetNext())
   {
-    [bodyList addObject:[[B2DBody alloc] initWithBody:body]];
+    B2DBody *body = [[B2DBody alloc] initWithBody:boxBody];
+    [bodyList addObject:body];
+    [body release];
   }
   
-  return bodyList;
+  return [bodyList autorelease];
 }
 
 - (BOOL)allowsSleeping
@@ -209,7 +212,7 @@
   body.userData = NULL;
   body.gravityScale = bodyDefinition.gravityScale;
   
-  return [[B2DBody alloc] initWithBody:self.world->CreateBody(&body)];
+  return [[[B2DBody alloc] initWithBody:self.world->CreateBody(&body)] autorelease];
 }
 
 - (void)destroyBody:(B2DBody *)body
@@ -282,7 +285,7 @@
 
   b2Body *body = self.world->CreateBody(&bodyDefinition);
 
-  return [[B2DBody alloc] initWithBody:body];
+  return [[[B2DBody alloc] initWithBody:body] autorelease];
 }
 
 - (void)removeBody:(B2DBody *)body
