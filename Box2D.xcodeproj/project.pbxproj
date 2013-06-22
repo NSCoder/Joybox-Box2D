@@ -82,11 +82,6 @@
 		E5491DDF1775A6670030C22D /* B2DDestructionListenerTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DDE1775A6670030C22D /* B2DDestructionListenerTest.mm */; };
 		E5491DE21775AA710030C22D /* B2DQueryCallbackTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DE11775AA710030C22D /* B2DQueryCallbackTest.mm */; };
 		E5491DE51775AB300030C22D /* B2DRayCastCallbackTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DE41775AB300030C22D /* B2DRayCastCallbackTest.mm */; };
-		E5491DE81775AC550030C22D /* ContactFilterTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DE71775AC550030C22D /* ContactFilterTest.mm */; };
-		E5491DEB1775AD140030C22D /* ContactListenerTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DEA1775AD130030C22D /* ContactListenerTest.mm */; };
-		E5491DEE1775AE680030C22D /* DestructionListenerTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DED1775AE680030C22D /* DestructionListenerTest.mm */; };
-		E5491DF11775AF350030C22D /* QueryCallbackTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DF01775AF350030C22D /* QueryCallbackTest.mm */; };
-		E5491DF41775AFBD0030C22D /* RayCastCallbackTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5491DF31775AFBD0030C22D /* RayCastCallbackTest.mm */; };
 		E554233F176EA3C600FD9E39 /* B2DMassDataTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E554233E176EA3C600FD9E39 /* B2DMassDataTest.mm */; };
 		E5542342176EA47300FD9E39 /* B2DPolygonShapeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5542341176EA47300FD9E39 /* B2DPolygonShapeTest.mm */; };
 		E5542345176EAA7500FD9E39 /* B2DShapeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5542344176EAA7500FD9E39 /* B2DShapeTest.mm */; };
@@ -320,16 +315,6 @@
 		E5491DE11775AA710030C22D /* B2DQueryCallbackTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = B2DQueryCallbackTest.mm; path = Callback/B2DQueryCallbackTest.mm; sourceTree = "<group>"; };
 		E5491DE31775AB300030C22D /* B2DRayCastCallbackTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = B2DRayCastCallbackTest.h; path = Callback/B2DRayCastCallbackTest.h; sourceTree = "<group>"; };
 		E5491DE41775AB300030C22D /* B2DRayCastCallbackTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = B2DRayCastCallbackTest.mm; path = Callback/B2DRayCastCallbackTest.mm; sourceTree = "<group>"; };
-		E5491DE61775AC550030C22D /* ContactFilterTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactFilterTest.h; path = Callback/ContactFilterTest.h; sourceTree = "<group>"; };
-		E5491DE71775AC550030C22D /* ContactFilterTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ContactFilterTest.mm; path = Callback/ContactFilterTest.mm; sourceTree = "<group>"; };
-		E5491DE91775AD130030C22D /* ContactListenerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactListenerTest.h; path = Callback/ContactListenerTest.h; sourceTree = "<group>"; };
-		E5491DEA1775AD130030C22D /* ContactListenerTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ContactListenerTest.mm; path = Callback/ContactListenerTest.mm; sourceTree = "<group>"; };
-		E5491DEC1775AE670030C22D /* DestructionListenerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DestructionListenerTest.h; path = Callback/DestructionListenerTest.h; sourceTree = "<group>"; };
-		E5491DED1775AE680030C22D /* DestructionListenerTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DestructionListenerTest.mm; path = Callback/DestructionListenerTest.mm; sourceTree = "<group>"; };
-		E5491DEF1775AF340030C22D /* QueryCallbackTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryCallbackTest.h; path = Callback/QueryCallbackTest.h; sourceTree = "<group>"; };
-		E5491DF01775AF350030C22D /* QueryCallbackTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = QueryCallbackTest.mm; path = Callback/QueryCallbackTest.mm; sourceTree = "<group>"; };
-		E5491DF21775AFBC0030C22D /* RayCastCallbackTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RayCastCallbackTest.h; path = Callback/RayCastCallbackTest.h; sourceTree = "<group>"; };
-		E5491DF31775AFBD0030C22D /* RayCastCallbackTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = RayCastCallbackTest.mm; path = Callback/RayCastCallbackTest.mm; sourceTree = "<group>"; };
 		E554233D176EA3C600FD9E39 /* B2DMassDataTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DMassDataTest.h; sourceTree = "<group>"; };
 		E554233E176EA3C600FD9E39 /* B2DMassDataTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DMassDataTest.mm; sourceTree = "<group>"; };
 		E5542340176EA47300FD9E39 /* B2DPolygonShapeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DPolygonShapeTest.h; sourceTree = "<group>"; };
@@ -591,16 +576,6 @@
 				E5491DE11775AA710030C22D /* B2DQueryCallbackTest.mm */,
 				E5491DE31775AB300030C22D /* B2DRayCastCallbackTest.h */,
 				E5491DE41775AB300030C22D /* B2DRayCastCallbackTest.mm */,
-				E5491DE61775AC550030C22D /* ContactFilterTest.h */,
-				E5491DE71775AC550030C22D /* ContactFilterTest.mm */,
-				E5491DE91775AD130030C22D /* ContactListenerTest.h */,
-				E5491DEA1775AD130030C22D /* ContactListenerTest.mm */,
-				E5491DEC1775AE670030C22D /* DestructionListenerTest.h */,
-				E5491DED1775AE680030C22D /* DestructionListenerTest.mm */,
-				E5491DEF1775AF340030C22D /* QueryCallbackTest.h */,
-				E5491DF01775AF350030C22D /* QueryCallbackTest.mm */,
-				E5491DF21775AFBC0030C22D /* RayCastCallbackTest.h */,
-				E5491DF31775AFBD0030C22D /* RayCastCallbackTest.mm */,
 			);
 			name = Callback;
 			sourceTree = "<group>";
@@ -1232,11 +1207,6 @@
 				E5491DDF1775A6670030C22D /* B2DDestructionListenerTest.mm in Sources */,
 				E5491DE21775AA710030C22D /* B2DQueryCallbackTest.mm in Sources */,
 				E5491DE51775AB300030C22D /* B2DRayCastCallbackTest.mm in Sources */,
-				E5491DE81775AC550030C22D /* ContactFilterTest.mm in Sources */,
-				E5491DEB1775AD140030C22D /* ContactListenerTest.mm in Sources */,
-				E5491DEE1775AE680030C22D /* DestructionListenerTest.mm in Sources */,
-				E5491DF11775AF350030C22D /* QueryCallbackTest.mm in Sources */,
-				E5491DF41775AFBD0030C22D /* RayCastCallbackTest.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

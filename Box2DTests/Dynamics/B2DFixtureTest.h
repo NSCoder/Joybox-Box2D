@@ -2,7 +2,7 @@
 //  B2DFixtureTest.h
 //  Box2D
 //
-//  Created by Juan José Karam on 6/18/13.
+//  Created by Juan Jose Karam on 6/18/13.
 //  Copyright (c) 2013 Joybox. All rights reserved.
 //
 
