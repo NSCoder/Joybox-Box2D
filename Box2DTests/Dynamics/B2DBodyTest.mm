@@ -371,6 +371,16 @@
 
 #pragma mark - Methods
 
+- (void)testIsEqualToBody
+{
+  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBody *firstBody = [self.world createBody:bodyDefinition];
+  B2DBody *secondBody = [[B2DBody alloc] initWithBody:firstBody.body];
+
+  STAssertTrue([firstBody isEqualToBody:secondBody], nil);
+}
+
+
 - (void)testResetMassData
 {
   B2DBodyDef bodyDefinition = B2DBodyDefMake();

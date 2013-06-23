@@ -248,6 +248,18 @@
 
 #pragma mark - Methods
 
+- (BOOL)isEqualToBody:(B2DBody *)aBody
+{
+  BOOL isEqual = NO;
+  
+  if (self.body == aBody.body)
+  {
+    isEqual = YES;
+  }
+  
+  return isEqual;
+}
+
 - (void)resetMassData
 {
   self.body->ResetMassData();

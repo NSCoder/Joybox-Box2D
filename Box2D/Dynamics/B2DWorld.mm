@@ -88,12 +88,12 @@
   return [bodyList autorelease];
 }
 
-- (BOOL)allowsSleeping
+- (bool)allowsSleeping
 {
   return self.world->GetAllowSleeping();
 }
 
-- (void)setAllowsSleeping:(BOOL)allowsSleeping
+- (void)setAllowsSleeping:(bool)allowsSleeping
 {
   self.world->SetAllowSleeping(allowsSleeping);
 }

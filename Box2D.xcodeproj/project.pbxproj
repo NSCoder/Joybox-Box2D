@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E526DFB1176CE09F005C3525 /* B2DBodyDef.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFB0176CE09F005C3525 /* B2DBodyDef.h */; };
-		E526DFB2176CE09F005C3525 /* B2DBodyDef.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFB0176CE09F005C3525 /* B2DBodyDef.h */; };
-		E526DFB7176CE8D8005C3525 /* B2DProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFB6176CE8D8005C3525 /* B2DProfile.h */; };
-		E526DFB8176CE8D8005C3525 /* B2DProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFB6176CE8D8005C3525 /* B2DProfile.h */; };
-		E526DFC8176CEE65005C3525 /* B2DAABB.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFC7176CEE65005C3525 /* B2DAABB.h */; };
-		E526DFC9176CEE65005C3525 /* B2DAABB.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFC7176CEE65005C3525 /* B2DAABB.h */; };
-		E526DFE4176CF3AA005C3525 /* B2DContactListener.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFDA176CF3AA005C3525 /* B2DContactListener.h */; };
-		E526DFE5176CF3AA005C3525 /* B2DContactListener.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFDA176CF3AA005C3525 /* B2DContactListener.h */; };
+		E526DFB1176CE09F005C3525 /* B2DBodyDef.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFB0176CE09F005C3525 /* B2DBodyDef.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526DFB2176CE09F005C3525 /* B2DBodyDef.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFB0176CE09F005C3525 /* B2DBodyDef.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526DFB7176CE8D8005C3525 /* B2DProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFB6176CE8D8005C3525 /* B2DProfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526DFB8176CE8D8005C3525 /* B2DProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFB6176CE8D8005C3525 /* B2DProfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526DFC8176CEE65005C3525 /* B2DAABB.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFC7176CEE65005C3525 /* B2DAABB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526DFC9176CEE65005C3525 /* B2DAABB.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFC7176CEE65005C3525 /* B2DAABB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526DFE4176CF3AA005C3525 /* B2DContactListener.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFDA176CF3AA005C3525 /* B2DContactListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526DFE5176CF3AA005C3525 /* B2DContactListener.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFDA176CF3AA005C3525 /* B2DContactListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E526DFE6176CF3AA005C3525 /* B2DContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526DFDB176CF3AA005C3525 /* B2DContactListener.mm */; };
 		E526DFE7176CF3AA005C3525 /* B2DContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526DFDB176CF3AA005C3525 /* B2DContactListener.mm */; };
 		E526DFE9176CF3AA005C3525 /* ContactListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E526DFDC176CF3AA005C3525 /* ContactListener.cpp */; };
@@ -33,44 +33,44 @@
 		E526DFF9176CF3AA005C3525 /* RayCastCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E526DFE2176CF3AA005C3525 /* RayCastCallback.cpp */; };
 		E526DFFB176CF3AA005C3525 /* RayCastCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFE3176CF3AA005C3525 /* RayCastCallback.h */; };
 		E526DFFC176CF3AA005C3525 /* RayCastCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFE3176CF3AA005C3525 /* RayCastCallback.h */; };
-		E526E001176CF3C5005C3525 /* B2DQueryCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFFD176CF3C5005C3525 /* B2DQueryCallback.h */; };
-		E526E002176CF3C5005C3525 /* B2DQueryCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFFD176CF3C5005C3525 /* B2DQueryCallback.h */; };
+		E526E001176CF3C5005C3525 /* B2DQueryCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFFD176CF3C5005C3525 /* B2DQueryCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526E002176CF3C5005C3525 /* B2DQueryCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFFD176CF3C5005C3525 /* B2DQueryCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E526E003176CF3C5005C3525 /* B2DQueryCallback.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526DFFE176CF3C5005C3525 /* B2DQueryCallback.mm */; };
 		E526E004176CF3C5005C3525 /* B2DQueryCallback.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526DFFE176CF3C5005C3525 /* B2DQueryCallback.mm */; };
-		E526E006176CF3C5005C3525 /* B2DRayCastCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFFF176CF3C5005C3525 /* B2DRayCastCallback.h */; };
-		E526E007176CF3C5005C3525 /* B2DRayCastCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFFF176CF3C5005C3525 /* B2DRayCastCallback.h */; };
+		E526E006176CF3C5005C3525 /* B2DRayCastCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFFF176CF3C5005C3525 /* B2DRayCastCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526E007176CF3C5005C3525 /* B2DRayCastCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E526DFFF176CF3C5005C3525 /* B2DRayCastCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E526E008176CF3C5005C3525 /* B2DRayCastCallback.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E000176CF3C5005C3525 /* B2DRayCastCallback.mm */; };
 		E526E009176CF3C5005C3525 /* B2DRayCastCallback.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E000176CF3C5005C3525 /* B2DRayCastCallback.mm */; };
-		E526E00D176CF5D1005C3525 /* B2DDestructionListener.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E00B176CF5D1005C3525 /* B2DDestructionListener.h */; };
-		E526E00E176CF5D1005C3525 /* B2DDestructionListener.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E00B176CF5D1005C3525 /* B2DDestructionListener.h */; };
+		E526E00D176CF5D1005C3525 /* B2DDestructionListener.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E00B176CF5D1005C3525 /* B2DDestructionListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526E00E176CF5D1005C3525 /* B2DDestructionListener.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E00B176CF5D1005C3525 /* B2DDestructionListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E526E00F176CF5D1005C3525 /* B2DDestructionListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E00C176CF5D1005C3525 /* B2DDestructionListener.mm */; };
 		E526E010176CF5D1005C3525 /* B2DDestructionListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E00C176CF5D1005C3525 /* B2DDestructionListener.mm */; };
 		E526E014176CF964005C3525 /* ContactFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E526E012176CF963005C3525 /* ContactFilter.cpp */; };
 		E526E015176CF964005C3525 /* ContactFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E526E012176CF963005C3525 /* ContactFilter.cpp */; };
 		E526E017176CF964005C3525 /* ContactFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E013176CF964005C3525 /* ContactFilter.h */; };
 		E526E018176CF964005C3525 /* ContactFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E013176CF964005C3525 /* ContactFilter.h */; };
-		E526E01B176CFA74005C3525 /* B2DContactFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E019176CFA73005C3525 /* B2DContactFilter.h */; };
-		E526E01C176CFA74005C3525 /* B2DContactFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E019176CFA73005C3525 /* B2DContactFilter.h */; };
+		E526E01B176CFA74005C3525 /* B2DContactFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E019176CFA73005C3525 /* B2DContactFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526E01C176CFA74005C3525 /* B2DContactFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E019176CFA73005C3525 /* B2DContactFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E526E01D176CFA74005C3525 /* B2DContactFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E01A176CFA73005C3525 /* B2DContactFilter.mm */; };
 		E526E01E176CFA74005C3525 /* B2DContactFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E01A176CFA73005C3525 /* B2DContactFilter.mm */; };
 		E526E021176D04DF005C3525 /* B2DAABB.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E020176D04DF005C3525 /* B2DAABB.mm */; };
 		E526E022176D04DF005C3525 /* B2DAABB.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E020176D04DF005C3525 /* B2DAABB.mm */; };
-		E526E025176D0677005C3525 /* B2DShapeTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E024176D0677005C3525 /* B2DShapeTypes.h */; };
-		E526E026176D0677005C3525 /* B2DShapeTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E024176D0677005C3525 /* B2DShapeTypes.h */; };
-		E526E029176D081F005C3525 /* B2DFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E027176D081E005C3525 /* B2DFilter.h */; };
-		E526E02A176D081F005C3525 /* B2DFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E027176D081E005C3525 /* B2DFilter.h */; };
+		E526E025176D0677005C3525 /* B2DShapeTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E024176D0677005C3525 /* B2DShapeTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526E026176D0677005C3525 /* B2DShapeTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E024176D0677005C3525 /* B2DShapeTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526E029176D081F005C3525 /* B2DFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E027176D081E005C3525 /* B2DFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526E02A176D081F005C3525 /* B2DFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E027176D081E005C3525 /* B2DFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E526E02B176D081F005C3525 /* B2DFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E028176D081F005C3525 /* B2DFilter.mm */; };
 		E526E02C176D081F005C3525 /* B2DFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E028176D081F005C3525 /* B2DFilter.mm */; };
-		E526E030176D0A84005C3525 /* B2DRayCastOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E02E176D0A83005C3525 /* B2DRayCastOutput.h */; };
-		E526E031176D0A84005C3525 /* B2DRayCastOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E02E176D0A83005C3525 /* B2DRayCastOutput.h */; };
+		E526E030176D0A84005C3525 /* B2DRayCastOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E02E176D0A83005C3525 /* B2DRayCastOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526E031176D0A84005C3525 /* B2DRayCastOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E02E176D0A83005C3525 /* B2DRayCastOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E526E032176D0A84005C3525 /* B2DRayCastOutput.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E02F176D0A83005C3525 /* B2DRayCastOutput.mm */; };
 		E526E033176D0A84005C3525 /* B2DRayCastOutput.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E02F176D0A83005C3525 /* B2DRayCastOutput.mm */; };
-		E526E037176D0A9A005C3525 /* B2DRayCastInput.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E035176D0A99005C3525 /* B2DRayCastInput.h */; };
-		E526E038176D0A9A005C3525 /* B2DRayCastInput.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E035176D0A99005C3525 /* B2DRayCastInput.h */; };
+		E526E037176D0A9A005C3525 /* B2DRayCastInput.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E035176D0A99005C3525 /* B2DRayCastInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526E038176D0A9A005C3525 /* B2DRayCastInput.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E035176D0A99005C3525 /* B2DRayCastInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E526E039176D0A9A005C3525 /* B2DRayCastInput.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E036176D0A99005C3525 /* B2DRayCastInput.mm */; };
 		E526E03A176D0A9A005C3525 /* B2DRayCastInput.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E036176D0A99005C3525 /* B2DRayCastInput.mm */; };
-		E526E041176D231E005C3525 /* B2DChainShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E03F176D231D005C3525 /* B2DChainShape.h */; };
-		E526E042176D231E005C3525 /* B2DChainShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E03F176D231D005C3525 /* B2DChainShape.h */; };
+		E526E041176D231E005C3525 /* B2DChainShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E03F176D231D005C3525 /* B2DChainShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E526E042176D231E005C3525 /* B2DChainShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E526E03F176D231D005C3525 /* B2DChainShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E526E043176D231E005C3525 /* B2DChainShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E040176D231D005C3525 /* B2DChainShape.mm */; };
 		E526E044176D231E005C3525 /* B2DChainShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E040176D231D005C3525 /* B2DChainShape.mm */; };
 		E526E048176D2DAF005C3525 /* B2DWorldTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E526E047176D2DAF005C3525 /* B2DWorldTest.mm */; };
@@ -217,12 +217,12 @@
 		E57C25571764007A00A850EB /* B2DBodyTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E57C25551763FFE500A850EB /* B2DBodyTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E57C25581764008600A850EB /* B2DBodyTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E57C25551763FFE500A850EB /* B2DBodyTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E57C25591764008D00A850EB /* B2DFixture.h in Headers */ = {isa = PBXBuildFile; fileRef = E57C25461763E1FD00A850EB /* B2DFixture.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E57C255B1764020F00A850EB /* B2DMassData.h in Headers */ = {isa = PBXBuildFile; fileRef = E57C255A1764020F00A850EB /* B2DMassData.h */; };
-		E57C255C1764020F00A850EB /* B2DMassData.h in Headers */ = {isa = PBXBuildFile; fileRef = E57C255A1764020F00A850EB /* B2DMassData.h */; };
+		E57C255B1764020F00A850EB /* B2DMassData.h in Headers */ = {isa = PBXBuildFile; fileRef = E57C255A1764020F00A850EB /* B2DMassData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E57C255C1764020F00A850EB /* B2DMassData.h in Headers */ = {isa = PBXBuildFile; fileRef = E57C255A1764020F00A850EB /* B2DMassData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E57C255E176402EE00A850EB /* B2DMassData.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57C255D176402EE00A850EB /* B2DMassData.mm */; };
 		E57C255F176402EE00A850EB /* B2DMassData.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57C255D176402EE00A850EB /* B2DMassData.mm */; };
-		E58089B817640F6800C49864 /* B2DFixtureDef.h in Headers */ = {isa = PBXBuildFile; fileRef = E58089B717640F6800C49864 /* B2DFixtureDef.h */; };
-		E58089B917640F6800C49864 /* B2DFixtureDef.h in Headers */ = {isa = PBXBuildFile; fileRef = E58089B717640F6800C49864 /* B2DFixtureDef.h */; };
+		E58089B817640F6800C49864 /* B2DFixtureDef.h in Headers */ = {isa = PBXBuildFile; fileRef = E58089B717640F6800C49864 /* B2DFixtureDef.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E58089B917640F6800C49864 /* B2DFixtureDef.h in Headers */ = {isa = PBXBuildFile; fileRef = E58089B717640F6800C49864 /* B2DFixtureDef.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5B36C2117701BC000EC80DE /* B2DAABBTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5B36C2017701BC000EC80DE /* B2DAABBTest.mm */; };
 		E5B36C2417701C5200EC80DE /* B2DRayCastOutputTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5B36C2317701C5200EC80DE /* B2DRayCastOutputTest.mm */; };
 		E5B36C2717701CEA00EC80DE /* B2DRayCastInputTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5B36C2617701CEA00EC80DE /* B2DRayCastInputTest.mm */; };
@@ -929,27 +929,27 @@
 				E560F70A173E0C3D00F3C277 /* B2DEdgeShape.h in Headers */,
 				E57C25591764008D00A850EB /* B2DFixture.h in Headers */,
 				E57C25581764008600A850EB /* B2DBodyTypes.h in Headers */,
-				E57C25521763F87F00A850EB /* B2DTransform.h in Headers */,
 				E57C255C1764020F00A850EB /* B2DMassData.h in Headers */,
 				E58089B917640F6800C49864 /* B2DFixtureDef.h in Headers */,
 				E526DFB2176CE09F005C3525 /* B2DBodyDef.h in Headers */,
 				E526DFB8176CE8D8005C3525 /* B2DProfile.h in Headers */,
 				E526DFC9176CEE65005C3525 /* B2DAABB.h in Headers */,
-				E526DFE5176CF3AA005C3525 /* B2DContactListener.h in Headers */,
-				E526DFED176CF3AA005C3525 /* ContactListener.h in Headers */,
-				E526DFF2176CF3AA005C3525 /* DestructionListener.h in Headers */,
-				E526DFF7176CF3AA005C3525 /* QueryCallback.h in Headers */,
-				E526DFFC176CF3AA005C3525 /* RayCastCallback.h in Headers */,
+				E526E01C176CFA74005C3525 /* B2DContactFilter.h in Headers */,
+				E526E026176D0677005C3525 /* B2DShapeTypes.h in Headers */,
 				E526E002176CF3C5005C3525 /* B2DQueryCallback.h in Headers */,
 				E526E007176CF3C5005C3525 /* B2DRayCastCallback.h in Headers */,
 				E526E00E176CF5D1005C3525 /* B2DDestructionListener.h in Headers */,
-				E526E018176CF964005C3525 /* ContactFilter.h in Headers */,
-				E526E01C176CFA74005C3525 /* B2DContactFilter.h in Headers */,
-				E526E026176D0677005C3525 /* B2DShapeTypes.h in Headers */,
 				E526E02A176D081F005C3525 /* B2DFilter.h in Headers */,
 				E526E031176D0A84005C3525 /* B2DRayCastOutput.h in Headers */,
 				E526E038176D0A9A005C3525 /* B2DRayCastInput.h in Headers */,
 				E526E042176D231E005C3525 /* B2DChainShape.h in Headers */,
+				E526DFE5176CF3AA005C3525 /* B2DContactListener.h in Headers */,
+				E57C25521763F87F00A850EB /* B2DTransform.h in Headers */,
+				E526DFED176CF3AA005C3525 /* ContactListener.h in Headers */,
+				E526DFF2176CF3AA005C3525 /* DestructionListener.h in Headers */,
+				E526DFF7176CF3AA005C3525 /* QueryCallback.h in Headers */,
+				E526DFFC176CF3AA005C3525 /* RayCastCallback.h in Headers */,
+				E526E018176CF964005C3525 /* ContactFilter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -963,29 +963,29 @@
 				E560F706173E0C2F00F3C277 /* B2DWorld.h in Headers */,
 				E560F703173E0C2700F3C277 /* B2DPolygonShape.h in Headers */,
 				E560F702173E0C2400F3C277 /* B2DEdgeShape.h in Headers */,
-				E57C25481763E1FD00A850EB /* B2DFixture.h in Headers */,
-				E57C25511763F87F00A850EB /* B2DTransform.h in Headers */,
-				E57C25571764007A00A850EB /* B2DBodyTypes.h in Headers */,
 				E57C255B1764020F00A850EB /* B2DMassData.h in Headers */,
 				E58089B817640F6800C49864 /* B2DFixtureDef.h in Headers */,
 				E526DFB1176CE09F005C3525 /* B2DBodyDef.h in Headers */,
 				E526DFB7176CE8D8005C3525 /* B2DProfile.h in Headers */,
 				E526DFC8176CEE65005C3525 /* B2DAABB.h in Headers */,
-				E526DFE4176CF3AA005C3525 /* B2DContactListener.h in Headers */,
-				E526DFEC176CF3AA005C3525 /* ContactListener.h in Headers */,
-				E526DFF1176CF3AA005C3525 /* DestructionListener.h in Headers */,
-				E526DFF6176CF3AA005C3525 /* QueryCallback.h in Headers */,
-				E526DFFB176CF3AA005C3525 /* RayCastCallback.h in Headers */,
 				E526E001176CF3C5005C3525 /* B2DQueryCallback.h in Headers */,
 				E526E006176CF3C5005C3525 /* B2DRayCastCallback.h in Headers */,
 				E526E00D176CF5D1005C3525 /* B2DDestructionListener.h in Headers */,
-				E526E017176CF964005C3525 /* ContactFilter.h in Headers */,
 				E526E01B176CFA74005C3525 /* B2DContactFilter.h in Headers */,
 				E526E025176D0677005C3525 /* B2DShapeTypes.h in Headers */,
 				E526E029176D081F005C3525 /* B2DFilter.h in Headers */,
 				E526E030176D0A84005C3525 /* B2DRayCastOutput.h in Headers */,
 				E526E037176D0A9A005C3525 /* B2DRayCastInput.h in Headers */,
 				E526E041176D231E005C3525 /* B2DChainShape.h in Headers */,
+				E526DFE4176CF3AA005C3525 /* B2DContactListener.h in Headers */,
+				E57C25481763E1FD00A850EB /* B2DFixture.h in Headers */,
+				E57C25511763F87F00A850EB /* B2DTransform.h in Headers */,
+				E57C25571764007A00A850EB /* B2DBodyTypes.h in Headers */,
+				E526DFEC176CF3AA005C3525 /* ContactListener.h in Headers */,
+				E526DFF1176CF3AA005C3525 /* DestructionListener.h in Headers */,
+				E526DFF6176CF3AA005C3525 /* QueryCallback.h in Headers */,
+				E526DFFB176CF3AA005C3525 /* RayCastCallback.h in Headers */,
+				E526E017176CF964005C3525 /* ContactFilter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

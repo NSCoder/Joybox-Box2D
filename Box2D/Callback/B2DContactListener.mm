@@ -62,7 +62,7 @@
                                           if (weakSelf.beginContact != nil)
                                           {
                                             b2Body *firstBoxBody = contact->GetFixtureA()->GetBody();
-                                            b2Body *secondBoxBody = contact->GetFixtureA()->GetBody();
+                                            b2Body *secondBoxBody = contact->GetFixtureB()->GetBody();
                                             
                                             B2DBody *firstBody = [[B2DBody alloc] initWithBody:firstBoxBody];
                                             B2DBody *secondBody = [[B2DBody alloc] initWithBody:secondBoxBody];
@@ -77,7 +77,7 @@
                                         if (weakSelf.endContact != nil)
                                         {
                                           b2Body *firstBoxBody = contact->GetFixtureA()->GetBody();
-                                          b2Body *secondBoxBody = contact->GetFixtureA()->GetBody();
+                                          b2Body *secondBoxBody = contact->GetFixtureB()->GetBody();
                                           
                                           B2DBody *firstBody = [[B2DBody alloc] initWithBody:firstBoxBody];
                                           B2DBody *secondBody = [[B2DBody alloc] initWithBody:secondBoxBody];
