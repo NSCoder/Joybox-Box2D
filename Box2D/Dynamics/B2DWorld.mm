@@ -143,17 +143,17 @@
   self.world->SetGravity(b2Vec2FromPoint(gravity));
 }
 
-- (BOOL)isLocked
+- (bool)isLocked
 {
   return self.world->IsLocked();
 }
 
-- (BOOL)autoClearForces
+- (bool)autoClearForces
 {
   return self.world->GetAutoClearForces();
 }
 
-- (void)setAutoClearForces:(BOOL)autoClearForces
+- (void)setAutoClearForces:(bool)autoClearForces
 {
   self.world->SetAutoClearForces(autoClearForces);
 }

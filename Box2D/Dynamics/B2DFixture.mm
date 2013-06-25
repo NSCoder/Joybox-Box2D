@@ -39,17 +39,17 @@
   return [[[B2DShape alloc] initWithShape:self.fixture->GetShape()] autorelease];
 }
 
-- (BOOL)isSensor
+- (bool)isSensor
 {
   return self.fixture->IsSensor();
 }
 
-- (BOOL)sensor
+- (bool)sensor
 {
   return [self isSensor];
 }
 
-- (void)setSensor:(BOOL)sensor
+- (void)setSensor:(bool)sensor
 {
   self.fixture->SetSensor(sensor);
 }
@@ -132,12 +132,12 @@
   return [[[B2DFixture alloc] initWithFixture:boxFixture] autorelease];
 }
 
-- (BOOL)testPoint:(CGPoint)point
+- (bool)testPoint:(CGPoint)point
 {
   return self.fixture->TestPoint(b2Vec2FromPoint(point));
 }
 
-- (BOOL)rayCastWithOutput:(B2DRayCastOutput *)output input:(B2DRayCastInput)input andChildIndex:(NSInteger)childIndex
+- (bool)rayCastWithOutput:(B2DRayCastOutput *)output input:(B2DRayCastInput)input andChildIndex:(NSInteger)childIndex
 {
   b2RayCastOutput boxOutput;
   boxOutput.normal = b2Vec2FromPoint(output->normal);
@@ -148,7 +148,7 @@
   boxInput.p2 = b2Vec2FromPoint(input.point2);
   boxInput.maxFraction = input.maxFraction;
   
-  BOOL rayCast = self.fixture->RayCast(&boxOutput, boxInput, (int32)childIndex);
+  bool rayCast = self.fixture->RayCast(&boxOutput, boxInput, (int32)childIndex);
   
   output->normal = CGPointFromVector(boxOutput.normal);
   output->fraction = boxOutput.fraction;

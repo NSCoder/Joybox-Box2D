@@ -63,7 +63,7 @@
   return CGPointFromVector(((b2EdgeShape *)self.shape)->m_vertex2);
 }
 
-- (BOOL)hasStartAdjacentVertex
+- (bool)hasStartAdjacentVertex
 {
   return ((b2EdgeShape *)self.shape)->m_hasVertex0;
 }
@@ -73,7 +73,7 @@
   return CGPointFromVector(((b2EdgeShape *)self.shape)->m_vertex0);
 }
 
-- (BOOL)hasEndAdjacentVertex
+- (bool)hasEndAdjacentVertex
 {
   return ((b2EdgeShape *)self.shape)->m_hasVertex3;
 }

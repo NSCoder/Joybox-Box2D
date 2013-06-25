@@ -168,7 +168,7 @@
   world.gravity = CGPointMake(0, -9.8);
   
   B2DContactListener *contactListener = [[B2DContactListener alloc] init];
-  contactListener.beginContact = ^(B2DBody *firstBody, B2DBody *secondBody, BOOL isTouching)
+  contactListener.beginContact = ^(B2DBody *firstBody, B2DBody *secondBody, bool isTouching)
   {
     STAssertTrue(firstBody != nil, nil);
     STAssertTrue(secondBody != nil, nil);

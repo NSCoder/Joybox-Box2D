@@ -75,7 +75,7 @@
   NSArray *fixtureList = [self.body fixtureList];
   B2DFixture *fixture = [fixtureList objectAtIndex:0];
   
-  STAssertEquals(fixture.isSensor, NO, nil);
+  STAssertEquals(fixture.isSensor, false, nil);
 }
 
 - (void)testSensor
@@ -83,7 +83,7 @@
   NSArray *fixtureList = [self.body fixtureList];
   B2DFixture *fixture = [fixtureList objectAtIndex:0];
   
-  STAssertEquals(fixture.sensor, NO, nil);
+  STAssertEquals(fixture.sensor, false, nil);
 }
 
 - (void)testSetSensor
@@ -92,7 +92,7 @@
   B2DFixture *fixture = [fixtureList objectAtIndex:0];
   fixture.sensor = YES;
   
-  STAssertEquals(fixture.isSensor, YES, nil);
+  STAssertEquals(fixture.isSensor, true, nil);
 }
 
 - (void)testFilterData
@@ -235,7 +235,7 @@
   B2DRayCastOutput rayCastOutput = B2DRayCastOutputMake(CGPointMake(0, 0), 0);
   B2DRayCastInput rayCastInput = B2DRayCastInputMake(CGPointMake(10, 10), CGPointMake(1, 1), 20);
   
-  BOOL rayCast = [fixture rayCastWithOutput:&rayCastOutput input:rayCastInput andChildIndex:0];
+  bool rayCast = [fixture rayCastWithOutput:&rayCastOutput input:rayCastInput andChildIndex:0];
   STAssertTrue(rayCast, nil);
   STAssertFalse(CGPointEqualToPoint(rayCastOutput.normal, CGPointMake(0, 0)), nil);
   STAssertTrue(rayCastOutput.fraction != 0, nil);

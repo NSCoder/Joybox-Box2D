@@ -49,12 +49,12 @@
   return vertices;
 }
 
-- (BOOL)hasPreviousVertex
+- (bool)hasPreviousVertex
 {
   return ((b2ChainShape *)self.shape)->m_hasPrevVertex;
 }
 
-- (BOOL)hasNextVertex
+- (bool)hasNextVertex
 {
   return ((b2ChainShape *)self.shape)->m_hasNextVertex;
 }

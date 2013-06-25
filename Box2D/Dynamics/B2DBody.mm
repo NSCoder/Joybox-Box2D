@@ -181,76 +181,76 @@
   self.body->SetGravityScale(gravityScale);
 }
 
-- (BOOL)isBullet
+- (bool)isBullet
 {
   return self.body->IsBullet();
 }
 
-- (BOOL)bullet
+- (bool)bullet
 {
   return [self isBullet];
 }
 
-- (void)setBullet:(BOOL)bullet
+- (void)setBullet:(bool)bullet
 {
   self.body->SetBullet(bullet);
 }
 
-- (BOOL)isAwake
+- (bool)isAwake
 {
   return self.body->IsAwake();
 }
 
-- (BOOL)awake
+- (bool)awake
 {
   return [self isAwake];
 }
 
-- (void)setAwake:(BOOL)awake
+- (void)setAwake:(bool)awake
 {
   self.body->SetAwake(awake);
 }
 
-- (BOOL)isActive
+- (bool)isActive
 {
   return self.body->IsActive();
 }
 
-- (BOOL)isFixedRotation
+- (bool)isFixedRotation
 {
   return self.body->IsFixedRotation();
 }
 
-- (BOOL)fixedRotation
+- (bool)fixedRotation
 {
   return [self isFixedRotation];
 }
 
-- (void)setFixedRotation:(BOOL)fixedRotation
+- (void)setFixedRotation:(bool)fixedRotation
 {
   self.body->SetFixedRotation(fixedRotation);
 }
 
-- (BOOL)isSleepingAllowed
+- (bool)isSleepingAllowed
 {
   return self.body->IsSleepingAllowed();
 }
 
-- (BOOL)sleepingAllowed
+- (bool)sleepingAllowed
 {
   return [self isSleepingAllowed];
 }
 
-- (void)setSleepingAllowed:(BOOL)sleepingAllowed
+- (void)setSleepingAllowed:(bool)sleepingAllowed
 {
   self.body->SetSleepingAllowed(sleepingAllowed);
 }
 
 #pragma mark - Methods
 
-- (BOOL)isEqualToBody:(B2DBody *)aBody
+- (bool)isEqualToBody:(B2DBody *)aBody
 {
-  BOOL isEqual = NO;
+  bool isEqual = NO;
   
   if (self.body == aBody.body)
   {

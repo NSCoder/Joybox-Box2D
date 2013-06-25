@@ -79,7 +79,7 @@
   transform.position = CGPointMake(0, 0);
   transform.angle = 0;
   
-  BOOL rayCast = [shape rayCastWithOutput:&rayCastOutput input:rayCastInput transform:transform andChildren:0];
+  bool rayCast = [shape rayCastWithOutput:&rayCastOutput input:rayCastInput transform:transform andChildren:0];
   
   STAssertTrue(rayCast, nil);
   STAssertFalse(CGPointEqualToPoint(rayCastOutput.normal, CGPointMake(0, 0)), nil);

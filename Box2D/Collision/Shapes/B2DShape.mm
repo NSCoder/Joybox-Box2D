@@ -56,14 +56,14 @@
 
 #pragma mark - Methods
 
-- (BOOL)testPointWithTransform:(B2DTransform)transform andPoint:(CGPoint)point
+- (bool)testPointWithTransform:(B2DTransform)transform andPoint:(CGPoint)point
 {
   b2Transform boxTransform = b2Transform();
   boxTransform.Set(b2Vec2FromPoint(transform.position), transform.angle);
   return self.shape->TestPoint(boxTransform, b2Vec2FromPoint(point));
 }
 
-- (BOOL)rayCastWithOutput:(B2DRayCastOutput *)output
+- (bool)rayCastWithOutput:(B2DRayCastOutput *)output
                     input:(B2DRayCastInput)input
                 transform:(B2DTransform)transform
                  andChildren:(NSInteger)childIndex
@@ -80,7 +80,7 @@
   b2Transform boxTransform = b2Transform();
   boxTransform.Set(b2Vec2FromPoint(transform.position), transform.angle);
   
-  BOOL rayCast = self.shape->RayCast(&boxOutput, boxInput, boxTransform, (int32)childIndex);
+  bool rayCast = self.shape->RayCast(&boxOutput, boxInput, boxTransform, (int32)childIndex);
   output->normal = CGPointFromVector(boxOutput.normal);
   output->fraction = boxOutput.fraction;
   
