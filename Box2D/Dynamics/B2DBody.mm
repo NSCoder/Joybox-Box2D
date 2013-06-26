@@ -405,6 +405,8 @@
                    density:(CGFloat)density
                   isSensor:(BOOL)isSensor
 {
+  NSLog(@"Deprecated Method: Use createFixture: instead.");
+  
   b2FixtureDef fixtureDefinition;
   
   fixtureDefinition.shape = shape.shape;
