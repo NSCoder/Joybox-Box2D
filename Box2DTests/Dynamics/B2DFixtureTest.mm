@@ -100,9 +100,9 @@
   NSArray *fixtureList = [self.body fixtureList];
   B2DFixture *fixture = [fixtureList objectAtIndex:0];
   
-  STAssertEquals(fixture.filterData.categoryBits, (uint16)1, nil);
-  STAssertEquals(fixture.filterData.maskBits, (uint16)65535, nil);
-  STAssertEquals(fixture.filterData.groupIndex, (int16)0, nil);
+  STAssertEquals(fixture.filterData.categoryBits, (NSUInteger)1, nil);
+  STAssertEquals(fixture.filterData.maskBits, (NSUInteger)65535, nil);
+  STAssertEquals(fixture.filterData.groupIndex, (NSInteger)0, nil);
 }
 
 - (void)testSetFilterData
@@ -113,9 +113,9 @@
   B2DFilter filter = B2DFilterMake();
   fixture.filterData = filter;
   
-  STAssertEquals(fixture.filterData.categoryBits, (uint16)0x0001, nil);
-  STAssertEquals(fixture.filterData.maskBits, (uint16)0xFFFF, nil);
-  STAssertEquals(fixture.filterData.groupIndex, (int16)0, nil);
+  STAssertEquals(fixture.filterData.categoryBits, (NSUInteger)0x0001, nil);
+  STAssertEquals(fixture.filterData.maskBits, (NSUInteger)0xFFFF, nil);
+  STAssertEquals(fixture.filterData.groupIndex, (NSInteger)0, nil);
 }
 
 - (void)testBody

@@ -18,7 +18,7 @@ B2DFilter B2DFilterMake()
   return filter;
 }
 
-B2DFilter B2DFilterMake(uint16 categoryBits, uint16 maskBits, int16 groupIndex)
+B2DFilter B2DFilterMake(NSUInteger categoryBits, NSUInteger maskBits, NSInteger groupIndex)
 {
   B2DFilter filter;
   filter.categoryBits = categoryBits;

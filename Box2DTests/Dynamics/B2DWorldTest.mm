@@ -12,6 +12,7 @@
 #import "B2DContactListener.h"
 #import "B2DContactFilter.h"
 #import "B2DDestructionListener.h"
+#import "B2DDraw.h"
 #import "B2DPolygonShape.h"
 #import "B2DFixture.h"
 #import "B2DQueryCallback.h"
@@ -249,6 +250,35 @@
   
   B2DBody *body = [world createBody:bodyDefinition];
   [body createFixture:fixtureDefinition];
+}
+
+- (void)testSetDebugDraw
+{
+  B2DWorld *world = [[B2DWorld alloc] init];
+  world.gravity = CGPointMake(0, -9.8);
+  
+  B2DDraw *draw = [[B2DDraw alloc] init];
+  draw.drawSolidPolygon = ^(CGPoint *vertices, NSInteger vertexCount, B2DColor color)
+  {
+    STAssertTrue(vertices != NULL, nil);
+    STAssertTrue(vertexCount == 4, nil);
+    STAssertTrue(color.red != 0, nil);
+    STAssertTrue(color.green != 0, nil);
+    STAssertTrue(color.blue != 0, nil);
+  };
+  
+  [world setDebugDraw:draw];
+  
+  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  bodyDefinition.position = CGPointMake(10, 10);
+  bodyDefinition.type = kDynamicBodyType;
+  
+  B2DFixtureDef fixtureDefinition = B2DFixtureDefMake();
+  fixtureDefinition.shape = [[B2DPolygonShape alloc] initWithHalfWidth:0.5 andHalfHeight:0.5];
+  
+  B2DBody *body = [world createBody:bodyDefinition];
+  [body createFixture:fixtureDefinition];
+  [world drawDebugData];
 }
 
 - (void)testCreateBody

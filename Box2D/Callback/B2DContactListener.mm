@@ -7,7 +7,6 @@
 //
 
 #import "B2DContactListener.h"
-#import "ContactListener.h"
 #import "B2DBody.h"
 
 @interface B2DContactListener ()
@@ -15,7 +14,6 @@
 - (void)setupCallbacks;
 
 @end
-
 
 @implementation B2DContactListener
 
@@ -52,7 +50,6 @@
   [super dealloc];
 }
 
-
 - (void)setupCallbacks
 {
   __block B2DContactListener *weakSelf = self;
@@ -70,7 +67,6 @@
                                             weakSelf.beginContact([firstBody autorelease], [secondBody autorelease], contact->IsTouching());
                                           }
                                         });
-  
   
   self.contactListener->SetEndContact(^(b2Contact *contact)
                                       {

@@ -28,7 +28,6 @@ void ContactListener::BeginContact(b2Contact *contact)
   }
 }
 
-
 void ContactListener::EndContact(b2Contact *contact)
 {
   if (m_endContact != NULL)
@@ -37,7 +36,6 @@ void ContactListener::EndContact(b2Contact *contact)
   }
 }
 
-
 void ContactListener::PreSolve(b2Contact *contact, const b2Manifold *oldManifold)
 {
   if (m_preSolve != NULL)
@@ -45,7 +43,6 @@ void ContactListener::PreSolve(b2Contact *contact, const b2Manifold *oldManifold
     m_preSolve(contact, oldManifold);
   }
 }
-
 
 void ContactListener::PostSolve(b2Contact *contact, const b2ContactImpulse *impulse)
 {

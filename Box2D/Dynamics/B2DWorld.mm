@@ -11,6 +11,7 @@
 #import "B2DContactListener.h"
 #import "B2DContactFilter.h"
 #import "B2DDestructionListener.h"
+#import "B2DDraw.h"
 #import "B2DQueryCallback.h"
 #import "B2DRayCastCallback.h"
 
@@ -191,6 +192,11 @@
 - (void)setDestructionListener:(B2DDestructionListener *)destructionListener
 {
   self.world->SetDestructionListener(destructionListener.destructionListener);
+}
+
+- (void)setDebugDraw:(B2DDraw *)draw
+{
+  self.world->SetDebugDraw(draw.draw);
 }
 
 - (B2DBody *)createBody:(B2DBodyDef)bodyDefinition

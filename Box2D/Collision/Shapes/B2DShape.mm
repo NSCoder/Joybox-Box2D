@@ -8,19 +8,28 @@
 
 #import "B2DShape.h"
 
+@interface B2DShape ()
+
+@property (nonatomic, assign) bool isTransientEntity;
+
+@end
+
+
 @implementation B2DShape
 
 @synthesize shape;
+@synthesize isTransientEntity;
 @dynamic type;
 @dynamic childCount;
 @dynamic radius;
 
-- (id)initWithShape:(b2Shape *)boxShape
+- (id)initWithShape:(b2Shape*)boxShape
 {
   self = [super init];
   
   if (self)
   {
+    self.isTransientEntity = true;
     self.shape = boxShape;
   }
   
@@ -29,8 +38,14 @@
 
 - (void)dealloc
 {
-  delete shape;
-  shape = nil;
+  // I don't like very much this solution, but at the moment is the more
+  // convenient way to solve the problem.
+  // TODO: Revisit for Joybox 1.2.0
+  if(!self.isTransientEntity)
+  {
+    delete shape;
+    shape = nil;
+  }
     
   [super dealloc];
 }

@@ -9,6 +9,10 @@
 #import "B2DFixture.h"
 #import "B2DBody.h"
 #import "B2DShape.h"
+#import "B2DCircleShape.h"
+#import "B2DEdgeShape.h"
+#import "B2DPolygonShape.h"
+#import "B2DChainShape.h"
 
 @implementation B2DFixture
 
@@ -36,7 +40,33 @@
 
 - (B2DShape *)shape
 {
-  return [[[B2DShape alloc] initWithShape:self.fixture->GetShape()] autorelease];
+  b2Shape *boxShape = self.fixture->GetShape();
+  
+  B2DShape *shape;
+  switch (boxShape->GetType())
+  {
+    case b2Shape::e_circle:
+      shape = [[B2DCircleShape alloc] initWithShape:boxShape];
+      break;
+      
+    case b2Shape::e_edge:
+      shape = [[B2DEdgeShape alloc] initWithShape:boxShape];
+      break;
+      
+    case b2Shape::e_polygon:
+      shape = [[B2DPolygonShape alloc] initWithShape:boxShape];
+      break;
+      
+    case b2Shape::e_chain:
+      shape = [[B2DChainShape alloc] initWithShape:boxShape];
+      break;
+      
+    default:
+      shape = [[B2DShape alloc] initWithShape:boxShape];
+      break;
+  }
+  
+  return [shape autorelease];
 }
 
 - (bool)isSensor
@@ -56,7 +86,7 @@
 
 - (B2DFilter)filterData
 {
-  b2Filter filter = self.fixture->GetFilterData();
+  b2Filter filter = fixture->GetFilterData();
   return B2DFilterMake(filter.categoryBits, filter.maskBits, filter.groupIndex);
 }
 
@@ -66,6 +96,9 @@
   filter.categoryBits = filterData.categoryBits;
   filter.maskBits = filterData.maskBits;
   filter.groupIndex = filterData.groupIndex;
+  
+  NSLog(@"fuck");
+  NSLog(@"%i", filter.categoryBits);
   
   self.fixture->SetFilterData(filter);
 }
