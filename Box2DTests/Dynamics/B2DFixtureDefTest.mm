@@ -13,7 +13,7 @@
 
 - (void)testB2DFixtureDefMake
 {
-  B2DFixtureDef fixtureDefinition = B2DFixtureDefMake();
+  B2DFixtureDef *fixtureDefinition = [[B2DFixtureDef alloc] init];
   STAssertEquals(fixtureDefinition.shape, (B2DShape *)nil, nil);
   STAssertEquals(fixtureDefinition.userData, (id)nil, nil);
   STAssertEquals(fixtureDefinition.friction, (CGFloat)0.2f, nil);

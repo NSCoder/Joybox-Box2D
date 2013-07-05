@@ -8,15 +8,30 @@
 
 #import "B2DFixtureDef.h"
 
-B2DFixtureDef B2DFixtureDefMake()
+@implementation B2DFixtureDef
+
+@synthesize shape;
+@synthesize userData;
+@synthesize friction;
+@synthesize restitution;
+@synthesize density;
+@synthesize isSensor;
+
+- (id)init
 {
-  B2DFixtureDef fixtureDefinition;
-	fixtureDefinition.shape = nil;
-	fixtureDefinition.userData = nil;
-  fixtureDefinition.friction = 0.2f;
-  fixtureDefinition.restitution = 0.0f;
-  fixtureDefinition.density = 0.0f;
-  fixtureDefinition.isSensor = false;
+  self = [super init];
   
-  return fixtureDefinition;
+  if (self)
+  {
+    self.shape = nil;
+    self.userData = nil;
+    self.friction = 0.2f;
+    self.restitution = 0.0f;
+    self.density = 0.0f;
+    self.isSensor = false;
+  }
+  
+  return self;
 }
+
+@end

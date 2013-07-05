@@ -8,12 +8,24 @@
 
 #import "B2DMassData.h"
 
-B2DMassData B2DMassDataMake(CGFloat mass, CGPoint center, CGFloat rotationalInertia)
+@implementation B2DMassData
+
+@synthesize mass;
+@synthesize centre;
+@synthesize I;
+
+- (id)initWithMassData:(b2MassData)boxMassData
 {
-  B2DMassData massData;
-  massData.mass = mass;
-  massData.center = center;
-  massData.rotationalInertia = rotationalInertia;
+  self = [super init];
   
-  return massData;
+  if (self)
+  {
+    self.mass = boxMassData.mass;
+    self.centre = CGPointFromVector(boxMassData.center);
+    self.I = boxMassData.I;
+  }
+  
+  return self;
 }
+
+@end

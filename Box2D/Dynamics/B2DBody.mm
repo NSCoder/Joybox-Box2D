@@ -7,9 +7,11 @@
 //
 
 #import "B2DBody.h"
-#import "B2DFixture.h"
+#import "B2DTransform.h"
+#import "B2DMassData.h"
+#import "B2DFixtureDef.h"
 #import "B2DShape.h"
-#import "B2DWorld.h"
+#import "B2DFixture.h"
 
 @implementation B2DBody
 
@@ -76,10 +78,10 @@
   self.body->SetType((b2BodyType)type);
 }
 
-- (B2DTransform)transform
+- (B2DTransform *)transform
 {
   b2Transform transform = self.body->GetTransform();
-  return B2DTransformMake(CGPointFromVector(transform.p), transform.q.GetAngle());
+  return [[[B2DTransform alloc] initWithTransform:transform] autorelease];
 }
 
 - (CGPoint)position
@@ -133,20 +135,20 @@
   return self.body->GetInertia();
 }
 
-- (B2DMassData)massData
+- (B2DMassData *)massData
 {
   b2MassData massData;
   self.body->GetMassData(&massData);
   
-  return B2DMassDataMake(massData.mass, CGPointFromVector(massData.center), massData.I);
+  return [[[B2DMassData alloc] initWithMassData:massData] autorelease];
 }
 
-- (void)setMassData:(B2DMassData)massData
+- (void)setMassData:(B2DMassData *)massData
 {
   b2MassData boxMassData = b2MassData();
   boxMassData.mass = massData.mass;
-  boxMassData.center = b2Vec2FromPoint(massData.center);
-  boxMassData.I = massData.rotationalInertia;
+  boxMassData.center = b2Vec2FromPoint(massData.centre);
+  boxMassData.I = massData.I;
   
   self.body->SetMassData(&boxMassData);
 }
@@ -354,7 +356,7 @@
   self.body->ApplyAngularImpulse(impulse);
 }
 
-- (void)createFixture:(B2DFixtureDef)fixtureDefinition
+- (void)createFixture:(B2DFixtureDef *)fixtureDefinition
 {
   b2FixtureDef fixture;
   

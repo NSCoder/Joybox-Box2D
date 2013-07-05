@@ -8,12 +8,24 @@
 
 #import "B2DRayCastInput.h"
 
-B2DRayCastInput B2DRayCastInputMake(CGPoint point1, CGPoint point2, CGFloat maxFraction)
+@implementation B2DRayCastInput
+
+@synthesize point1;
+@synthesize point2;
+@synthesize maxFraction;
+
+- (id)initWithRayCastInput:(b2RayCastInput)rayCastInput
 {
-  B2DRayCastInput rayCastInput;
-  rayCastInput.point1 = point1;
-  rayCastInput.point2 = point2;
-  rayCastInput.maxFraction = maxFraction;
+  self = [super init];
   
-  return rayCastInput;
+  if (self)
+  {
+    self.point1 = CGPointFromVector(rayCastInput.p1);
+    self.point2 = CGPointFromVector(rayCastInput.p2);
+    self.maxFraction = rayCastInput.maxFraction;
+  }
+  
+  return self;
 }
+
+@end

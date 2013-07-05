@@ -8,13 +8,6 @@
 
 #include "Draw.h"
 
-Draw::Draw()
-{
-  uint32 flags = 0;
-	flags += b2Draw::e_shapeBit;
-  this->SetFlags(flags);
-}
-
 Draw::~Draw()
 {
   Block_release(m_drawPolygon);
@@ -51,15 +44,17 @@ void Draw::DrawCircle(const b2Vec2& center, float32 radius, const b2Color& color
 {
   if (m_drawCircle != NULL)
   {
-    m_drawCircle(center, radius, color);
+    b2Color boxColor = color;
+    m_drawCircle(center, radius, boxColor);
   }
 }
-
+ 
 void Draw::DrawSolidCircle(const b2Vec2& center, float32 radius, const b2Vec2& axis, const b2Color& color)
 {
   if (m_drawSolidCircle != NULL)
   {
-    m_drawSolidCircle(center, radius, color);
+    
+    m_drawSolidCircle(center, radius, axis, color);
   }
 }
 

@@ -7,6 +7,8 @@
 //
 
 #import "B2DDraw.h"
+#import "B2DColor.h"
+#import "B2DTransform.h"
 
 @interface B2DDraw ()
 
@@ -17,6 +19,7 @@
 @implementation B2DDraw
 
 @synthesize draw;
+@dynamic drawFlags;
 @synthesize drawPolygon;
 @synthesize drawSolidPolygon;
 @synthesize drawCircle;
@@ -64,6 +67,20 @@
   [super dealloc];
 }
 
+#pragma mark - Properties
+
+- (unsigned int)drawFlags
+{
+  return self.draw->GetFlags();
+}
+
+- (void)setDrawFlags:(unsigned int)drawingFlags
+{
+  self.draw->SetFlags(drawingFlags);
+}
+
+#pragma mark - Methods
+
 - (void)setupCallbacks
 {
   __block B2DDraw *weakSelf = self;
@@ -79,9 +96,11 @@
                                   vertices[i] = CGPointFromVector(boxVertices[i]);
                                 }
                                 
-                                B2DColor color = B2DColorMake(boxColor.r, boxColor.g, boxColor.b);
+                                B2DColor *color = [[B2DColor alloc] initWithColor:boxColor];
+
+                                weakSelf.drawPolygon(vertices, vertexCount, [color autorelease]);
                                 
-                                weakSelf.drawPolygon(vertices, vertexCount, color);
+                                delete[] vertices;
                               }
                             });
   
@@ -97,31 +116,36 @@
                                        vertices[i] = CGPointFromVector(boxVertices[i]);
                                      }
                                      
-                                     B2DColor color = B2DColorMake(boxColor.r, boxColor.g, boxColor.b);
+                                     B2DColor *color = [[B2DColor alloc] initWithColor:boxColor];
                                      
-                                     weakSelf.drawSolidPolygon(vertices, vertexCount, color);
+                                     weakSelf.drawSolidPolygon(vertices, vertexCount, [color autorelease]);
+                                     
+                                     delete[] vertices;
                                    }
                                  });
   
-  self.draw->SetDrawCircle(^(const b2Vec2 &boxCenter, float32 radius, const b2Color &boxColor)
+  self.draw->SetDrawCircle(^(const b2Vec2 &boxCenter, float32 radius, b2Color boxColor)
                            {
                              if (weakSelf.drawCircle)
                              {
-                               CGPoint center = CGPointFromVector(boxCenter);
-                               B2DColor color = B2DColorMake(boxColor.r, boxColor.g, boxColor.b);
-                             
-                               weakSelf.drawCircle(center, radius, color);
+                               CGPoint center = CGPointFromVector(boxCenter);                               
+                               
+                               B2DColor *color = [[B2DColor alloc] initWithColor:boxColor];
+                               
+                               weakSelf.drawCircle(center, radius, [color autorelease]);
                              }
                            });
   
-  self.draw->SetDrawSolidCircle(^(const b2Vec2 &boxCenter, float32 radius, const b2Color &boxColor)
+  self.draw->SetDrawSolidCircle(^(const b2Vec2 &boxCenter, float32 radius, const b2Vec2& boxAxis, const b2Color &boxColor)
                                 {
                                   if (weakSelf.drawSolidCircle)
                                   {
                                     CGPoint center = CGPointFromVector(boxCenter);
-                                    B2DColor color = B2DColorMake(boxColor.r, boxColor.g, boxColor.b);
-                                  
-                                    weakSelf.drawSolidCircle(center, radius, color);
+                                    CGPoint axis = CGPointFromVector(boxAxis);
+                                    
+                                    B2DColor *color = [[B2DColor alloc] initWithColor:boxColor];
+                                    
+                                    weakSelf.drawSolidCircle(center, radius, axis, [color autorelease]);
                                   }
                                 });
   
@@ -131,9 +155,10 @@
                               {
                                 CGPoint point1 = CGPointFromVector(boxPoint1);
                                 CGPoint point2 = CGPointFromVector(boxPoint2);
-                                B2DColor color = B2DColorMake(boxColor.r, boxColor.g, boxColor.b);
+                                
+                                B2DColor *color = [[B2DColor alloc] initWithColor:boxColor];
                               
-                                weakSelf.drawSegment(point1, point2, color);
+                                weakSelf.drawSegment(point1, point2, [color autorelease]);
                               }
                             });
   
@@ -141,12 +166,20 @@
                               {
                                 if (weakSelf.drawTransform)
                                 {
-                                  B2DTransform transform = B2DTransformMake(CGPointFromVector(boxTransform.p),
-                                                                            boxTransform.q.GetAngle());
-                                
-                                  weakSelf.drawTransform(transform);
+                                  B2DTransform *transform = [[B2DTransform alloc] initWithTransform:boxTransform];
+                                  weakSelf.drawTransform([transform autorelease]);
                                 }
                               });
+}
+
+- (void)appendDrawFlags:(unsigned int)flags
+{
+  self.draw->AppendFlags(flags);
+}
+
+- (void)clearDrawFlags:(unsigned int)flags
+{
+  self.draw->ClearFlags(flags);
 }
 
 @end

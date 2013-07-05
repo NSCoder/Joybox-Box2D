@@ -13,10 +13,14 @@
 
 - (void)testB2DMassDataMake
 {
-  B2DMassData massData = B2DMassDataMake(1, CGPointMake(1, 1), 1);
-  STAssertEquals(massData.mass, (CGFloat)1, nil);
-  STAssertTrue(CGPointEqualToPoint(massData.center, CGPointMake(1, 1)), nil);
-  STAssertEquals(massData.rotationalInertia, (CGFloat)1, nil);
+  B2DMassData *massData = [[B2DMassData alloc] init];
+  massData.mass = 1;
+  massData.centre = CGPointMake(1, 1);
+  massData.I = 1;
+  
+  STAssertEquals(massData.mass, (Float32)1, nil);
+  STAssertTrue(CGPointEqualToPoint(massData.centre, CGPointMake(1, 1)), nil);
+  STAssertEquals(massData.I, (Float32)1, nil);
 }
 
 @end

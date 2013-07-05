@@ -8,11 +8,22 @@
 
 #import "B2DRayCastOutput.h"
 
-B2DRayCastOutput B2DRayCastOutputMake(CGPoint normal, CGFloat fraction)
+@implementation B2DRayCastOutput
+
+@synthesize normal;
+@synthesize fraction;
+
+- (id)initWithRayCastOutput:(b2RayCastOutput)rayCastOutput
 {
-  B2DRayCastOutput rayCastOutput;
-  rayCastOutput.normal = normal;
-  rayCastOutput.fraction = fraction;
+  self = [super init];
   
-  return rayCastOutput;
+  if (self)
+  {
+    self.normal = CGPointFromVector(rayCastOutput.normal);
+    self.fraction = fraction;
+  }
+  
+  return self;
 }
+
+@end

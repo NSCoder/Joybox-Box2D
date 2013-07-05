@@ -8,24 +8,15 @@
 
 #import "B2DProfile.h"
 
-B2DProfile B2DProfileMake(CGFloat step,
-                          CGFloat collide,
-                          CGFloat solve,
-                          CGFloat solveInit,
-                          CGFloat solveVelocity,
-                          CGFloat solvePosition,
-                          CGFloat broadphase,
-                          CGFloat solveTOI)
-{
-  B2DProfile profile;
-  profile.step = step;
-  profile.collide = collide;
-  profile.solve = solve;
-  profile.solveInit = solveInit;
-  profile.solveVelocity = solveVelocity;
-  profile.solvePosition = solvePosition;
-  profile.broadphase = broadphase;
-  profile.solveTOI = solveTOI;
+@implementation B2DProfile
 
-  return profile;
-}
+@synthesize step;
+@synthesize collide;
+@synthesize solve;
+@synthesize solveInit;
+@synthesize solveVelocity;
+@synthesize solvePosition;
+@synthesize broadphase;
+@synthesize solveTOI;
+
+@end

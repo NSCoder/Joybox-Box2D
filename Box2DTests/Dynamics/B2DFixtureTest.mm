@@ -10,6 +10,14 @@
 #import "B2DFixture.h"
 #import "B2DWorld.h"
 #import "B2DBody.h"
+#import "B2DBodyDef.h"
+#import "B2DFixtureDef.h"
+#import "B2DFilter.h"
+#import "B2DBody.h"
+#import "B2DRayCastOutput.h"
+#import "B2DRayCastInput.h"
+#import "B2DMassData.h"
+#import "B2DAABB.h"
 #import "B2DPolygonShape.h"
 
 @interface B2DFixtureTest ()
@@ -28,12 +36,12 @@
 {
   self.world = [[B2DWorld alloc] init];
   
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   bodyDefinition.position = CGPointMake(1, 1);
   self.body = [self.world createBody:bodyDefinition];
   
-  B2DFixtureDef fixtureDefinition = B2DFixtureDefMake();
+  B2DFixtureDef *fixtureDefinition = [[B2DFixtureDef alloc] init];
   fixtureDefinition.shape = [[B2DPolygonShape alloc] initWithHalfWidth:0.5 andHalfHeight:0.5];;
   fixtureDefinition.density = 1;
   fixtureDefinition.friction = 1;
@@ -110,7 +118,7 @@
   NSArray *fixtureList = [self.body fixtureList];
   B2DFixture *fixture = [fixtureList objectAtIndex:0];
   
-  B2DFilter filter = B2DFilterMake();
+  B2DFilter *filter = [[B2DFilter alloc] init];
   fixture.filterData = filter;
   
   STAssertEquals(fixture.filterData.categoryBits, (NSUInteger)0x0001, nil);
@@ -232,10 +240,16 @@
   NSArray *fixtureList = [self.body fixtureList];
   B2DFixture *fixture = [fixtureList objectAtIndex:0];
   
-  B2DRayCastOutput rayCastOutput = B2DRayCastOutputMake(CGPointMake(0, 0), 0);
-  B2DRayCastInput rayCastInput = B2DRayCastInputMake(CGPointMake(10, 10), CGPointMake(1, 1), 20);
+  B2DRayCastOutput *rayCastOutput = [[B2DRayCastOutput alloc] init];
+  rayCastOutput.normal = CGPointMake(0, 0);
+  rayCastOutput.fraction = 0;
+
+  B2DRayCastInput *rayCastInput = [[B2DRayCastInput alloc] init];
+  rayCastInput.point1 = CGPointMake(10, 10);
+  rayCastInput.point2 = CGPointMake(1, 1);
+  rayCastInput.maxFraction = 20;
   
-  bool rayCast = [fixture rayCastWithOutput:&rayCastOutput input:rayCastInput andChildIndex:0];
+  bool rayCast = [fixture rayCastWithOutput:rayCastOutput input:rayCastInput andChildIndex:0];
   STAssertTrue(rayCast, nil);
   STAssertFalse(CGPointEqualToPoint(rayCastOutput.normal, CGPointMake(0, 0)), nil);
   STAssertTrue(rayCastOutput.fraction != 0, nil);
@@ -246,11 +260,11 @@
   NSArray *fixtureList = [self.body fixtureList];
   B2DFixture *fixture = [fixtureList objectAtIndex:0];
   
-  B2DMassData massData = [fixture massData];
+  B2DMassData *massData = [fixture massData];
   
-  STAssertEquals(massData.mass, (CGFloat)1, nil);
-  STAssertTrue(CGPointEqualToPoint(massData.center, CGPointMake(0, 0)), nil);
-  STAssertTrue(massData.rotationalInertia != 0, nil);
+  STAssertEquals(massData.mass, (Float32)1, nil);
+  STAssertTrue(CGPointEqualToPoint(massData.centre, CGPointMake(0, 0)), nil);
+  STAssertTrue(massData.I != 0, nil);
 }
 
 - (void)testAABB
@@ -258,7 +272,7 @@
   NSArray *fixtureList = [self.body fixtureList];
   B2DFixture *fixture = [fixtureList objectAtIndex:0];
   
-  B2DAABB aabb = [fixture aabb:0];
+  B2DAABB *aabb = [fixture aabb:0];
   
   STAssertFalse(CGPointEqualToPoint(aabb.lowerBound, CGPointMake(0, 0)), nil);
   STAssertFalse(CGPointEqualToPoint(aabb.upperBound, CGPointMake(0, 0)), nil);

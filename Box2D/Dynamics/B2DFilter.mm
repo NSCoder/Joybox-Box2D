@@ -8,22 +8,38 @@
 
 #import "B2DFilter.h"
 
-B2DFilter B2DFilterMake()
+@implementation B2DFilter
+
+@synthesize categoryBits;
+@synthesize maskBits;
+@synthesize groupIndex;
+
+- (id)init
 {
-  B2DFilter filter;
-  filter.categoryBits = 0x0001;
-  filter.maskBits = 0xFFFF;
-  filter.groupIndex = 0;
+  self = [super init];
   
-  return filter;
+  if (self)
+  {
+    self.categoryBits = 0x0001;
+    self.maskBits = 0xFFFF;
+    self.groupIndex = 0;
+  }
+  
+  return self;
 }
 
-B2DFilter B2DFilterMake(NSUInteger categoryBits, NSUInteger maskBits, NSInteger groupIndex)
+- (id)initWithFilter:(b2Filter)boxFilter
 {
-  B2DFilter filter;
-  filter.categoryBits = categoryBits;
-  filter.maskBits = maskBits;
-  filter.groupIndex = groupIndex;
+  self = [super init];
   
-  return filter;
+  if (self)
+  {
+    self.categoryBits = boxFilter.categoryBits;
+    self.maskBits = boxFilter.maskBits;
+    self.groupIndex = boxFilter.groupIndex;
+  }
+  
+  return self;
 }
+
+@end

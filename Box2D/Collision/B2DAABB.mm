@@ -8,11 +8,22 @@
 
 #import "B2DAABB.h"
 
-B2DAABB B2DAABBMake(CGPoint lowerBound, CGPoint upperBound)
+@implementation B2DAABB
+
+@synthesize lowerBound;
+@synthesize upperBound;
+
+- (id)initWithAABB:(b2AABB)aabb;
 {
-  B2DAABB aabb;
-  aabb.lowerBound = lowerBound;
-  aabb.upperBound = upperBound;
+  self = [super init];
   
-  return aabb;
+  if (self)
+  {
+    self.lowerBound = CGPointFromVector(aabb.lowerBound);
+    self.upperBound = CGPointFromVector(aabb.upperBound);
+  }
+  
+  return self;
 }
+
+@end

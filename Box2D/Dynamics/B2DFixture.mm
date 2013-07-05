@@ -7,8 +7,13 @@
 //
 
 #import "B2DFixture.h"
-#import "B2DBody.h"
 #import "B2DShape.h"
+#import "B2DFilter.h"
+#import "B2DBody.h"
+#import "B2DRayCastOutput.h"
+#import "B2DRayCastInput.h"
+#import "B2DMassData.h"
+#import "B2DAABB.h"
 #import "B2DCircleShape.h"
 #import "B2DEdgeShape.h"
 #import "B2DPolygonShape.h"
@@ -84,21 +89,18 @@
   self.fixture->SetSensor(sensor);
 }
 
-- (B2DFilter)filterData
+- (B2DFilter *)filterData
 {
   b2Filter filter = fixture->GetFilterData();
-  return B2DFilterMake(filter.categoryBits, filter.maskBits, filter.groupIndex);
+  return [[B2DFilter alloc] initWithFilter:filter];
 }
 
-- (void)setFilterData:(B2DFilter)filterData
+- (void)setFilterData:(B2DFilter *)filterData
 {
   b2Filter filter = b2Filter();
   filter.categoryBits = filterData.categoryBits;
   filter.maskBits = filterData.maskBits;
   filter.groupIndex = filterData.groupIndex;
-  
-  NSLog(@"fuck");
-  NSLog(@"%i", filter.categoryBits);
   
   self.fixture->SetFilterData(filter);
 }
@@ -170,11 +172,11 @@
   return self.fixture->TestPoint(b2Vec2FromPoint(point));
 }
 
-- (bool)rayCastWithOutput:(B2DRayCastOutput *)output input:(B2DRayCastInput)input andChildIndex:(NSInteger)childIndex
+- (bool)rayCastWithOutput:(B2DRayCastOutput *)output input:(B2DRayCastInput *)input andChildIndex:(NSInteger)childIndex
 {
   b2RayCastOutput boxOutput;
-  boxOutput.normal = b2Vec2FromPoint(output->normal);
-  boxOutput.fraction = output->fraction;
+  boxOutput.normal = b2Vec2FromPoint(output.normal);
+  boxOutput.fraction = output.fraction;
   
   b2RayCastInput boxInput;
   boxInput.p1 = b2Vec2FromPoint(input.point1);
@@ -183,24 +185,24 @@
   
   bool rayCast = self.fixture->RayCast(&boxOutput, boxInput, (int32)childIndex);
   
-  output->normal = CGPointFromVector(boxOutput.normal);
-  output->fraction = boxOutput.fraction;
+  output.normal = CGPointFromVector(boxOutput.normal);
+  output.fraction = boxOutput.fraction;
   
   return rayCast;
 }
 
-- (B2DMassData)massData
+- (B2DMassData *)massData
 {
   b2MassData massData;
   self.fixture->GetMassData(&massData);
   
-  return B2DMassDataMake(massData.mass, CGPointFromVector(massData.center), massData.I);
+  return [[[B2DMassData alloc] initWithMassData:massData] autorelease];
 }
 
-- (B2DAABB)aabb:(NSInteger)childIndex
+- (B2DAABB *)aabb:(NSInteger)childIndex
 {
   b2AABB aabb = self.fixture->GetAABB((int32)childIndex);  
-  return B2DAABBMake(CGPointFromVector(aabb.lowerBound), CGPointFromVector(aabb.upperBound));
+  return [[[B2DAABB alloc] initWithAABB:aabb] autorelease];
 }
 
 - (void)dump:(NSInteger)bodyIndex

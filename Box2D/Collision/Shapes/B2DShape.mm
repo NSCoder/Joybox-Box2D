@@ -7,6 +7,11 @@
 //
 
 #import "B2DShape.h"
+#import "B2DTransform.h"
+#import "B2DRayCastOutput.h"
+#import "B2DRayCastInput.h"
+#import "B2DAABB.h"
+#import "B2DMassData.h"
 
 @interface B2DShape ()
 
@@ -71,21 +76,21 @@
 
 #pragma mark - Methods
 
-- (bool)testPointWithTransform:(B2DTransform)transform andPoint:(CGPoint)point
+- (bool)testPointWithTransform:(B2DTransform *)transform andPoint:(CGPoint)point
 {
   b2Transform boxTransform = b2Transform();
-  boxTransform.Set(b2Vec2FromPoint(transform.position), transform.angle);
+  boxTransform.Set(b2Vec2FromPoint(transform.point), transform.angle);
   return self.shape->TestPoint(boxTransform, b2Vec2FromPoint(point));
 }
 
 - (bool)rayCastWithOutput:(B2DRayCastOutput *)output
-                    input:(B2DRayCastInput)input
-                transform:(B2DTransform)transform
+                    input:(B2DRayCastInput *)input
+                transform:(B2DTransform *)transform
                  andChildren:(NSInteger)childIndex
 {
   b2RayCastOutput boxOutput;
-  boxOutput.normal = b2Vec2FromPoint(output->normal);
-  boxOutput.fraction = output->fraction;
+  boxOutput.normal = b2Vec2FromPoint(output.normal);
+  boxOutput.fraction = output.fraction;
   
   b2RayCastInput boxInput;
   boxInput.p1 = b2Vec2FromPoint(input.point1);
@@ -93,42 +98,42 @@
   boxInput.maxFraction = input.maxFraction;
   
   b2Transform boxTransform = b2Transform();
-  boxTransform.Set(b2Vec2FromPoint(transform.position), transform.angle);
+  boxTransform.Set(b2Vec2FromPoint(transform.point), transform.angle);
   
   bool rayCast = self.shape->RayCast(&boxOutput, boxInput, boxTransform, (int32)childIndex);
-  output->normal = CGPointFromVector(boxOutput.normal);
-  output->fraction = boxOutput.fraction;
+  output.normal = CGPointFromVector(boxOutput.normal);
+  output.fraction = boxOutput.fraction;
   
   return rayCast;
 }
 
-- (void)computeAABB:(B2DAABB *)aabb withTransform:(B2DTransform)transform andChildIndex:(NSInteger)childIndex
+- (void)computeAABB:(B2DAABB *)aabb withTransform:(B2DTransform *)transform andChildIndex:(NSInteger)childIndex
 {
   b2AABB boxAABB;
-  boxAABB.lowerBound = b2Vec2FromPoint(aabb->lowerBound);
-  boxAABB.upperBound = b2Vec2FromPoint(aabb->upperBound);
+  boxAABB.lowerBound = b2Vec2FromPoint(aabb.lowerBound);
+  boxAABB.upperBound = b2Vec2FromPoint(aabb.upperBound);
   
   b2Transform boxTransform = b2Transform();
-  boxTransform.Set(b2Vec2FromPoint(transform.position), transform.angle);
+  boxTransform.Set(b2Vec2FromPoint(transform.point), transform.angle);
   
   self.shape->ComputeAABB(&boxAABB, boxTransform, (int32)childIndex);
   
-  aabb->lowerBound = CGPointFromVector(boxAABB.lowerBound);
-  aabb->upperBound = CGPointFromVector(boxAABB.upperBound);
+  aabb.lowerBound = CGPointFromVector(boxAABB.lowerBound);
+  aabb.upperBound = CGPointFromVector(boxAABB.upperBound);
 }
 
 - (void)computeMass:(B2DMassData *)massData withDensity:(CGFloat)density
 {
   b2MassData boxMassData;
-  boxMassData.mass = massData->mass;
-  boxMassData.center = b2Vec2FromPoint(massData->center);
-  boxMassData.I = massData->rotationalInertia;
+  boxMassData.mass = massData.mass;
+  boxMassData.center = b2Vec2FromPoint(massData.centre);
+  boxMassData.I = massData.I;
   
   self.shape->ComputeMass(&boxMassData, density);
   
-  massData->mass = boxMassData.mass;
-  massData->center = CGPointFromVector(boxMassData.center);
-  massData->rotationalInertia = boxMassData.I;
+  massData.mass = boxMassData.mass;
+  massData.centre = CGPointFromVector(boxMassData.center);
+  massData.I = boxMassData.I;
 }
 
 @end

@@ -15,15 +15,14 @@
 
 typedef void (^drawDrawPolygonCallback) (const b2Vec2 *vertices, int32 vertexCount, const b2Color& color);
 typedef void (^drawDrawSolidPolygonCallback) (const b2Vec2 *vertices, int32 vertexCount, const b2Color& color);
-typedef void (^drawDrawCircleCallback) (const b2Vec2& center, float32 radius, const b2Color& color);
-typedef void (^drawDrawSolidCircleCallback) (const b2Vec2& center, float32 radius, const b2Color& color);
+typedef void (^drawDrawCircleCallback) (const b2Vec2& center, float32 radius, b2Color color);
+typedef void (^drawDrawSolidCircleCallback) (const b2Vec2& center, float32 radius, const b2Vec2& axis, const b2Color& color);
 typedef void (^drawDrawSegmentCallback) (const b2Vec2& point1, const b2Vec2& point2, const b2Color& color);
 typedef void (^drawDrawTransformCallback) (const b2Transform& transform);
 
 class Draw : public b2Draw
 {
 public:
-  Draw();
   ~Draw();
   drawDrawPolygonCallback GetDrawPolygon();
   void SetDrawPolygon(drawDrawPolygonCallback drawPolygon);

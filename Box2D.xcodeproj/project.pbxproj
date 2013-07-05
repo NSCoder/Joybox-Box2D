@@ -90,10 +90,6 @@
 		E551268E177FA91D00578B0E /* B2DDraw.h in Headers */ = {isa = PBXBuildFile; fileRef = E551268B177FA91C00578B0E /* B2DDraw.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E551268F177FA91D00578B0E /* B2DDraw.mm in Sources */ = {isa = PBXBuildFile; fileRef = E551268C177FA91D00578B0E /* B2DDraw.mm */; };
 		E5512690177FA91D00578B0E /* B2DDraw.mm in Sources */ = {isa = PBXBuildFile; fileRef = E551268C177FA91D00578B0E /* B2DDraw.mm */; };
-		E5512693177FADB800578B0E /* B2DColor.h in Headers */ = {isa = PBXBuildFile; fileRef = E5512691177FADB800578B0E /* B2DColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5512694177FADB800578B0E /* B2DColor.h in Headers */ = {isa = PBXBuildFile; fileRef = E5512691177FADB800578B0E /* B2DColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5512695177FADB800578B0E /* B2DColor.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5512692177FADB800578B0E /* B2DColor.mm */; };
-		E5512696177FADB800578B0E /* B2DColor.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5512692177FADB800578B0E /* B2DColor.mm */; };
 		E5512699177FB1BD00578B0E /* B2DDrawCallbackTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5512698177FB1BD00578B0E /* B2DDrawCallbackTest.mm */; };
 		E554233F176EA3C600FD9E39 /* B2DMassDataTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E554233E176EA3C600FD9E39 /* B2DMassDataTest.mm */; };
 		E5542342176EA47300FD9E39 /* B2DPolygonShapeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5542341176EA47300FD9E39 /* B2DPolygonShapeTest.mm */; };
@@ -111,6 +107,10 @@
 		E560F70C173E0C4300F3C277 /* B2DShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A128F173DFFEF002055C2 /* B2DShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E560F70D173E0C4500F3C277 /* B2DBody.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A1292173DFFEF002055C2 /* B2DBody.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E560F70E173E0C4600F3C277 /* B2DWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = E57A1294173DFFEF002055C2 /* B2DWorld.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E564102F17855C3200BB2D79 /* B2DColor.h in Headers */ = {isa = PBXBuildFile; fileRef = E564102D17855C3200BB2D79 /* B2DColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E564103017855C3200BB2D79 /* B2DColor.h in Headers */ = {isa = PBXBuildFile; fileRef = E564102D17855C3200BB2D79 /* B2DColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E564103117855C3200BB2D79 /* B2DColor.mm in Sources */ = {isa = PBXBuildFile; fileRef = E564102E17855C3200BB2D79 /* B2DColor.mm */; };
+		E564103217855C3200BB2D79 /* B2DColor.mm in Sources */ = {isa = PBXBuildFile; fileRef = E564102E17855C3200BB2D79 /* B2DColor.mm */; };
 		E57A10E0173DEDF9002055C2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57A10DF173DEDF9002055C2 /* Cocoa.framework */; };
 		E57A10F2173DEDFA002055C2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57A10F1173DEDFA002055C2 /* SenTestingKit.framework */; };
 		E57A10F3173DEDFA002055C2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57A10DF173DEDF9002055C2 /* Cocoa.framework */; };
@@ -332,8 +332,6 @@
 		E5512686177FA25A00578B0E /* Draw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Draw.h; sourceTree = "<group>"; };
 		E551268B177FA91C00578B0E /* B2DDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DDraw.h; sourceTree = "<group>"; };
 		E551268C177FA91D00578B0E /* B2DDraw.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DDraw.mm; sourceTree = "<group>"; };
-		E5512691177FADB800578B0E /* B2DColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = B2DColor.h; path = Common/B2DColor.h; sourceTree = "<group>"; };
-		E5512692177FADB800578B0E /* B2DColor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = B2DColor.mm; path = Common/B2DColor.mm; sourceTree = "<group>"; };
 		E5512697177FB1BD00578B0E /* B2DDrawCallbackTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = B2DDrawCallbackTest.h; path = Callback/B2DDrawCallbackTest.h; sourceTree = "<group>"; };
 		E5512698177FB1BD00578B0E /* B2DDrawCallbackTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = B2DDrawCallbackTest.mm; path = Callback/B2DDrawCallbackTest.mm; sourceTree = "<group>"; };
 		E554233D176EA3C600FD9E39 /* B2DMassDataTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DMassDataTest.h; sourceTree = "<group>"; };
@@ -344,6 +342,8 @@
 		E5542344176EAA7500FD9E39 /* B2DShapeTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DShapeTest.mm; sourceTree = "<group>"; };
 		E560F6AF173E0A7600F3C277 /* Box2DTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Box2DTests-Info.plist"; sourceTree = "<group>"; };
 		E560F6B0173E0A7600F3C277 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		E564102D17855C3200BB2D79 /* B2DColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = B2DColor.h; path = Common/B2DColor.h; sourceTree = "<group>"; };
+		E564102E17855C3200BB2D79 /* B2DColor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = B2DColor.mm; path = Common/B2DColor.mm; sourceTree = "<group>"; };
 		E57A10DC173DEDF9002055C2 /* libBox2D.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBox2D.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57A10DF173DEDF9002055C2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E57A10F0173DEDFA002055C2 /* Box2DTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Box2DTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -351,8 +351,6 @@
 		E57A110C173DEEF0002055C2 /* libBox2D.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBox2D.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57A110D173DEEF0002055C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E57A1136173DFD5E002055C2 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
-		E57A1137173DFD5E002055C2 /* Box2DConfig.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Box2DConfig.cmake; sourceTree = "<group>"; };
-		E57A1138173DFD5E002055C2 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		E57A113A173DFD5E002055C2 /* b2BroadPhase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2BroadPhase.cpp; sourceTree = "<group>"; };
 		E57A113B173DFD5E002055C2 /* b2BroadPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2BroadPhase.h; sourceTree = "<group>"; };
 		E57A113C173DFD5E002055C2 /* b2CollideCircle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2CollideCircle.cpp; sourceTree = "<group>"; };
@@ -533,6 +531,8 @@
 				E526DFDB176CF3AA005C3525 /* B2DContactListener.mm */,
 				E526E00B176CF5D1005C3525 /* B2DDestructionListener.h */,
 				E526E00C176CF5D1005C3525 /* B2DDestructionListener.mm */,
+				E551268B177FA91C00578B0E /* B2DDraw.h */,
+				E551268C177FA91D00578B0E /* B2DDraw.mm */,
 				E526DFFD176CF3C5005C3525 /* B2DQueryCallback.h */,
 				E526DFFE176CF3C5005C3525 /* B2DQueryCallback.mm */,
 				E526DFFF176CF3C5005C3525 /* B2DRayCastCallback.h */,
@@ -543,14 +543,12 @@
 				E526DFDD176CF3AA005C3525 /* ContactListener.h */,
 				E526DFDE176CF3AA005C3525 /* DestructionListener.cpp */,
 				E526DFDF176CF3AA005C3525 /* DestructionListener.h */,
+				E5512685177FA25A00578B0E /* Draw.cpp */,
+				E5512686177FA25A00578B0E /* Draw.h */,
 				E526DFE0176CF3AA005C3525 /* QueryCallback.cpp */,
 				E526DFE1176CF3AA005C3525 /* QueryCallback.h */,
 				E526DFE2176CF3AA005C3525 /* RayCastCallback.cpp */,
 				E526DFE3176CF3AA005C3525 /* RayCastCallback.h */,
-				E5512685177FA25A00578B0E /* Draw.cpp */,
-				E5512686177FA25A00578B0E /* Draw.h */,
-				E551268B177FA91C00578B0E /* B2DDraw.h */,
-				E551268C177FA91D00578B0E /* B2DDraw.mm */,
 			);
 			path = Callback;
 			sourceTree = "<group>";
@@ -707,8 +705,6 @@
 			isa = PBXGroup;
 			children = (
 				E57A1136173DFD5E002055C2 /* Box2D.h */,
-				E57A1137173DFD5E002055C2 /* Box2DConfig.cmake */,
-				E57A1138173DFD5E002055C2 /* CMakeLists.txt */,
 				E57A1139173DFD5E002055C2 /* Collision */,
 				E57A1151173DFD5E002055C2 /* Common */,
 				E57A115F173DFD5E002055C2 /* Dynamics */,
@@ -928,8 +924,8 @@
 			children = (
 				E57C254F1763F87F00A850EB /* B2DTransform.h */,
 				E57C25501763F87F00A850EB /* B2DTransform.mm */,
-				E5512691177FADB800578B0E /* B2DColor.h */,
-				E5512692177FADB800578B0E /* B2DColor.mm */,
+				E564102D17855C3200BB2D79 /* B2DColor.h */,
+				E564102E17855C3200BB2D79 /* B2DColor.mm */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -969,12 +965,12 @@
 				E526E007176CF3C5005C3525 /* B2DRayCastCallback.h in Headers */,
 				E526E00E176CF5D1005C3525 /* B2DDestructionListener.h in Headers */,
 				E526E02A176D081F005C3525 /* B2DFilter.h in Headers */,
+				E564103017855C3200BB2D79 /* B2DColor.h in Headers */,
 				E526E031176D0A84005C3525 /* B2DRayCastOutput.h in Headers */,
 				E526E038176D0A9A005C3525 /* B2DRayCastInput.h in Headers */,
 				E526E042176D231E005C3525 /* B2DChainShape.h in Headers */,
 				E526DFE5176CF3AA005C3525 /* B2DContactListener.h in Headers */,
 				E551268E177FA91D00578B0E /* B2DDraw.h in Headers */,
-				E5512694177FADB800578B0E /* B2DColor.h in Headers */,
 				E57C25521763F87F00A850EB /* B2DTransform.h in Headers */,
 				E526DFED176CF3AA005C3525 /* ContactListener.h in Headers */,
 				E526DFF2176CF3AA005C3525 /* DestructionListener.h in Headers */,
@@ -1013,7 +1009,7 @@
 				E57C25481763E1FD00A850EB /* B2DFixture.h in Headers */,
 				E57C25511763F87F00A850EB /* B2DTransform.h in Headers */,
 				E551268D177FA91D00578B0E /* B2DDraw.h in Headers */,
-				E5512693177FADB800578B0E /* B2DColor.h in Headers */,
+				E564102F17855C3200BB2D79 /* B2DColor.h in Headers */,
 				E57C25571764007A00A850EB /* B2DBodyTypes.h in Headers */,
 				E526DFEC176CF3AA005C3525 /* ContactListener.h in Headers */,
 				E526DFF1176CF3AA005C3525 /* DestructionListener.h in Headers */,
@@ -1175,6 +1171,7 @@
 				E57A123A173DFD5E002055C2 /* b2PolygonAndCircleContact.cpp in Sources */,
 				E57A123F173DFD5E002055C2 /* b2PolygonContact.cpp in Sources */,
 				E57A1244173DFD5E002055C2 /* b2DistanceJoint.cpp in Sources */,
+				E564103117855C3200BB2D79 /* B2DColor.mm in Sources */,
 				E57A1249173DFD5E002055C2 /* b2FrictionJoint.cpp in Sources */,
 				E57A124E173DFD5E002055C2 /* b2GearJoint.cpp in Sources */,
 				E57A1253173DFD5E002055C2 /* b2Joint.cpp in Sources */,
@@ -1215,7 +1212,6 @@
 				E5B36C391770276500EC80DE /* B2DFixtureDef.mm in Sources */,
 				E5512687177FA25A00578B0E /* Draw.cpp in Sources */,
 				E551268F177FA91D00578B0E /* B2DDraw.mm in Sources */,
-				E5512695177FADB800578B0E /* B2DColor.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1287,6 +1283,7 @@
 				E57A1237173DFD5E002055C2 /* b2EdgeAndPolygonContact.cpp in Sources */,
 				E57A123C173DFD5E002055C2 /* b2PolygonAndCircleContact.cpp in Sources */,
 				E57A1241173DFD5E002055C2 /* b2PolygonContact.cpp in Sources */,
+				E564103217855C3200BB2D79 /* B2DColor.mm in Sources */,
 				E57A1246173DFD5E002055C2 /* b2DistanceJoint.cpp in Sources */,
 				E57A124B173DFD5E002055C2 /* b2FrictionJoint.cpp in Sources */,
 				E57A1250173DFD5E002055C2 /* b2GearJoint.cpp in Sources */,
@@ -1327,7 +1324,6 @@
 				E5B36C3A1770276500EC80DE /* B2DFixtureDef.mm in Sources */,
 				E5512688177FA25A00578B0E /* Draw.cpp in Sources */,
 				E5512690177FA91D00578B0E /* B2DDraw.mm in Sources */,
-				E5512696177FADB800578B0E /* B2DColor.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1405,20 +1401,25 @@
 		E57A1103173DEDFA002055C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Box2D/Configuration/Box2D-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"${SRCROOT}/Libraries/\"/**";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = Box2D;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = Debug;
 		};
 		E57A1104173DEDFA002055C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Box2D/Configuration/Box2D-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"${SRCROOT}/Libraries/\"/**";
 				PRODUCT_NAME = Box2D;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = Release;
 		};

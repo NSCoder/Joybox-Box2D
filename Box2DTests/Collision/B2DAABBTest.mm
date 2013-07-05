@@ -13,7 +13,10 @@
 
 - (void)testB2DAABBMake
 {
-  B2DAABB aabb = B2DAABBMake(CGPointMake(0, 0), CGPointMake(1, 1));
+  B2DAABB *aabb = [[B2DAABB alloc] init];
+  aabb.lowerBound = CGPointMake(0, 0);
+  aabb.upperBound = CGPointMake(1, 1);
+
   STAssertTrue(CGPointEqualToPoint(aabb.lowerBound, CGPointMake(0, 0)), nil);
   STAssertTrue(CGPointEqualToPoint(aabb.upperBound, CGPointMake(1, 1)), nil);
 }

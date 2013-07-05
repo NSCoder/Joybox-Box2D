@@ -13,9 +13,12 @@
 
 - (void)testB2DRayCastOutputMake
 {
-  B2DRayCastOutput rayCastOutput = B2DRayCastOutputMake(CGPointMake(1, 1), 10);
+  B2DRayCastOutput *rayCastOutput = [[B2DRayCastOutput alloc] init];
+  rayCastOutput.normal = CGPointMake(1, 1);
+  rayCastOutput.fraction = 10;
+  
   STAssertTrue(CGPointEqualToPoint(rayCastOutput.normal, CGPointMake(1, 1)), nil);
-  STAssertEquals(rayCastOutput.fraction, (CGFloat)10, nil);
+  STAssertEquals(rayCastOutput.fraction, (Float32)10, nil);
 }
 
 @end

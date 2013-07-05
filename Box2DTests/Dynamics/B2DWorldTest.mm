@@ -8,14 +8,19 @@
 
 #import "B2DWorldTest.h"
 #import "B2DWorld.h"
+#import "B2DProfile.h"
 #import "B2DBody.h"
+#import "B2DPolygonShape.h"
+#import "B2DFixture.h"
+#import "B2DFixtureDef.h"
 #import "B2DContactListener.h"
 #import "B2DContactFilter.h"
 #import "B2DDestructionListener.h"
 #import "B2DDraw.h"
-#import "B2DPolygonShape.h"
-#import "B2DFixture.h"
+#import "B2DColor.h"
+#import "B2DBodyDef.h"
 #import "B2DQueryCallback.h"
+#import "B2DAABB.h"
 #import "B2DRayCastCallback.h"
 
 @implementation B2DWorldTest
@@ -46,7 +51,7 @@
 {
   B2DWorld *world = [[B2DWorld alloc] init];
   
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(1, 1);
   [world createBody:bodyDefinition];
   
@@ -77,7 +82,7 @@
 {
   B2DWorld *world = [[B2DWorld alloc] init];
   
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(1, 1);
   [world createBody:bodyDefinition];
   
@@ -149,7 +154,7 @@
 - (void)testProfile
 {
   B2DWorld *world = [[B2DWorld alloc] init];
-  B2DProfile profile = world.profile;
+  B2DProfile *profile = world.profile;
   
   STAssertEquals(profile.step, (CGFloat)0.0f, nil);
   STAssertEquals(profile.collide, (CGFloat)0.0f, nil);
@@ -178,11 +183,11 @@
   
   [world setContactListener:contactListener];
   
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(10, 10);
   bodyDefinition.type = kDynamicBodyType;
   
-  B2DFixtureDef fixtureDefinition = B2DFixtureDefMake();
+  B2DFixtureDef *fixtureDefinition = [[B2DFixtureDef alloc] init];
   fixtureDefinition.shape = [[B2DPolygonShape alloc] initWithHalfWidth:0.5 andHalfHeight:0.5];
 
   B2DBody *firstBody = [world createBody:bodyDefinition];
@@ -211,11 +216,11 @@
   
   [world setContactFilter:contactFilter];
   
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(10, 10);
   bodyDefinition.type = kDynamicBodyType;
   
-  B2DFixtureDef fixtureDefinition = B2DFixtureDefMake();
+  B2DFixtureDef *fixtureDefinition = [[B2DFixtureDef alloc] init];
   fixtureDefinition.shape = [[B2DPolygonShape alloc] initWithHalfWidth:0.5 andHalfHeight:0.5];
   
   B2DBody *firstBody = [world createBody:bodyDefinition];
@@ -241,11 +246,11 @@
   
   [world setDestructionListener:destructionListener];
   
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(10, 10);
   bodyDefinition.type = kDynamicBodyType;
   
-  B2DFixtureDef fixtureDefinition = B2DFixtureDefMake();
+  B2DFixtureDef *fixtureDefinition = [[B2DFixtureDef alloc] init];
   fixtureDefinition.shape = [[B2DPolygonShape alloc] initWithHalfWidth:0.5 andHalfHeight:0.5];
   
   B2DBody *body = [world createBody:bodyDefinition];
@@ -258,7 +263,8 @@
   world.gravity = CGPointMake(0, -9.8);
   
   B2DDraw *draw = [[B2DDraw alloc] init];
-  draw.drawSolidPolygon = ^(CGPoint *vertices, NSInteger vertexCount, B2DColor color)
+  [draw appendDrawFlags:kShapeDrawFlag];
+  draw.drawSolidPolygon = ^(CGPoint *vertices, NSInteger vertexCount, B2DColor *color)
   {
     STAssertTrue(vertices != NULL, nil);
     STAssertTrue(vertexCount == 4, nil);
@@ -269,11 +275,11 @@
   
   [world setDebugDraw:draw];
   
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(10, 10);
   bodyDefinition.type = kDynamicBodyType;
   
-  B2DFixtureDef fixtureDefinition = B2DFixtureDefMake();
+  B2DFixtureDef *fixtureDefinition = [[B2DFixtureDef alloc] init];
   fixtureDefinition.shape = [[B2DPolygonShape alloc] initWithHalfWidth:0.5 andHalfHeight:0.5];
   
   B2DBody *body = [world createBody:bodyDefinition];
@@ -285,7 +291,7 @@
 {
   B2DWorld *world = [[B2DWorld alloc] init];
   
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(10, 10);
   bodyDefinition.type = kDynamicBodyType;
   bodyDefinition.angle = 10;
@@ -321,7 +327,7 @@
 {
   B2DWorld *world = [[B2DWorld alloc] init];
   
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(1, 1);
   
   B2DBody *body = [world createBody:bodyDefinition];
@@ -335,11 +341,11 @@
   B2DWorld *world = [[B2DWorld alloc] init];
   world.gravity = CGPointMake(0, -9.8);
   
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(10, 10);
   bodyDefinition.type = kDynamicBodyType;
   
-  B2DFixtureDef fixtureDefinition = B2DFixtureDefMake();
+  B2DFixtureDef *fixtureDefinition = [[B2DFixtureDef alloc] init];
   fixtureDefinition.shape = [[B2DPolygonShape alloc] initWithHalfWidth:0.5 andHalfHeight:0.5];
   
   B2DBody *body = [world createBody:bodyDefinition];
@@ -353,11 +359,11 @@
 {
   B2DWorld *world = [[B2DWorld alloc] init];
   
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(10, 10);
   bodyDefinition.type = kDynamicBodyType;
   
-  B2DFixtureDef fixtureDefinition = B2DFixtureDefMake();
+  B2DFixtureDef *fixtureDefinition = [[B2DFixtureDef alloc] init];
   fixtureDefinition.shape = [[B2DPolygonShape alloc] initWithHalfWidth:0.5 andHalfHeight:0.5];
   
   B2DBody *body = [world createBody:bodyDefinition];
@@ -374,11 +380,11 @@
 {
   B2DWorld *world = [[B2DWorld alloc] init];
   
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(10, 10);
   bodyDefinition.type = kDynamicBodyType;
   
-  B2DFixtureDef fixtureDefinition = B2DFixtureDefMake();
+  B2DFixtureDef *fixtureDefinition = [[B2DFixtureDef alloc] init];
   fixtureDefinition.shape = [[B2DPolygonShape alloc] initWithHalfWidth:0.5 andHalfHeight:0.5];
   
   B2DBody *body = [world createBody:bodyDefinition];
@@ -392,7 +398,7 @@
     return true;
   };
   
-  B2DAABB aabb = B2DAABB();
+  B2DAABB *aabb = [[B2DAABB alloc] init];
   aabb.lowerBound = CGPointMake(0, 0);
   aabb.upperBound = CGPointMake(10, 10);
   
@@ -403,11 +409,11 @@
 {
   B2DWorld *world = [[B2DWorld alloc] init];
   
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(10, 10);
   bodyDefinition.type = kDynamicBodyType;
   
-  B2DFixtureDef fixtureDefinition = B2DFixtureDefMake();
+  B2DFixtureDef *fixtureDefinition = [[B2DFixtureDef alloc] init];
   fixtureDefinition.shape = [[B2DPolygonShape alloc] initWithHalfWidth:0.5 andHalfHeight:0.5];
   
   B2DBody *body = [world createBody:bodyDefinition];

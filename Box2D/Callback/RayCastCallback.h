@@ -13,7 +13,7 @@
 #include <Block.h>
 #include <Box2D/Box2D.h>
 
-typedef float32 (^rayCastCallbackReportFixtureCallback)(b2Fixture *fixture, const b2Vec2& point, const b2Vec2& normal, float32 fraction);
+typedef float (^rayCastCallbackReportFixtureCallback)(b2Fixture *fixture, const b2Vec2& point, const b2Vec2& normal, float32 fraction);
 
 class RayCastCallback : public b2RayCastCallback
 {

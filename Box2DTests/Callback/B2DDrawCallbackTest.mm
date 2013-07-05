@@ -30,4 +30,39 @@
   STAssertNoThrow([draw release], nil);
 }
 
+#pragma mark - Properties
+
+- (void)testDrawingFlags
+{
+  B2DDraw *draw = [[B2DDraw alloc] init];
+  
+  unsigned int drawFlags = kShapeDrawFlag;
+  drawFlags += kCenterOfMassDrawFlag;
+  draw.drawFlags = drawFlags;
+  STAssertEquals(draw.drawFlags, drawFlags, nil);
+}
+
+- (void)testAppendDrawingFlags
+{
+  B2DDraw *draw = [[B2DDraw alloc] init];
+  unsigned int drawFlags = kShapeDrawFlag;
+  draw.drawFlags = drawFlags;
+  
+  [draw appendDrawFlags:kCenterOfMassDrawFlag];
+  drawFlags += kCenterOfMassDrawFlag;
+  STAssertEquals(draw.drawFlags, drawFlags, nil);
+}
+
+- (void)testClearDrawingFlags
+{
+  B2DDraw *draw = [[B2DDraw alloc] init];
+  unsigned int drawFlags = kShapeDrawFlag;
+  drawFlags += kCenterOfMassDrawFlag;
+  draw.drawFlags = drawFlags;
+  
+  [draw clearDrawFlags:kCenterOfMassDrawFlag];
+  drawFlags -= kCenterOfMassDrawFlag;
+  STAssertEquals(draw.drawFlags, drawFlags, nil);
+}
+
 @end

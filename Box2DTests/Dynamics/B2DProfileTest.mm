@@ -13,7 +13,16 @@
 
 - (void)testB2DProfileMake
 {
-  B2DProfile profile = B2DProfileMake(1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f);
+  B2DProfile *profile = [[B2DProfile alloc] init];
+  profile.step = 1.0;
+  profile.collide = 2.0;
+  profile.solve = 3.0;
+  profile.solveInit = 4.0;
+  profile.solveVelocity = 5.0;
+  profile.solvePosition = 6.0;
+  profile.broadphase = 7.0;
+  profile.solveTOI = 8.0;
+
   STAssertEquals(profile.step, (CGFloat)1.0f, nil);
   STAssertEquals(profile.collide, (CGFloat)2.0f, nil);
   STAssertEquals(profile.solve, (CGFloat)3.0f, nil);

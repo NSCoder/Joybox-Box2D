@@ -7,12 +7,15 @@
 //
 
 #import "B2DWorld.h"
+#import "B2DProfile.h"
 #import "B2DBody.h"
 #import "B2DContactListener.h"
 #import "B2DContactFilter.h"
 #import "B2DDestructionListener.h"
 #import "B2DDraw.h"
+#import "B2DBodyDef.h"
 #import "B2DQueryCallback.h"
+#import "B2DAABB.h"
 #import "B2DRayCastCallback.h"
 
 @interface B2DWorld ()
@@ -159,11 +162,11 @@
   self.world->SetAutoClearForces(autoClearForces);
 }
 
-- (B2DProfile)profile
+- (B2DProfile *)profile
 {
   b2Profile boxProfile = self.world->GetProfile();
   
-  B2DProfile profile;
+  B2DProfile *profile = [[B2DProfile alloc] init];
   profile.step = boxProfile.step;
   profile.collide = boxProfile.collide;
   profile.solve = boxProfile.solve;
@@ -173,7 +176,7 @@
   profile.broadphase = boxProfile.broadphase;
   profile.solveTOI = boxProfile.solveTOI;
   
-  return profile;
+  return [profile autorelease];
 }
 
 
@@ -199,7 +202,7 @@
   self.world->SetDebugDraw(draw.draw);
 }
 
-- (B2DBody *)createBody:(B2DBodyDef)bodyDefinition
+- (B2DBody *)createBody:(B2DBodyDef *)bodyDefinition
 {
   b2BodyDef body;
   
@@ -236,7 +239,7 @@
   self.world->ClearForces();
 }
 
-- (void)queryAABBWithCallback:(B2DQueryCallback *)queryCallback andAABB:(B2DAABB)aabb
+- (void)queryAABBWithCallback:(B2DQueryCallback *)queryCallback andAABB:(B2DAABB *)aabb
 {
   b2AABB boxAABB;
   boxAABB.lowerBound = b2Vec2FromPoint(aabb.lowerBound);

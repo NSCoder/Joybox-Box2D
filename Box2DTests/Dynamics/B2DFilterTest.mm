@@ -13,12 +13,15 @@
 
 - (void)testB2DFilterMake
 {
-  B2DFilter firstFilter = B2DFilterMake();
+  B2DFilter *firstFilter = [[B2DFilter alloc] init];
   STAssertEquals(firstFilter.categoryBits, (NSUInteger)0x0001, nil);
   STAssertEquals(firstFilter.maskBits, (NSUInteger)0xFFFF, nil);
   STAssertEquals(firstFilter.groupIndex, (NSInteger)0, nil);
   
-  B2DFilter secondFilter = B2DFilterMake(0x0002, 0xFF0F, 1);
+  B2DFilter *secondFilter = [[B2DFilter alloc] init];
+  secondFilter.categoryBits = 0x002;
+  secondFilter.maskBits = 0xFF0F;
+  secondFilter.groupIndex= 1;
   STAssertEquals(secondFilter.categoryBits, (NSUInteger)0x0002, nil);
   STAssertEquals(secondFilter.maskBits, (NSUInteger)0xFF0F, nil);
   STAssertEquals(secondFilter.groupIndex, (NSInteger)1, nil);

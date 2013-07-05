@@ -8,11 +8,22 @@
 
 #import "B2DTransform.h"
 
-B2DTransform B2DTransformMake(CGPoint position, CGFloat angle)
+@implementation B2DTransform
+
+@synthesize point;
+@synthesize angle;
+
+- (id)initWithTransform:(b2Transform)boxTransform
 {
-  B2DTransform transform;
-  transform.position = position;
-  transform.angle = angle;
+  self = [super init];
   
-  return transform;
+  if (self)
+  {
+    self.point = CGPointFromVector(boxTransform.p);
+    self.angle = boxTransform.q.GetAngle();
+  }
+  
+  return self;
 }
+
+@end

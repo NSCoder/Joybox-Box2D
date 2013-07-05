@@ -7,8 +7,13 @@
 //
 
 #import "B2DBodyTest.h"
-#import "B2DWorld.h"
 #import "B2DBody.h"
+#import "B2DWorld.h"
+#import "B2DBodyDef.h"
+#import "B2DTransform.h"
+#import "B2DMassData.h"
+#import "B2DFixtureDef.h"
+#import "B2DShape.h"
 #import "B2DFixture.h"
 #import "B2DEdgeShape.h"
 #import "B2DPolygonShape.h"
@@ -37,7 +42,7 @@
 
 - (void)testInit
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   
   STAssertTrue(body.body != NULL, nil);
@@ -45,7 +50,7 @@
 
 - (void)testDealloc
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [[self.world createBody:bodyDefinition] retain];
   
   STAssertNoThrow([body release], nil);
@@ -56,7 +61,7 @@
 
 - (void)testType
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   B2DBody *body = [self.world createBody:bodyDefinition];
   
@@ -65,7 +70,7 @@
 
 - (void)testSetType
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   body.type = kDynamicBodyType;
   
@@ -74,18 +79,18 @@
 
 - (void)testTransform
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(1, 1);
   bodyDefinition.angle = 1;
   B2DBody *body = [self.world createBody:bodyDefinition];
   
-  STAssertTrue(CGPointEqualToPoint(body.transform.position, CGPointMake(1, 1)), nil);
-  STAssertEquals(body.transform.angle, (CGFloat)1, nil);
+  STAssertTrue(CGPointEqualToPoint(body.transform.point, CGPointMake(1, 1)), nil);
+  STAssertEquals(body.transform.angle, (Float32)1, nil);
 }
 
 - (void)testPosition
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(1, 1);
   B2DBody *body = [self.world createBody:bodyDefinition];
   
@@ -94,7 +99,7 @@
 
 - (void)testAngle
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.angle = 1;
   B2DBody *body = [self.world createBody:bodyDefinition];
   
@@ -103,7 +108,7 @@
 
 - (void)testWorldCenter
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(2, 2);
   B2DBody *body = [self.world createBody:bodyDefinition];
   
@@ -112,7 +117,7 @@
 
 - (void)testLocalCenter
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(2, 2);
   B2DBody *body = [self.world createBody:bodyDefinition];
   
@@ -121,7 +126,7 @@
 
 - (void)testLinearVelocity
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   bodyDefinition.linearVelocity = CGPointMake(1, 1);
   B2DBody *body = [self.world createBody:bodyDefinition];
@@ -131,7 +136,7 @@
 
 - (void)testSetLinearVelocity
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   B2DBody *body = [self.world createBody:bodyDefinition];
   body.linearVelocity = CGPointMake(2, 2);
@@ -141,7 +146,7 @@
 
 - (void)testAngularVelocity
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   bodyDefinition.angularVelocity = 2;
   B2DBody *body = [self.world createBody:bodyDefinition];
@@ -151,7 +156,7 @@
 
 - (void)testSetAngularVelocity
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   B2DBody *body = [self.world createBody:bodyDefinition];
   body.angularVelocity = 2;
@@ -161,7 +166,7 @@
 
 - (void)testMass
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   
   STAssertEquals(body.mass, (CGFloat)0, nil);
@@ -169,7 +174,7 @@
 
 - (void)testInertia
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   
   STAssertEquals(body.inertia, (CGFloat)0, nil);
@@ -177,34 +182,34 @@
 
 - (void)testMassData
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   
-  STAssertEquals(body.massData.mass, (CGFloat)0, nil);
-  STAssertTrue(CGPointEqualToPoint(body.massData.center, CGPointMake(0, 0)), nil);
-  STAssertEquals(body.massData.rotationalInertia, (CGFloat)0, nil);
+  STAssertEquals(body.massData.mass, (Float32)0, nil);
+  STAssertTrue(CGPointEqualToPoint(body.massData.centre, CGPointMake(0, 0)), nil);
+  STAssertEquals(body.massData.I, (Float32)0, nil);
 }
 
 - (void)testSetMassData
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   B2DBody *body = [self.world createBody:bodyDefinition];
   
-  B2DMassData massData = B2DMassData();
+  B2DMassData *massData = [[B2DMassData alloc] init];
   massData.mass = 2;
-  massData.center = CGPointMake(0, 0);
-  massData.rotationalInertia = 1;
+  massData.centre = CGPointMake(0, 0);
+  massData.I = 1;
   body.massData = massData;
   
-  STAssertEquals(body.massData.mass, (CGFloat)2, nil);
-  STAssertTrue(CGPointEqualToPoint(body.massData.center, CGPointMake(0, 0)), nil);
-  STAssertEquals(body.massData.rotationalInertia, (CGFloat)1, nil);
+  STAssertEquals(body.massData.mass, (Float32)2, nil);
+  STAssertTrue(CGPointEqualToPoint(body.massData.centre, CGPointMake(0, 0)), nil);
+  STAssertEquals(body.massData.I, (Float32)1, nil);
 }
 
 - (void)testLinearDamping
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   bodyDefinition.linearDamping = 2;
   B2DBody *body = [self.world createBody:bodyDefinition];
@@ -214,7 +219,7 @@
 
 - (void)testSetLinearDamping
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   B2DBody *body = [self.world createBody:bodyDefinition];
   body.linearDamping = 2;
@@ -224,7 +229,7 @@
 
 - (void)testAngularDamping
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   bodyDefinition.angularDamping = 2;
   B2DBody *body = [self.world createBody:bodyDefinition];
@@ -234,7 +239,7 @@
 
 - (void)testSetAngularDamping
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   B2DBody *body = [self.world createBody:bodyDefinition];
   body.angularDamping = 2;
@@ -244,7 +249,7 @@
 
 - (void)testGravityScale
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.gravityScale = 2;
   B2DBody *body = [self.world createBody:bodyDefinition];
   
@@ -253,7 +258,7 @@
 
 - (void)testSetGravityScale
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   body.gravityScale = 2;
   
@@ -262,7 +267,7 @@
 
 - (void)testIsBullet
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.bullet = YES;
   B2DBody *body = [self.world createBody:bodyDefinition];
   
@@ -271,7 +276,7 @@
 
 - (void)testBullet
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.bullet = YES;
   B2DBody *body = [self.world createBody:bodyDefinition];
   
@@ -280,7 +285,7 @@
 
 - (void)testSetBullet
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   body.bullet = YES;
   
@@ -289,7 +294,7 @@
 
 - (void)testIsAwake
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.awake = NO;
   B2DBody *body = [self.world createBody:bodyDefinition];
   
@@ -298,7 +303,7 @@
 
 - (void)testAwake
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.awake = NO;
   B2DBody *body = [self.world createBody:bodyDefinition];
   
@@ -307,7 +312,7 @@
 
 - (void)testSetAwake
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   body.awake = NO;
   
@@ -316,7 +321,7 @@
 
 - (void)testIsFixedRotation
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.fixedRotation = YES;
   B2DBody *body = [self.world createBody:bodyDefinition];
   
@@ -325,7 +330,7 @@
 
 - (void)testFixedRotation
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.fixedRotation = YES;
   B2DBody *body = [self.world createBody:bodyDefinition];
   
@@ -334,7 +339,7 @@
 
 - (void)testSetFixedRotation
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   body.fixedRotation = YES;
   
@@ -343,7 +348,7 @@
 
 - (void)testIsSleepingAllowed
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.allowSleep = NO;
   B2DBody *body = [self.world createBody:bodyDefinition];
   
@@ -352,7 +357,7 @@
 
 - (void)testSleepingAllowed
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.allowSleep = NO;
   B2DBody *body = [self.world createBody:bodyDefinition];
   
@@ -361,7 +366,7 @@
 
 - (void)testSetSleepingAllowed
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   body.sleepingAllowed = NO;
   
@@ -373,7 +378,7 @@
 
 - (void)testIsEqualToBody
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *firstBody = [self.world createBody:bodyDefinition];
   B2DBody *secondBody = [[B2DBody alloc] initWithBody:firstBody.body];
 
@@ -383,25 +388,25 @@
 
 - (void)testResetMassData
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   
-  B2DMassData massData = B2DMassData();
+  B2DMassData *massData = [[B2DMassData alloc] init];
   massData.mass = 2;
-  massData.center = CGPointMake(0, 0);
-  massData.rotationalInertia = 1;
+  massData.centre = CGPointMake(0, 0);
+  massData.I = 1;
   body.massData = massData;
   
   [body resetMassData];
   
-  STAssertEquals(body.massData.mass, (CGFloat)0, nil);
-  STAssertTrue(CGPointEqualToPoint(body.massData.center, CGPointMake(0, 0)), nil);
-  STAssertEquals(body.massData.rotationalInertia, (CGFloat)0, nil);
+  STAssertEquals(body.massData.mass, (Float32)0, nil);
+  STAssertTrue(CGPointEqualToPoint(body.massData.centre, CGPointMake(0, 0)), nil);
+  STAssertEquals(body.massData.I, (Float32)0, nil);
 }
 
 - (void)testSetTransformWithPositionAndAngle
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   [body setTransformWithPosition:CGPointMake(1, 1) andAngle:1];
   
@@ -411,7 +416,7 @@
 
 - (void)testWorldPoint
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(5, 5);
   B2DBody *body = [self.world createBody:bodyDefinition];
   CGPoint worldPoint = [body worldPoint:CGPointMake(1, 1)];
@@ -421,7 +426,7 @@
 
 - (void)testWorldVector
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(5, 5);
   B2DBody *body = [self.world createBody:bodyDefinition];
   CGPoint worldVector = [body worldVector:CGPointMake(1, 1)];
@@ -431,7 +436,7 @@
 
 - (void)testLocalPoint
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(5, 5);
   B2DBody *body = [self.world createBody:bodyDefinition];
   CGPoint localPoint = [body localPoint:CGPointMake(5, 5)];
@@ -441,7 +446,7 @@
 
 - (void)testLocalVector
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.position = CGPointMake(5, 5);
   B2DBody *body = [self.world createBody:bodyDefinition];
   CGPoint localVector = [body localVector:CGPointMake(5, 5)];
@@ -451,7 +456,7 @@
 
 - (void)testLinearVelocityFromWorldPoint
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   bodyDefinition.position = CGPointMake(5, 5);
   bodyDefinition.linearVelocity = CGPointMake(1, 1);
@@ -464,7 +469,7 @@
 
 - (void)testLinearVelocityFromLocalPoint
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   bodyDefinition.position = CGPointMake(5, 5);
   bodyDefinition.linearVelocity = CGPointMake(1, 1);
@@ -477,10 +482,10 @@
 
 - (void)testFixtureList
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   
-  B2DFixtureDef fixtureDefinition = B2DFixtureDefMake();
+  B2DFixtureDef *fixtureDefinition = [[B2DFixtureDef alloc] init];
   fixtureDefinition.shape = [[B2DEdgeShape alloc] initWithStartVertex:CGPointMake(0, 0) endVertex:CGPointMake(1, 1)];
   [body createFixture:fixtureDefinition];
   
@@ -490,7 +495,7 @@
 
 - (void)testNext
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *firstBody = [self.world createBody:bodyDefinition];
   B2DBody *secondBody = [self.world createBody:bodyDefinition];
   
@@ -500,7 +505,7 @@
 
 - (void)testApplyForceAtPoint
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   bodyDefinition.position = CGPointMake(5, 5);
   
@@ -514,7 +519,7 @@
 
 - (void)testApplyForceToCenter
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   bodyDefinition.position = CGPointMake(5, 5);
   
@@ -528,11 +533,11 @@
 
 - (void)testApplyTorque
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   B2DBody *body = [self.world createBody:bodyDefinition];
   
-  B2DFixtureDef fixtureDefinition = B2DFixtureDefMake();
+  B2DFixtureDef *fixtureDefinition = [[B2DFixtureDef alloc] init];
   fixtureDefinition.shape = [[B2DPolygonShape alloc] initWithHalfWidth:0.5 andHalfHeight:0.5];
   fixtureDefinition.density = 1;
   [body createFixture:fixtureDefinition];
@@ -546,7 +551,7 @@
 
 - (void)testApplyLinearImpulse
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   bodyDefinition.position = CGPointMake(5, 5);
   
@@ -560,11 +565,11 @@
 
 - (void)testApplyAngularImpulse
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   bodyDefinition.type = kDynamicBodyType;
   B2DBody *body = [self.world createBody:bodyDefinition];
   
-  B2DFixtureDef fixtureDefinition = B2DFixtureDefMake();
+  B2DFixtureDef *fixtureDefinition = [[B2DFixtureDef alloc] init];
   fixtureDefinition.shape = [[B2DPolygonShape alloc] initWithHalfWidth:0.5 andHalfHeight:0.5];
   fixtureDefinition.density = 1;
   [body createFixture:fixtureDefinition];
@@ -578,10 +583,10 @@
 
 - (void)testCreateFixture
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   
-  B2DFixtureDef fixtureDefinition = B2DFixtureDefMake();
+  B2DFixtureDef *fixtureDefinition = [[B2DFixtureDef alloc] init];
   fixtureDefinition.shape = [[B2DPolygonShape alloc] initWithHalfWidth:0.5 andHalfHeight:0.5];
   fixtureDefinition.friction = 1;
   fixtureDefinition.restitution = 1;
@@ -602,7 +607,7 @@
 
 - (void)testCreateFixtureWithShapeAndDensity
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   
   B2DShape *shape = [[B2DPolygonShape alloc] initWithHalfWidth:0.5 andHalfHeight:0.5];
@@ -617,7 +622,7 @@
 
 - (void)destroyFixture
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   
   B2DShape *shape = [[B2DPolygonShape alloc] initWithHalfWidth:0.5 andHalfHeight:0.5];
@@ -633,7 +638,7 @@
 
 - (void)testDump
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
   B2DBody *body = [self.world createBody:bodyDefinition];
   
   STAssertNoThrow([body dump], nil);

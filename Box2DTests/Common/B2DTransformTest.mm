@@ -13,9 +13,12 @@
 
 - (void)testB2DRayCastOutputMake
 {
-  B2DTransform transform = B2DTransformMake(CGPointMake(1, 1), 10);
-  STAssertTrue(CGPointEqualToPoint(transform.position, CGPointMake(1, 1)), nil);
-  STAssertEquals(transform.angle, (CGFloat)10, nil);
+  B2DTransform *transform = [[B2DTransform alloc] init];
+  transform.point = CGPointMake(1, 1);
+  transform.angle = 10;
+
+  STAssertTrue(CGPointEqualToPoint(transform.point, CGPointMake(1, 1)), nil);
+  STAssertEquals(transform.angle, (Float32)10, nil);
 }
 
 @end

@@ -33,7 +33,7 @@
     
     polygonShape->Set(boxVertices, (int32)vertexCount);
     
-    delete boxVertices;
+    delete[] boxVertices;
     
     self.shape = polygonShape;
   }

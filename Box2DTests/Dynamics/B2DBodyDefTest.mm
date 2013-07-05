@@ -13,7 +13,7 @@
 
 - (void)testB2DBodyDefMake
 {
-  B2DBodyDef bodyDefinition = B2DBodyDefMake();
+  B2DBodyDef * bodyDefinition = [[B2DBodyDef alloc] init];
   STAssertTrue(CGPointEqualToPoint(bodyDefinition.position, CGPointMake(0, 0)), nil);
   STAssertEquals(bodyDefinition.angle, (CGFloat)0.0, nil);
   STAssertTrue(CGPointEqualToPoint(bodyDefinition.linearVelocity, CGPointMake(0, 0)), nil);

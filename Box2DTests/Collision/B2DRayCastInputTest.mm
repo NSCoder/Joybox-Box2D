@@ -13,10 +13,14 @@
 
 - (void)testB2DRayCastOutputMake
 {
-  B2DRayCastInput rayCastInput = B2DRayCastInputMake(CGPointMake(0, 0), CGPointMake(1, 1), 10);
+  B2DRayCastInput *rayCastInput = [[B2DRayCastInput alloc] init];
+  rayCastInput.point1 = CGPointMake(0, 0);
+  rayCastInput.point2 = CGPointMake(1, 1);
+  rayCastInput.maxFraction = 10;
+  
   STAssertTrue(CGPointEqualToPoint(rayCastInput.point1, CGPointMake(0, 0)), nil);
   STAssertTrue(CGPointEqualToPoint(rayCastInput.point2, CGPointMake(1, 1)), nil);
-  STAssertEquals(rayCastInput.maxFraction, (CGFloat)10, nil);
+  STAssertEquals(rayCastInput.maxFraction, (Float32)10, nil);
 }
 
 @end
