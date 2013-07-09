@@ -35,7 +35,6 @@
   return self;
 }
 
-
 #pragma mark - Properties
 
 - (B2DShapeTypes)type
@@ -115,9 +114,15 @@
   return (id)self.fixture->GetUserData();
 }
 
-- (void)setUserData:(id)userData
+- (void)setUserData:(id)aUserData
 {
-  self.fixture->SetUserData(userData);
+  if ([self userData] != nil)
+  {
+    [[self userData] release];
+  }
+  
+  self.fixture->SetUserData(aUserData);
+  [aUserData retain];
 }
 
 - (CGFloat)density

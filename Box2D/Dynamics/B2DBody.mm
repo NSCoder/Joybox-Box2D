@@ -56,15 +56,6 @@
   return self;
 }
 
-- (void)dealloc
-{
-  [userData release];
-  userData = nil;
-  
-  [super dealloc];
-}
-
-
 #pragma mark - Properties
 
 - (id)userData

@@ -18,7 +18,6 @@
 @interface B2DBody : NSObject {
   
   b2Body *body;
-  id userData;
 }
 
 @property (nonatomic, assign) b2Body *body;
