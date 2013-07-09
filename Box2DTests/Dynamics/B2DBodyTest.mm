@@ -59,6 +59,25 @@
 
 #pragma mark - Properties
 
+- (void)testUserData
+{
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
+  bodyDefinition.type = kDynamicBodyType;
+  B2DBody *body = [self.world createBody:bodyDefinition];
+  
+  STAssertTrue(body.userData == nil, nil);
+}
+
+- (void)testSetUserData
+{
+  B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];
+  bodyDefinition.type = kDynamicBodyType;
+  B2DBody *body = [self.world createBody:bodyDefinition];
+  body.userData = @"Body User Data";
+  
+  STAssertTrue([body.userData isEqualToString:@"Body User Data"], nil);
+}
+
 - (void)testType
 {
   B2DBodyDef *bodyDefinition = [[B2DBodyDef alloc] init];

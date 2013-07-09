@@ -16,7 +16,7 @@
 @implementation B2DBody
 
 @synthesize body;
-@synthesize userData;
+@dynamic userData;
 @dynamic type;
 @dynamic position;
 @dynamic angle;
@@ -51,7 +51,6 @@
   if (self)
   {
     self.body = aBody;
-    aBody->SetUserData((void *)self);
   }
   
   return self;
@@ -67,6 +66,22 @@
 
 
 #pragma mark - Properties
+
+- (id)userData
+{
+  return (id)self.body->GetUserData();
+}
+
+- (void)setUserData:(id)aUserData
+{
+  if ([self userData] != nil)
+  {
+    [[self userData] release];
+  }
+  
+  self.body->SetUserData((void *)aUserData);
+  [aUserData retain];
+}
 
 - (B2DBodyTypes)type
 {
